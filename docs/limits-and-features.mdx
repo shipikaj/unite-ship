@@ -1,0 +1,99 @@
+---
+title: Limits & Features
+description: Understand how features and limits work across Unite plans.
+sidebar_position: 4
+---
+
+# Limits & Features
+
+This page explains how features and limits work in Unite.
+
+For plan-wise comparison, see: [Plans](./plans)
+
+---
+
+## Pipelines
+
+Pipelines are the core unit of Unite.
+
+- Each pipeline represents a connection between a data source and a destination  
+- Pipelines are counted when created  
+- Each pipeline is assigned a unique ID  
+
+### How limits work
+
+- Pipelines count toward your monthly quota when created  
+- Deleting a pipeline does **not** reduce usage for that billing cycle  
+- Recreating a pipeline does not bypass limits  
+
+Learn more: [Billing and Pipeline Quotas](./billing-and-quotas)
+
+---
+
+## Accounts
+
+Accounts represent the underlying data entities (such as properties, sites, or accounts from a data source).
+
+### Deduplication logic
+
+- The same account used across multiple pipelines is counted only once  
+- This ensures fair usage regardless of how many pipelines reference the same account  
+
+**Example:**
+- Account A used in 3 pipelines → counted as 1 account  
+
+---
+
+## Data Sources
+
+Data sources are the systems you connect to extract data.
+
+- Each connected source counts toward your plan limit  
+- Limits vary by plan  
+- Higher-tier plans allow more sources  
+
+---
+
+## Destinations
+
+Destinations are where your data is sent.
+
+- Starter plan includes limited destinations  
+- Standard and above include access to all supported destinations  
+
+---
+
+## Sync Frequency
+
+Sync frequency determines how often your data pipelines run.
+
+- Starter → Daily or weekly sync  
+- Standard & Premium → On-demand sync  
+- Enterprise → High-frequency sync (including minute-level)  
+
+---
+
+## Support
+
+Support levels vary by plan:
+
+- Starter → Email support  
+- Standard & Premium → Priority support  
+- Enterprise → Dedicated support  
+
+---
+
+## Summary
+
+- Pipelines are the primary driver of usage and limits  
+- Accounts are deduplicated across pipelines  
+- Data sources and destinations depend on your plan  
+- Sync frequency and support improve with higher tiers  
+
+---
+
+## Related
+
+- [Plans](./plans)  
+- [Billing & Quotas](./billing-and-quotas)  
+- [Connectors](./connectors)

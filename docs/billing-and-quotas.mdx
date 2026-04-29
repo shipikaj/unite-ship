@@ -1,0 +1,60 @@
+---
+title: Billing & Quotas
+description: Understand how Unite tracks usage and billing.
+sidebar_position: 2
+---
+
+# Billing & Quotas
+
+Unite billing is based on **pipeline usage within a billing cycle**.
+
+Compare limits across plans: [Limits & Features](./limits-and-features)
+
+---
+
+## What is Counted
+
+Each pipeline:
+- Has a unique ID  
+- Counts when created  
+
+Billing = **total pipelines created in the cycle**
+
+---
+
+## Key Rules
+
+### Deleting Pipelines Does Not Reset Usage
+Deleting a pipeline:
+- Does NOT free up quota  
+- Still counts in the current billing cycle  
+
+---
+
+### Historical Tracking
+- Recreating pipelines does not bypass limits  
+- System tracks past usage  
+
+---
+
+### Monthly Reset
+- Quota resets at the start of the next billing cycle  
+- Usage history remains visible  
+
+---
+
+## Example
+
+Plan limit: **5 pipelines**
+
+- Create 5 pipelines → limit reached  
+- Delete 1 pipeline → still counted  
+- Create a new pipeline → action blocked  
+
+---
+
+## Related
+
+- [Plans](./plans)  
+- [Monitor Usage](./monitor-usage)  
+- [Troubleshooting](./troubleshooting)
