@@ -1,0 +1,29 @@
+{
+  "id": "billing-and-quotas",
+  "title": "Billing & Quotas",
+  "description": "Understand how Unite tracks usage and billing.",
+  "source": "@site/docs/billing-and-quotas.mdx",
+  "sourceDirName": ".",
+  "slug": "/billing-and-quotas",
+  "permalink": "/billing-and-quotas",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/billing-and-quotas.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "Billing & Quotas",
+    "description": "Understand how Unite tracks usage and billing.",
+    "sidebar_position": 2
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Plans",
+    "permalink": "/plans"
+  },
+  "next": {
+    "title": "Connectors",
+    "permalink": "/connectors"
+  }
+}

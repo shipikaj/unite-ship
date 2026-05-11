@@ -1,0 +1,27 @@
+{
+  "id": "quickstart",
+  "title": "Quickstart",
+  "description": "Set up your first Unite pipeline in minutes.",
+  "source": "@site/docs/quickstart.mdx",
+  "sourceDirName": ".",
+  "slug": "/quickstart",
+  "permalink": "/quickstart",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/quickstart.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Quickstart",
+    "description": "Set up your first Unite pipeline in minutes."
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Introduction",
+    "permalink": "/introduction"
+  },
+  "next": {
+    "title": "Free Trial",
+    "permalink": "/freetrial"
+  }
+}

@@ -1,0 +1,175 @@
+{
+  "docusaurus-plugin-content-docs": {
+    "default": {
+      "path": "/",
+      "versions": [
+        {
+          "name": "current",
+          "label": "Next",
+          "isLast": true,
+          "path": "/",
+          "mainDocId": "introduction",
+          "docs": [
+            {
+              "id": "alerts",
+              "path": "/alerts",
+              "sidebar": "docs"
+            },
+            {
+              "id": "billing-and-quotas",
+              "path": "/billing-and-quotas",
+              "sidebar": "docs"
+            },
+            {
+              "id": "billing-cancellation-refund",
+              "path": "/billing-cancellation-refund",
+              "sidebar": "docs"
+            },
+            {
+              "id": "connectors",
+              "path": "/connectors",
+              "sidebar": "docs"
+            },
+            {
+              "id": "dashboard-overview",
+              "path": "/dashboard-overview",
+              "sidebar": "docs"
+            },
+            {
+              "id": "data-sources",
+              "path": "/data-sources",
+              "sidebar": "docs"
+            },
+            {
+              "id": "destinations",
+              "path": "/destinations",
+              "sidebar": "docs"
+            },
+            {
+              "id": "faqs",
+              "path": "/faqs",
+              "sidebar": "docs"
+            },
+            {
+              "id": "freetrial",
+              "path": "/freetrial",
+              "sidebar": "docs"
+            },
+            {
+              "id": "integrated-data-processing",
+              "path": "/integrated-data-processing",
+              "sidebar": "docs"
+            },
+            {
+              "id": "introduction",
+              "path": "/introduction",
+              "sidebar": "docs"
+            },
+            {
+              "id": "limits-and-features",
+              "path": "/limits-and-features",
+              "sidebar": "docs"
+            },
+            {
+              "id": "monitor-usage",
+              "path": "/monitor-usage",
+              "sidebar": "docs"
+            },
+            {
+              "id": "notifications",
+              "path": "/notifications",
+              "sidebar": "docs"
+            },
+            {
+              "id": "pipelines",
+              "path": "/pipelines",
+              "sidebar": "docs"
+            },
+            {
+              "id": "plans",
+              "path": "/plans",
+              "sidebar": "docs"
+            },
+            {
+              "id": "profile-settings",
+              "path": "/profile-settings",
+              "sidebar": "docs"
+            },
+            {
+              "id": "quickstart",
+              "path": "/quickstart",
+              "sidebar": "docs"
+            },
+            {
+              "id": "security-privacy",
+              "path": "/security-privacy",
+              "sidebar": "docs"
+            },
+            {
+              "id": "support-tickets",
+              "path": "/support-tickets",
+              "sidebar": "docs"
+            },
+            {
+              "id": "terms-and-services",
+              "path": "/terms-and-services",
+              "sidebar": "docs"
+            },
+            {
+              "id": "troubleshooting",
+              "path": "/troubleshooting",
+              "sidebar": "docs"
+            },
+            {
+              "id": "tutorial-basics/congratulations",
+              "path": "/tutorial-basics/congratulations"
+            },
+            {
+              "id": "tutorial-basics/create-a-blog-post",
+              "path": "/tutorial-basics/create-a-blog-post"
+            },
+            {
+              "id": "tutorial-basics/create-a-document",
+              "path": "/tutorial-basics/create-a-document"
+            },
+            {
+              "id": "tutorial-basics/create-a-page",
+              "path": "/tutorial-basics/create-a-page"
+            },
+            {
+              "id": "tutorial-basics/deploy-your-site",
+              "path": "/tutorial-basics/deploy-your-site"
+            },
+            {
+              "id": "tutorial-basics/markdown-features",
+              "path": "/tutorial-basics/markdown-features"
+            },
+            {
+              "id": "tutorial-extras/manage-docs-versions",
+              "path": "/tutorial-extras/manage-docs-versions"
+            },
+            {
+              "id": "tutorial-extras/translate-your-site",
+              "path": "/tutorial-extras/translate-your-site"
+            },
+            {
+              "id": "user-management",
+              "path": "/user-management",
+              "sidebar": "docs"
+            }
+          ],
+          "draftIds": [],
+          "sidebars": {
+            "docs": {
+              "link": {
+                "path": "/introduction",
+                "label": "introduction"
+              }
+            }
+          }
+        }
+      ],
+      "breadcrumbs": true
+    }
+  }
+}

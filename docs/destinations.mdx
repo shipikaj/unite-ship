@@ -1,0 +1,111 @@
+---
+title: Destinations
+description: Configure and manage destinations in Unite.
+sidebar_position: 3
+---
+
+# Destinations
+
+The **Destinations** section is used to manage systems where synchronized data is delivered within Unite.
+
+Destinations act as the final delivery layer for processed and transformed data coming from connected pipelines.
+
+---
+
+# Overview
+
+Destinations receive synchronized data from connected pipelines and make it available for reporting, analysis, warehousing, or downstream processing.
+
+Supported destination categories include:
+- Data warehouses
+- Analytics platforms
+- Reporting systems
+- Cloud storage platforms
+
+Supported destinations include:
+- BigQuery
+- Amazon Redshift
+- Google Data Studio
+
+Destination availability depends on the active workspace plan.
+
+---
+
+# Destination List
+
+The Destinations page displays all configured destination systems in a centralized table view.
+
+Each destination includes:
+- Destination name
+- Destination type
+- Connection status
+- Creation timestamp
+
+This allows teams to monitor destination readiness and operational health from a single interface.
+
+---
+
+# Destination Status
+
+Each destination displays a status indicator representing its current operational state.
+
+### Complete
+
+The destination has been configured successfully and is ready to receive synchronized data.
+
+### Incomplete
+
+The destination setup requires additional configuration before it can be used operationally.
+
+### Error
+
+The destination encountered a configuration or authentication issue that requires attention.
+
+---
+
+# Connect Destination
+
+Users can configure a destination directly from the **Connect Destination** action available on the page.
+
+The setup process includes:
+- Destination selection
+- Authentication and authorization
+- Workspace configuration
+- Permission validation
+
+Destination setup requirements vary depending on the selected integration.
+
+---
+
+# Search and Filtering
+
+The Destinations section includes search and filtering capabilities to help manage configured systems efficiently.
+
+Users can:
+- Search configured destinations
+- Filter by destination type
+- Review operational status
+- Navigate integrations quickly
+
+---
+
+# Destination Management
+
+Users can manage configured destinations directly from the table view.
+
+Available actions include:
+- Updating destination configuration
+- Reconnecting expired credentials
+- Reviewing connection details
+- Removing destinations
+
+Changes to destination configurations affect associated pipelines connected to those systems.
+
+---
+
+# Operational Notes
+
+- A destination must be configured before pipeline synchronization can begin
+- Authentication failures interrupt data delivery workflows
+- Removing a destination affects associated pipelines
+- Some destination integrations require periodic credential reauthorization

@@ -1,0 +1,29 @@
+{
+  "id": "dashboard",
+  "title": "Unite Dashboard",
+  "description": "Overview of the Unite workspace and dashboard experience.",
+  "source": "@site/docs/dashboard.mdx",
+  "sourceDirName": ".",
+  "slug": "/dashboard",
+  "permalink": "/dashboard",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/dashboard.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "Unite Dashboard",
+    "description": "Overview of the Unite workspace and dashboard experience.",
+    "sidebar_position": 1
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Troubleshooting",
+    "permalink": "/troubleshooting"
+  },
+  "next": {
+    "title": "pipelines",
+    "permalink": "/pipelines"
+  }
+}

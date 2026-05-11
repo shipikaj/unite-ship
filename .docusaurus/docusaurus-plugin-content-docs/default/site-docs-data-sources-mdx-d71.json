@@ -1,0 +1,29 @@
+{
+  "id": "data-sources",
+  "title": "Data Sources",
+  "description": "Connect and manage source integrations in Unite.",
+  "source": "@site/docs/data-sources.mdx",
+  "sourceDirName": ".",
+  "slug": "/data-sources",
+  "permalink": "/data-sources",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/data-sources.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "Data Sources",
+    "description": "Connect and manage source integrations in Unite.",
+    "sidebar_position": 2
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/dashboard-overview"
+  },
+  "next": {
+    "title": "Destinations",
+    "permalink": "/destinations"
+  }
+}

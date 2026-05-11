@@ -1,0 +1,29 @@
+{
+  "id": "connectors",
+  "title": "Connectors",
+  "description": "Understand connector availability across plans.",
+  "source": "@site/docs/connectors.mdx",
+  "sourceDirName": ".",
+  "slug": "/connectors",
+  "permalink": "/connectors",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/connectors.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "title": "Connectors",
+    "description": "Understand connector availability across plans.",
+    "sidebar_position": 3
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Billing & Quotas",
+    "permalink": "/billing-and-quotas"
+  },
+  "next": {
+    "title": "Limits & Features",
+    "permalink": "/limits-and-features"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "id": "freetrial",
+  "title": "Free Trial",
+  "description": "Learn how Unite’s free trial works.",
+  "source": "@site/docs/freetrial.mdx",
+  "sourceDirName": ".",
+  "slug": "/freetrial",
+  "permalink": "/freetrial",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/freetrial.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "title": "Free Trial",
+    "description": "Learn how Unite’s free trial works.",
+    "sidebar_position": 3
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Quickstart",
+    "permalink": "/quickstart"
+  },
+  "next": {
+    "title": "FAQs",
+    "permalink": "/faqs"
+  }
+}

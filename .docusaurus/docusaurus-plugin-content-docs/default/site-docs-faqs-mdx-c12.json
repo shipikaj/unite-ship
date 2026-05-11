@@ -1,0 +1,29 @@
+{
+  "id": "faqs",
+  "title": "FAQs",
+  "description": "Common questions about using Unite.",
+  "source": "@site/docs/faqs.mdx",
+  "sourceDirName": ".",
+  "slug": "/faqs",
+  "permalink": "/faqs",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/faqs.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "title": "FAQs",
+    "description": "Common questions about using Unite.",
+    "sidebar_position": 4
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Free Trial",
+    "permalink": "/freetrial"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/dashboard-overview"
+  }
+}

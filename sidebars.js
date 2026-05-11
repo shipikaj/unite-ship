@@ -17,7 +17,29 @@ const sidebars =
         "faqs",
       ],
     },
-    
+
+      {
+       type: "category",
+       label: "Using Unite",
+       items: [
+       {
+       type: "category",
+       label: "Dashboard",
+       items: [
+        "dashboard-overview",
+        "data-sources",
+        "destinations",
+        "pipelines",
+        "alerts",
+        "profile-settings",
+        "support-tickets",
+        "notifications",
+        "user-management"
+              ]
+        }
+             ]
+      },     
+
       {
       type: "category",
       label: "Pricing & Plans",
@@ -29,7 +51,7 @@ const sidebars =
         "monitor-usage",
         "troubleshooting",
       ],
-    },    
+    },   
 
     "billing-cancellation-refund",
 
@@ -42,7 +64,6 @@ const sidebars =
         "integrated-data-processing",
       ],
     },
-
   ],
 };
 

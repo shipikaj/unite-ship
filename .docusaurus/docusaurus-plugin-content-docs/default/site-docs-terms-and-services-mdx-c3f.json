@@ -1,0 +1,27 @@
+{
+  "id": "terms-and-services",
+  "title": "Terms of Service",
+  "description": "Terms of Service for Unite by Statfinity.",
+  "source": "@site/docs/terms-and-services.mdx",
+  "sourceDirName": ".",
+  "slug": "/terms-and-services",
+  "permalink": "/terms-and-services",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/terms-and-services.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Terms of Service",
+    "description": "Terms of Service for Unite by Statfinity."
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Billing, cancellation and refund policy",
+    "permalink": "/billing-cancellation-refund"
+  },
+  "next": {
+    "title": "Security and Privacy Policy",
+    "permalink": "/security-privacy"
+  }
+}

@@ -1,0 +1,140 @@
+---
+title: Pipelines
+description: Create, configure, and manage synchronization pipelines in Unite.
+sidebar_position: 4
+---
+
+# Pipelines
+
+The **Pipelines** section is used to create and manage synchronization workflows between connected data sources and destinations.
+
+Pipelines are the core operational unit in Unite and control how data is extracted, transformed, and synchronized across systems.
+
+---
+
+# Overview
+
+A pipeline connects:
+- One or more data sources
+- A configured destination
+- Synchronization and schema settings
+
+Pipelines allow teams to automate data movement and maintain consistent reporting and operational workflows.
+
+---
+
+# Pipeline List
+
+The Pipelines page displays all configured pipelines in a centralized table view.
+
+Each pipeline includes:
+- Pipeline name
+- Connected data source
+- Destination
+- Sync status
+- Last sync timestamp
+- Creation timestamp
+
+This allows teams to monitor operational activity and identify workflow issues quickly.
+
+---
+
+# Pipeline Status
+
+Each pipeline displays a status indicator representing its current operational state.
+
+### Active
+
+The pipeline is operational and synchronizing data successfully.
+
+### Paused
+
+The pipeline has been temporarily stopped and synchronization is disabled until resumed.
+
+### Incomplete
+
+The pipeline configuration is unfinished and requires additional setup before activation.
+
+### Error
+
+The pipeline encountered a synchronization, schema, or authentication issue requiring attention.
+
+---
+
+# Create Pipeline
+
+Users can create a pipeline directly from the **Create Pipeline** action available on the page.
+
+Pipeline setup includes:
+- Data Source selection
+- Destination selection
+- Schema configuration
+- Synchronization settings
+
+A pipeline can only be created after valid source and destination integrations are configured.
+
+---
+
+# Schema Configuration
+
+Schema configuration controls how data is mapped and synchronized between connected systems.
+
+This includes:
+- Table or entity selection
+- Field mapping
+- Transformation settings
+- Schema refresh behavior
+
+Changes to schema configuration directly affect synchronized destination data.
+
+---
+
+# Synchronization Settings
+
+Pipeline configuration settings include:
+- Sync frequency
+- Refresh behavior
+- Retry configuration
+- Historical synchronization settings
+
+Available configuration options vary depending on the connected integrations and workspace plan.
+
+---
+
+# Search and Filtering
+
+The Pipelines section includes search and filtering tools for managing larger operational workflows.
+
+Users can:
+- Search pipelines
+- Filter by status
+- Review sync activity
+- Monitor failed workflows
+
+---
+
+# Pipeline Activity
+
+Each pipeline maintains operational history, including:
+- Synchronization runs
+- Status changes
+- Error logs
+- Configuration updates
+
+This activity history helps teams monitor operational health and troubleshoot synchronization issues.
+
+---
+
+# Operational Notes
+
+- Pipelines require both a valid source and destination configuration
+- Synchronization failures may interrupt downstream reporting workflows
+- Removing connected sources or destinations affects associated pipelines
+- Pipeline creation counts toward workspace usage limits
+
+---
+
+# Related
+
+- [Data Sources](./data-sources)
+- [Destinations](./destinations)

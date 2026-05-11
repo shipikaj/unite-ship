@@ -1,0 +1,24 @@
+{
+  "id": "alerts",
+  "title": "alerts",
+  "description": "",
+  "source": "@site/docs/alerts.mdx",
+  "sourceDirName": ".",
+  "slug": "/alerts",
+  "permalink": "/alerts",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/alerts.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "docs",
+  "previous": {
+    "title": "Pipelines",
+    "permalink": "/pipelines"
+  },
+  "next": {
+    "title": "profile-settings",
+    "permalink": "/profile-settings"
+  }
+}

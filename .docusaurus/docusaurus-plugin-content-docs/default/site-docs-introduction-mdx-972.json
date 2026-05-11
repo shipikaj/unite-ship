@@ -1,0 +1,23 @@
+{
+  "id": "introduction",
+  "title": "Introduction",
+  "description": "Unite helps you connect, sync, and manage your data pipelines effortlessly.",
+  "source": "@site/docs/introduction.mdx",
+  "sourceDirName": ".",
+  "slug": "/introduction",
+  "permalink": "/introduction",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/introduction.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Introduction",
+    "description": "Unite helps you connect, sync, and manage your data pipelines effortlessly."
+  },
+  "sidebar": "docs",
+  "next": {
+    "title": "Quickstart",
+    "permalink": "/quickstart"
+  }
+}

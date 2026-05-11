@@ -1,0 +1,23 @@
+{
+  "id": "integrated-data-processing",
+  "title": "Integrated data processing terms",
+  "description": "Controller–processor data processing terms for Unite.",
+  "source": "@site/docs/integrated-data-processing.mdx",
+  "sourceDirName": ".",
+  "slug": "/integrated-data-processing",
+  "permalink": "/integrated-data-processing",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/integrated-data-processing.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Integrated data processing terms",
+    "description": "Controller–processor data processing terms for Unite."
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Security and Privacy Policy",
+    "permalink": "/security-privacy"
+  }
+}
