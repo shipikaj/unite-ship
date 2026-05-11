@@ -12,8 +12,7 @@
           "docs": [
             {
               "id": "alerts",
-              "path": "/alerts",
-              "sidebar": "docs"
+              "path": "/alerts"
             },
             {
               "id": "billing-and-quotas",
@@ -77,8 +76,7 @@
             },
             {
               "id": "notifications",
-              "path": "/notifications",
-              "sidebar": "docs"
+              "path": "/notifications"
             },
             {
               "id": "pipelines",
@@ -92,8 +90,7 @@
             },
             {
               "id": "profile-settings",
-              "path": "/profile-settings",
-              "sidebar": "docs"
+              "path": "/profile-settings"
             },
             {
               "id": "quickstart",
@@ -107,8 +104,7 @@
             },
             {
               "id": "support-tickets",
-              "path": "/support-tickets",
-              "sidebar": "docs"
+              "path": "/support-tickets"
             },
             {
               "id": "terms-and-services",
@@ -154,8 +150,7 @@
             },
             {
               "id": "user-management",
-              "path": "/user-management",
-              "sidebar": "docs"
+              "path": "/user-management"
             }
           ],
           "draftIds": [],

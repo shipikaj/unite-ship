@@ -256,20 +256,20 @@
     },
     "config": "config---5-e-9-4f3"
   },
-  "/-320": {
+  "/-590": {
     "__comp": "__comp---theme-docs-root-5-e-9-0b6",
     "__context": {
       "plugin": "plugin---aba-d70"
     }
   },
-  "/-4b4": {
+  "/-370": {
     "__comp": "__comp---theme-doc-version-roota-7-b-5de",
     "__props": "__props---22-d-307"
   },
-  "/-e38": {
+  "/-a9c": {
     "__comp": "__comp---theme-doc-roota-94-67a"
   },
-  "/alerts-f1b": {
+  "/alerts-65b": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---alerts-8-e-1-eeb"
   },
@@ -321,7 +321,7 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---monitor-usage-2-ee-bd6"
   },
-  "/notifications-bc9": {
+  "/notifications-d02": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---notificationsc-2-f-7cf"
   },
@@ -333,7 +333,7 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---plans-904-507"
   },
-  "/profile-settings-7ef": {
+  "/profile-settings-139": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---profile-settings-6-f-3-ddf"
   },
@@ -345,7 +345,7 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---security-privacydd-4-ac6"
   },
-  "/support-tickets-fbd": {
+  "/support-tickets-259": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---support-tickets-20-a-94b"
   },
@@ -389,7 +389,7 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---tutorial-extras-translate-your-site-25-a-771"
   },
-  "/user-management-580": {
+  "/user-management-297": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---user-managemente-25-3cf"
   }

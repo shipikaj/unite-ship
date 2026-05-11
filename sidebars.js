@@ -30,11 +30,11 @@ const sidebars =
         "data-sources",
         "destinations",
         "pipelines",
-        "alerts",
-        "profile-settings",
-        "support-tickets",
-        "notifications",
-        "user-management"
+//        "alerts",
+//        "profile-settings",
+//        "support-tickets",
+//        "notifications",
+//        "user-management"
               ]
         }
              ]

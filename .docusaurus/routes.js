@@ -119,21 +119,20 @@ export default [
   },
   {
     path: '/',
-    component: ComponentCreator('/', '320'),
+    component: ComponentCreator('/', '590'),
     routes: [
       {
         path: '/',
-        component: ComponentCreator('/', '4b4'),
+        component: ComponentCreator('/', '370'),
         routes: [
           {
             path: '/',
-            component: ComponentCreator('/', 'e38'),
+            component: ComponentCreator('/', 'a9c'),
             routes: [
               {
                 path: '/alerts',
-                component: ComponentCreator('/alerts', 'f1b'),
-                exact: true,
-                sidebar: "docs"
+                component: ComponentCreator('/alerts', '65b'),
+                exact: true
               },
               {
                 path: '/billing-and-quotas',
@@ -209,9 +208,8 @@ export default [
               },
               {
                 path: '/notifications',
-                component: ComponentCreator('/notifications', 'bc9'),
-                exact: true,
-                sidebar: "docs"
+                component: ComponentCreator('/notifications', 'd02'),
+                exact: true
               },
               {
                 path: '/pipelines',
@@ -227,9 +225,8 @@ export default [
               },
               {
                 path: '/profile-settings',
-                component: ComponentCreator('/profile-settings', '7ef'),
-                exact: true,
-                sidebar: "docs"
+                component: ComponentCreator('/profile-settings', '139'),
+                exact: true
               },
               {
                 path: '/quickstart',
@@ -245,9 +242,8 @@ export default [
               },
               {
                 path: '/support-tickets',
-                component: ComponentCreator('/support-tickets', 'fbd'),
-                exact: true,
-                sidebar: "docs"
+                component: ComponentCreator('/support-tickets', '259'),
+                exact: true
               },
               {
                 path: '/terms-and-services',
@@ -303,9 +299,8 @@ export default [
               },
               {
                 path: '/user-management',
-                component: ComponentCreator('/user-management', '580'),
-                exact: true,
-                sidebar: "docs"
+                component: ComponentCreator('/user-management', '297'),
+                exact: true
               }
             ]
           }
