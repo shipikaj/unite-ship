@@ -256,20 +256,20 @@
     },
     "config": "config---5-e-9-4f3"
   },
-  "/-590": {
+  "/-07a": {
     "__comp": "__comp---theme-docs-root-5-e-9-0b6",
     "__context": {
       "plugin": "plugin---aba-d70"
     }
   },
-  "/-370": {
+  "/-abc": {
     "__comp": "__comp---theme-doc-version-roota-7-b-5de",
     "__props": "__props---22-d-307"
   },
-  "/-a9c": {
+  "/-4df": {
     "__comp": "__comp---theme-doc-roota-94-67a"
   },
-  "/alerts-65b": {
+  "/alerts-f1b": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---alerts-8-e-1-eeb"
   },
@@ -317,13 +317,13 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---limits-and-featuresbee-3ed"
   },
+  "/managing-user-4ee": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---managing-userca-1-414"
+  },
   "/monitor-usage-a9a": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---monitor-usage-2-ee-bd6"
-  },
-  "/notifications-d02": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---notificationsc-2-f-7cf"
   },
   "/pipelines-1ce": {
     "__comp": "__comp---theme-doc-item-178-a40",
@@ -333,7 +333,7 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---plans-904-507"
   },
-  "/profile-settings-139": {
+  "/profile-settings-7ef": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---profile-settings-6-f-3-ddf"
   },
@@ -341,11 +341,15 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---quickstart-748-35f"
   },
+  "/roles-permissions-86b": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---roles-permissions-2-c-4-7b3"
+  },
   "/security-privacy-f04": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---security-privacydd-4-ac6"
   },
-  "/support-tickets-259": {
+  "/support-tickets-fbd": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---support-tickets-20-a-94b"
   },
@@ -388,9 +392,5 @@
   "/tutorial-extras/translate-your-site-403": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---tutorial-extras-translate-your-site-25-a-771"
-  },
-  "/user-management-297": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---user-managemente-25-3cf"
   }
 }

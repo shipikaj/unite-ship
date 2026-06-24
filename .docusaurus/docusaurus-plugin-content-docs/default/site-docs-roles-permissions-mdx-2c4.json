@@ -1,0 +1,29 @@
+{
+  "id": "roles-permissions",
+  "title": "Roles & Permissions",
+  "description": "Understand user roles and access levels within Unite.",
+  "source": "@site/docs/roles-permissions.mdx",
+  "sourceDirName": ".",
+  "slug": "/roles-permissions",
+  "permalink": "/roles-permissions",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/roles-permissions.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 7,
+  "frontMatter": {
+    "title": "Roles & Permissions",
+    "description": "Understand user roles and access levels within Unite.",
+    "sidebar_position": 7
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/managing-user"
+  },
+  "next": {
+    "title": "Profile Settings",
+    "permalink": "/profile-settings"
+  }
+}

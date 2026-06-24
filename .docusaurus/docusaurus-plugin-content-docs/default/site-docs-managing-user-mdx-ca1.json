@@ -1,0 +1,29 @@
+{
+  "id": "managing-user",
+  "title": "Overview",
+  "description": "Invite users, assign roles, and manage workspace access.",
+  "source": "@site/docs/managing-user.mdx",
+  "sourceDirName": ".",
+  "slug": "/managing-user",
+  "permalink": "/managing-user",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/managing-user.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 6,
+  "frontMatter": {
+    "title": "Overview",
+    "description": "Invite users, assign roles, and manage workspace access.",
+    "sidebar_position": 6
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Alerts",
+    "permalink": "/alerts"
+  },
+  "next": {
+    "title": "Roles & Permissions",
+    "permalink": "/roles-permissions"
+  }
+}

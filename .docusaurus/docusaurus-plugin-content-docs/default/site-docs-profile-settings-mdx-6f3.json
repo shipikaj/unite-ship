@@ -1,7 +1,7 @@
 {
   "id": "profile-settings",
-  "title": "profile-settings",
-  "description": "",
+  "title": "Profile Settings",
+  "description": "Manage your account information and security preferences.",
   "source": "@site/docs/profile-settings.mdx",
   "sourceDirName": ".",
   "slug": "/profile-settings",
@@ -11,5 +11,19 @@
   "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/profile-settings.mdx",
   "tags": [],
   "version": "current",
-  "frontMatter": {}
+  "sidebarPosition": 7,
+  "frontMatter": {
+    "title": "Profile Settings",
+    "description": "Manage your account information and security preferences.",
+    "sidebar_position": 7
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Roles & Permissions",
+    "permalink": "/roles-permissions"
+  },
+  "next": {
+    "title": "Support & Tickets",
+    "permalink": "/support-tickets"
+  }
 }

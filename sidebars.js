@@ -30,15 +30,21 @@ const sidebars =
         "data-sources",
         "destinations",
         "pipelines",
-//        "alerts",
-//        "profile-settings",
-//        "support-tickets",
-//        "notifications",
-//        "user-management"
-              ]
-        }
-             ]
-      },     
+        "alerts",
+            {
+          type: "category",
+          label: "User Management",
+          items: [
+            "managing-user",
+            "roles-permissions"
+          ]
+        },
+        "profile-settings",
+        "support-tickets"
+        ]
+      }
+    ]
+  },     
 
       {
       type: "category",

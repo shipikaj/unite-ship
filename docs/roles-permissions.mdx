@@ -1,0 +1,278 @@
+---
+title: Roles & Permissions
+description: Understand user roles and access levels within Unite.
+sidebar_position: 7
+---
+
+# Roles & Permissions
+
+Unite uses role-based access control (RBAC) to help organizations securely manage pipelines, integrations, users, and workspace administration.
+
+Each role is designed around a specific responsibility within the data workflow lifecycle.
+
+---
+
+# Choosing the Right Role
+
+| Role | Best For |
+|--------|----------|
+| Super Admin | Workspace owners and platform administrators |
+| Admin | Team leads managing users and operational workflows |
+| Developer | Data engineers and technical operators |
+| Analyst | Reporting, monitoring, and business users |
+
+---
+
+# Super Admin
+
+The Super Admin is the workspace owner and has unrestricted access across the platform.
+
+Typical responsibilities include:
+
+- Managing workspace users
+- Configuring billing and subscriptions
+- Overseeing integrations and pipelines
+- Managing workspace settings
+- Monitoring platform usage
+
+### Recommended For
+
+- Founders
+- Platform owners
+- Data team managers
+- Workspace administrators
+
+### Access Summary
+
+✔ Manage users and roles
+
+✔ Manage billing and plans
+
+✔ Create and manage integrations
+
+✔ Create and manage pipelines
+
+✔ View logs and operational activity
+
+---
+
+# Admin
+
+Admins manage day-to-day workspace operations and user access.
+
+Admins have nearly the same operational capabilities as Super Admins but do not receive billing access unless explicitly granted.
+
+### Recommended For
+
+- Data team leads
+- Operations managers
+- Analytics managers
+
+### Access Summary
+
+✔ Manage users and roles
+
+✔ Create and manage integrations
+
+✔ Create and manage pipelines
+
+✔ View workspace usage
+
+✖ Billing access by default
+
+### Optional Billing Access
+
+Super Admins can grant billing permissions when required.
+
+Once enabled, Admins can access:
+
+- Plans
+- Billing
+- Invoices
+- Payments
+
+---
+
+# Developer
+
+Developers are responsible for building, maintaining, and troubleshooting data workflows.
+
+This role is designed for technical users who need full control of integrations and pipelines without administrative responsibilities.
+
+### Recommended For
+
+- Data Engineers
+- Analytics Engineers
+- Technical Operations Teams
+
+### Access Summary
+
+✔ Create and manage data sources
+
+✔ Create and manage destinations
+
+✔ Create and manage pipelines
+
+✔ Manage schedules
+
+✔ View logs and error details
+
+✖ Manage users
+
+✖ Access billing
+
+✖ Manage workspace administration
+
+### Typical Activities
+
+- Connecting new integrations
+- Configuring schemas
+- Troubleshooting sync failures
+- Monitoring pipeline health
+
+---
+
+# Analyst
+
+Analysts are designed for monitoring, reporting, and operational visibility.
+
+This role provides read-only access with limited operational controls.
+
+### Recommended For
+
+- Business Analysts
+- Marketing Teams
+- Reporting Teams
+- Stakeholders
+
+### Access Summary
+
+✔ View pipelines
+
+✔ View sources and destinations
+
+✔ View logs and sync history
+
+✔ Trigger Sync Now
+
+✔ Pause and resume pipelines
+
+✔ Test connections
+
+✖ Create or modify pipelines
+
+✖ Create or modify integrations
+
+✖ Manage schedules
+
+✖ Manage users
+
+✖ Access billing
+
+### Typical Activities
+
+- Reviewing sync activity
+- Monitoring data freshness
+- Investigating failed syncs
+- Validating pipeline outputs
+
+---
+
+# Permission Matrix
+
+## Workspace Administration
+
+| Capability | Super Admin | Admin | Developer | Analyst |
+|------------|-------------|--------|------------|----------|
+| Invite Users | ✓ | ✓ | ✗ | ✗ |
+| Remove Users | ✓ | ✓ | ✗ | ✗ |
+| Assign Roles | ✓ | ✓ | ✗ | ✗ |
+| Manage Workspace Settings | ✓ | ✓ | ✗ | ✗ |
+| View Usage Dashboard | ✓ | ✓ | ✗ | ✗ |
+
+---
+
+## Billing & Subscription
+
+| Capability | Super Admin | Admin | Developer | Analyst |
+|------------|-------------|--------|------------|----------|
+| View Plans | ✓ | Optional | ✗ | ✗ |
+| View Billing | ✓ | Optional | ✗ | ✗ |
+| Manage Payments | ✓ | Optional | ✗ | ✗ |
+| View Invoices | ✓ | Optional | ✗ | ✗ |
+
+---
+
+## Data Sources & Destinations
+
+| Capability | Super Admin | Admin | Developer | Analyst |
+|------------|-------------|--------|------------|----------|
+| View Sources | ✓ | ✓ | ✓ | ✓ |
+| Create Sources | ✓ | ✓ | ✓ | ✗ |
+| Edit Sources | ✓ | ✓ | ✓ | ✗ |
+| Delete Sources | ✓ | ✓ | ✓ | ✗ |
+| View Destinations | ✓ | ✓ | ✓ | ✓ |
+| Create Destinations | ✓ | ✓ | ✓ | ✗ |
+| Edit Destinations | ✓ | ✓ | ✓ | ✗ |
+| Delete Destinations | ✓ | ✓ | ✓ | ✗ |
+
+---
+
+## Pipelines
+
+| Capability | Super Admin | Admin | Developer | Analyst |
+|------------|-------------|--------|------------|----------|
+| View Pipelines | ✓ | ✓ | ✓ | ✓ |
+| Create Pipelines | ✓ | ✓ | ✓ | ✗ |
+| Edit Pipelines | ✓ | ✓ | ✓ | ✗ |
+| Delete Pipelines | ✓ | ✓ | ✓ | ✗ |
+| Modify Schedules | ✓ | ✓ | ✓ | ✗ |
+| Sync Now | ✓ | ✓ | ✓ | ✓ |
+| Pause / Resume | ✓ | ✓ | ✓ | ✓ |
+| View Logs | ✓ | ✓ | ✓ | ✓ |
+| Test Connections | ✓ | ✓ | ✓ | ✓ |
+
+---
+
+## Quick Reference
+
+Use this table when deciding which role to assign to a user.
+
+| Capability | Super Admin | Admin | Developer | Analyst |
+|------------|-------------|--------|-----------|---------|
+| View Data Sources | ✓ | ✓ | ✓ | ✓ |
+| Create Data Sources | ✓ | ✓ | ✓ | ✗ |
+| Edit Data Sources | ✓ | ✓ | ✓ | ✗ |
+| Delete Data Sources | ✓ | ✓ | ✓ | ✗ |
+| View Destinations | ✓ | ✓ | ✓ | ✓ |
+| Create Destinations | ✓ | ✓ | ✓ | ✗ |
+| Edit Destinations | ✓ | ✓ | ✓ | ✗ |
+| Delete Destinations | ✓ | ✓ | ✓ | ✗ |
+| View Pipelines | ✓ | ✓ | ✓ | ✓ |
+| Create Pipelines | ✓ | ✓ | ✓ | ✗ |
+| Edit Pipelines | ✓ | ✓ | ✓ | ✗ |
+| Delete Pipelines | ✓ | ✓ | ✓ | ✗ |
+| Modify Pipeline Schedules | ✓ | ✓ | ✓ | ✗ |
+| Pause / Resume Pipelines | ✓ | ✓ | ✓ | ✓ |
+| Run Sync Now | ✓ | ✓ | ✓ | ✓ |
+| Test Connections | ✓ | ✓ | ✓ | ✓ |
+| View Sync Logs | ✓ | ✓ | ✓ | ✓ |
+| Manage Users | ✓ | ✓ | ✗ | ✗ |
+| Assign User Roles | ✓ | ✓ | ✗ | ✗ |
+| View Usage Dashboard | ✓ | ✓ | ✗ | ✗ |
+| Manage Workspace Settings | ✓ | ✓ | ✗ | ✗ |
+| Access Billing & Plans | ✓ | Optional | ✗ | ✗ |
+| Manage Payments | ✓ | Optional | ✗ | ✗ |
+
+---
+
+# Best Practices
+
+For most organizations, we recommend:
+
+- Assign **Super Admin** to workspace owners only
+- Assign **Admin** to team leads responsible for operations
+- Assign **Developer** to users configuring integrations and pipelines
+- Assign **Analyst** to reporting and monitoring teams
+
+Following the principle of least privilege helps maintain security while ensuring users have the access required to perform their responsibilities.

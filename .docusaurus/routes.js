@@ -119,20 +119,21 @@ export default [
   },
   {
     path: '/',
-    component: ComponentCreator('/', '590'),
+    component: ComponentCreator('/', '07a'),
     routes: [
       {
         path: '/',
-        component: ComponentCreator('/', '370'),
+        component: ComponentCreator('/', 'abc'),
         routes: [
           {
             path: '/',
-            component: ComponentCreator('/', 'a9c'),
+            component: ComponentCreator('/', '4df'),
             routes: [
               {
                 path: '/alerts',
-                component: ComponentCreator('/alerts', '65b'),
-                exact: true
+                component: ComponentCreator('/alerts', 'f1b'),
+                exact: true,
+                sidebar: "docs"
               },
               {
                 path: '/billing-and-quotas',
@@ -201,15 +202,16 @@ export default [
                 sidebar: "docs"
               },
               {
-                path: '/monitor-usage',
-                component: ComponentCreator('/monitor-usage', 'a9a'),
+                path: '/managing-user',
+                component: ComponentCreator('/managing-user', '4ee'),
                 exact: true,
                 sidebar: "docs"
               },
               {
-                path: '/notifications',
-                component: ComponentCreator('/notifications', 'd02'),
-                exact: true
+                path: '/monitor-usage',
+                component: ComponentCreator('/monitor-usage', 'a9a'),
+                exact: true,
+                sidebar: "docs"
               },
               {
                 path: '/pipelines',
@@ -225,12 +227,19 @@ export default [
               },
               {
                 path: '/profile-settings',
-                component: ComponentCreator('/profile-settings', '139'),
-                exact: true
+                component: ComponentCreator('/profile-settings', '7ef'),
+                exact: true,
+                sidebar: "docs"
               },
               {
                 path: '/quickstart',
                 component: ComponentCreator('/quickstart', 'e4f'),
+                exact: true,
+                sidebar: "docs"
+              },
+              {
+                path: '/roles-permissions',
+                component: ComponentCreator('/roles-permissions', '86b'),
                 exact: true,
                 sidebar: "docs"
               },
@@ -242,8 +251,9 @@ export default [
               },
               {
                 path: '/support-tickets',
-                component: ComponentCreator('/support-tickets', '259'),
-                exact: true
+                component: ComponentCreator('/support-tickets', 'fbd'),
+                exact: true,
+                sidebar: "docs"
               },
               {
                 path: '/terms-and-services',
@@ -295,11 +305,6 @@ export default [
               {
                 path: '/tutorial-extras/translate-your-site',
                 component: ComponentCreator('/tutorial-extras/translate-your-site', '403'),
-                exact: true
-              },
-              {
-                path: '/user-management',
-                component: ComponentCreator('/user-management', '297'),
                 exact: true
               }
             ]

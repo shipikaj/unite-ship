@@ -12,7 +12,8 @@
           "docs": [
             {
               "id": "alerts",
-              "path": "/alerts"
+              "path": "/alerts",
+              "sidebar": "docs"
             },
             {
               "id": "billing-and-quotas",
@@ -70,13 +71,14 @@
               "sidebar": "docs"
             },
             {
-              "id": "monitor-usage",
-              "path": "/monitor-usage",
+              "id": "managing-user",
+              "path": "/managing-user",
               "sidebar": "docs"
             },
             {
-              "id": "notifications",
-              "path": "/notifications"
+              "id": "monitor-usage",
+              "path": "/monitor-usage",
+              "sidebar": "docs"
             },
             {
               "id": "pipelines",
@@ -90,11 +92,17 @@
             },
             {
               "id": "profile-settings",
-              "path": "/profile-settings"
+              "path": "/profile-settings",
+              "sidebar": "docs"
             },
             {
               "id": "quickstart",
               "path": "/quickstart",
+              "sidebar": "docs"
+            },
+            {
+              "id": "roles-permissions",
+              "path": "/roles-permissions",
               "sidebar": "docs"
             },
             {
@@ -104,7 +112,8 @@
             },
             {
               "id": "support-tickets",
-              "path": "/support-tickets"
+              "path": "/support-tickets",
+              "sidebar": "docs"
             },
             {
               "id": "terms-and-services",
@@ -147,10 +156,6 @@
             {
               "id": "tutorial-extras/translate-your-site",
               "path": "/tutorial-extras/translate-your-site"
-            },
-            {
-              "id": "user-management",
-              "path": "/user-management"
             }
           ],
           "draftIds": [],

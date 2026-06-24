@@ -1,7 +1,7 @@
 {
   "id": "alerts",
-  "title": "alerts",
-  "description": "",
+  "title": "Alerts",
+  "description": "Configure notifications and stay informed about important workspace activity.",
   "source": "@site/docs/alerts.mdx",
   "sourceDirName": ".",
   "slug": "/alerts",
@@ -11,5 +11,19 @@
   "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/alerts.mdx",
   "tags": [],
   "version": "current",
-  "frontMatter": {}
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "title": "Alerts",
+    "description": "Configure notifications and stay informed about important workspace activity.",
+    "sidebar_position": 5
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Pipelines",
+    "permalink": "/pipelines"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/managing-user"
+  }
 }
