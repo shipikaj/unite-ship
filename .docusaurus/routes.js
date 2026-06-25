@@ -119,15 +119,15 @@ export default [
   },
   {
     path: '/',
-    component: ComponentCreator('/', '021'),
+    component: ComponentCreator('/', 'b7d'),
     routes: [
       {
         path: '/',
-        component: ComponentCreator('/', '6e0'),
+        component: ComponentCreator('/', '238'),
         routes: [
           {
             path: '/',
-            component: ComponentCreator('/', '9b2'),
+            component: ComponentCreator('/', '06c'),
             routes: [
               {
                 path: '/billing-cancellation-refund',
@@ -265,8 +265,26 @@ export default [
                 sidebar: "docs"
               },
               {
-                path: '/using-unite/data-sources',
-                component: ComponentCreator('/using-unite/data-sources', 'cd9'),
+                path: '/using-unite/data-sources/google-ads/setup-gads',
+                component: ComponentCreator('/using-unite/data-sources/google-ads/setup-gads', '72c'),
+                exact: true,
+                sidebar: "docs"
+              },
+              {
+                path: '/using-unite/data-sources/google-analytics-4/setup-ga4',
+                component: ComponentCreator('/using-unite/data-sources/google-analytics-4/setup-ga4', '6d4'),
+                exact: true,
+                sidebar: "docs"
+              },
+              {
+                path: '/using-unite/data-sources/google-search-console/setup-gsc',
+                component: ComponentCreator('/using-unite/data-sources/google-search-console/setup-gsc', '9a9'),
+                exact: true,
+                sidebar: "docs"
+              },
+              {
+                path: '/using-unite/data-sources/overview',
+                component: ComponentCreator('/using-unite/data-sources/overview', 'e76'),
                 exact: true,
                 sidebar: "docs"
               },

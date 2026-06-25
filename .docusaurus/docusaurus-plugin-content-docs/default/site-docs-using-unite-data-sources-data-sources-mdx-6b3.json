@@ -1,0 +1,29 @@
+{
+  "id": "using-unite/data-sources/data-sources",
+  "title": "Data Sources",
+  "description": "Connect and manage source integrations in Unite.",
+  "source": "@site/docs/using-unite/data-sources/data-sources.mdx",
+  "sourceDirName": "using-unite/data-sources",
+  "slug": "/using-unite/data-sources/",
+  "permalink": "/using-unite/data-sources/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/using-unite/data-sources/data-sources.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "Data Sources",
+    "description": "Connect and manage source integrations in Unite.",
+    "sidebar_position": 2
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Dashboard",
+    "permalink": "/using-unite/dashboard"
+  },
+  "next": {
+    "title": "Setup",
+    "permalink": "/using-unite/data-sources/google-analytics-4/setup"
+  }
+}

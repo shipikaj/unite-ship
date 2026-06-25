@@ -122,8 +122,23 @@
               "sidebar": "docs"
             },
             {
-              "id": "using-unite/data-sources",
-              "path": "/using-unite/data-sources",
+              "id": "using-unite/data-sources/google-ads/setup-gads",
+              "path": "/using-unite/data-sources/google-ads/setup-gads",
+              "sidebar": "docs"
+            },
+            {
+              "id": "using-unite/data-sources/google-analytics-4/setup-ga4",
+              "path": "/using-unite/data-sources/google-analytics-4/setup-ga4",
+              "sidebar": "docs"
+            },
+            {
+              "id": "using-unite/data-sources/google-search-console/setup-gsc",
+              "path": "/using-unite/data-sources/google-search-console/setup-gsc",
+              "sidebar": "docs"
+            },
+            {
+              "id": "using-unite/data-sources/overview",
+              "path": "/using-unite/data-sources/overview",
               "sidebar": "docs"
             },
             {

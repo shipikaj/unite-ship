@@ -256,17 +256,17 @@
     },
     "config": "config---5-e-9-4f3"
   },
-  "/-021": {
+  "/-b7d": {
     "__comp": "__comp---theme-docs-root-5-e-9-0b6",
     "__context": {
       "plugin": "plugin---aba-d70"
     }
   },
-  "/-6e0": {
+  "/-238": {
     "__comp": "__comp---theme-doc-version-roota-7-b-5de",
     "__props": "__props---22-d-307"
   },
-  "/-9b2": {
+  "/-06c": {
     "__comp": "__comp---theme-doc-roota-94-67a"
   },
   "/billing-cancellation-refund-c43": {
@@ -365,9 +365,21 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---using-unite-dashboarde-4-c-556"
   },
-  "/using-unite/data-sources-cd9": {
+  "/using-unite/data-sources/google-ads/setup-gads-72c": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---using-unite-data-sourcesdbe-c01"
+    "content": "content---using-unite-data-sources-google-ads-setup-gadsb-88-a6d"
+  },
+  "/using-unite/data-sources/google-analytics-4/setup-ga4-6d4": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---using-unite-data-sources-google-analytics-4-setup-ga-4302-a4b"
+  },
+  "/using-unite/data-sources/google-search-console/setup-gsc-9a9": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---using-unite-data-sources-google-search-console-setup-gscc-1-e-66f"
+  },
+  "/using-unite/data-sources/overview-e76": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---using-unite-data-sources-overview-489-56f"
   },
   "/using-unite/destinations-73d": {
     "__comp": "__comp---theme-doc-item-178-a40",

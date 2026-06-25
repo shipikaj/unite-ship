@@ -1,0 +1,29 @@
+{
+  "id": "using-unite/data-sources/google-search-console/setup-gsc",
+  "title": "Setup",
+  "description": "Connect Google Search Console as a data source in Unite.",
+  "source": "@site/docs/using-unite/data-sources/google-search-console/setup-gsc.mdx",
+  "sourceDirName": "using-unite/data-sources/google-search-console",
+  "slug": "/using-unite/data-sources/google-search-console/setup-gsc",
+  "permalink": "/using-unite/data-sources/google-search-console/setup-gsc",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/using-unite/data-sources/google-search-console/setup-gsc.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "Setup",
+    "description": "Connect Google Search Console as a data source in Unite.",
+    "sidebar_position": 2
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Setup",
+    "permalink": "/using-unite/data-sources/google-analytics-4/setup-ga4"
+  },
+  "next": {
+    "title": "Destinations",
+    "permalink": "/using-unite/destinations"
+  }
+}

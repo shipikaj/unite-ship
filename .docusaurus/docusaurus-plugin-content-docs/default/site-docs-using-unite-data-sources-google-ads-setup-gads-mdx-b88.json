@@ -1,0 +1,29 @@
+{
+  "id": "using-unite/data-sources/google-ads/setup-gads",
+  "title": "Setup",
+  "description": "Connect Google Ads as a data source in Unite.",
+  "source": "@site/docs/using-unite/data-sources/google-ads/setup-gads.mdx",
+  "sourceDirName": "using-unite/data-sources/google-ads",
+  "slug": "/using-unite/data-sources/google-ads/setup-gads",
+  "permalink": "/using-unite/data-sources/google-ads/setup-gads",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/using-unite/data-sources/google-ads/setup-gads.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "Setup",
+    "description": "Connect Google Ads as a data source in Unite.",
+    "sidebar_position": 2
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/using-unite/data-sources/overview"
+  },
+  "next": {
+    "title": "Setup",
+    "permalink": "/using-unite/data-sources/google-analytics-4/setup-ga4"
+  }
+}

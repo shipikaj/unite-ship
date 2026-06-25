@@ -19,8 +19,8 @@
   },
   "sidebar": "docs",
   "previous": {
-    "title": "Data Sources",
-    "permalink": "/using-unite/data-sources"
+    "title": "Setup",
+    "permalink": "/using-unite/data-sources/google-search-console/setup-gsc"
   },
   "next": {
     "title": "Pipelines",

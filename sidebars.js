@@ -24,7 +24,30 @@ const sidebars =
       items: 
       [
         "using-unite/dashboard",
-        "using-unite/data-sources",
+        { type: "category",
+          label: "Data Sources",
+          items: [
+            "using-unite/data-sources/overview",
+          {type: "category",
+          label: "Google Ads",
+           items: [
+            "using-unite/data-sources/google-ads/setup-gads",
+                  ] 
+          },
+          {type: "category",
+          label: "Google Analytics 4",
+           items: [
+            "using-unite/data-sources/google-analytics-4/setup-ga4",
+                  ] 
+          },
+          {type: "category",
+          label: "Google Search Console",
+           items: [
+            "using-unite/data-sources/google-search-console/setup-gsc",
+           ] 
+          },
+          ],
+        },
         "using-unite/destinations",
         "using-unite/pipelines",
         "using-unite/alerts",
