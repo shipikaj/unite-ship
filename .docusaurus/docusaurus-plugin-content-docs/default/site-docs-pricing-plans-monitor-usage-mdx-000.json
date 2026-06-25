@@ -1,0 +1,29 @@
+{
+  "id": "pricing-plans/monitor-usage",
+  "title": "Monitor Usage",
+  "description": "Track your usage and limits in Unite.",
+  "source": "@site/docs/pricing-plans/monitor-usage.mdx",
+  "sourceDirName": "pricing-plans",
+  "slug": "/pricing-plans/monitor-usage",
+  "permalink": "/pricing-plans/monitor-usage",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/pricing-plans/monitor-usage.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "title": "Monitor Usage",
+    "description": "Track your usage and limits in Unite.",
+    "sidebar_position": 5
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Limits & Features",
+    "permalink": "/pricing-plans/limits-and-features"
+  },
+  "next": {
+    "title": "Troubleshooting",
+    "permalink": "/pricing-plans/troubleshooting"
+  }
+}

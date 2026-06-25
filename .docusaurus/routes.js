@@ -119,28 +119,16 @@ export default [
   },
   {
     path: '/',
-    component: ComponentCreator('/', '07a'),
+    component: ComponentCreator('/', '021'),
     routes: [
       {
         path: '/',
-        component: ComponentCreator('/', 'abc'),
+        component: ComponentCreator('/', '6e0'),
         routes: [
           {
             path: '/',
-            component: ComponentCreator('/', '4df'),
+            component: ComponentCreator('/', '9b2'),
             routes: [
-              {
-                path: '/alerts',
-                component: ComponentCreator('/alerts', 'f1b'),
-                exact: true,
-                sidebar: "docs"
-              },
-              {
-                path: '/billing-and-quotas',
-                component: ComponentCreator('/billing-and-quotas', 'fd6'),
-                exact: true,
-                sidebar: "docs"
-              },
               {
                 path: '/billing-cancellation-refund',
                 component: ComponentCreator('/billing-cancellation-refund', 'c43'),
@@ -148,122 +136,79 @@ export default [
                 sidebar: "docs"
               },
               {
-                path: '/connectors',
-                component: ComponentCreator('/connectors', '882'),
+                path: '/getting-started/faqs',
+                component: ComponentCreator('/getting-started/faqs', '627'),
                 exact: true,
                 sidebar: "docs"
               },
               {
-                path: '/dashboard-overview',
-                component: ComponentCreator('/dashboard-overview', '50e'),
+                path: '/getting-started/freetrial',
+                component: ComponentCreator('/getting-started/freetrial', 'c6e'),
                 exact: true,
                 sidebar: "docs"
               },
               {
-                path: '/data-sources',
-                component: ComponentCreator('/data-sources', 'ee5'),
+                path: '/getting-started/introduction',
+                component: ComponentCreator('/getting-started/introduction', 'e37'),
                 exact: true,
                 sidebar: "docs"
               },
               {
-                path: '/destinations',
-                component: ComponentCreator('/destinations', 'f10'),
+                path: '/getting-started/quickstart',
+                component: ComponentCreator('/getting-started/quickstart', 'ace'),
                 exact: true,
                 sidebar: "docs"
               },
               {
-                path: '/faqs',
-                component: ComponentCreator('/faqs', '96c'),
+                path: '/legal/integrated-data-processing',
+                component: ComponentCreator('/legal/integrated-data-processing', 'ae2'),
                 exact: true,
                 sidebar: "docs"
               },
               {
-                path: '/freetrial',
-                component: ComponentCreator('/freetrial', '3c9'),
+                path: '/legal/security-privacy',
+                component: ComponentCreator('/legal/security-privacy', 'afa'),
                 exact: true,
                 sidebar: "docs"
               },
               {
-                path: '/integrated-data-processing',
-                component: ComponentCreator('/integrated-data-processing', '069'),
+                path: '/legal/terms-and-services',
+                component: ComponentCreator('/legal/terms-and-services', '2d4'),
                 exact: true,
                 sidebar: "docs"
               },
               {
-                path: '/introduction',
-                component: ComponentCreator('/introduction', '6f2'),
+                path: '/pricing-plans/billing-and-quotas',
+                component: ComponentCreator('/pricing-plans/billing-and-quotas', 'ee0'),
                 exact: true,
                 sidebar: "docs"
               },
               {
-                path: '/limits-and-features',
-                component: ComponentCreator('/limits-and-features', 'edb'),
+                path: '/pricing-plans/connectors',
+                component: ComponentCreator('/pricing-plans/connectors', 'f32'),
+                exact: true
+              },
+              {
+                path: '/pricing-plans/limits-and-features',
+                component: ComponentCreator('/pricing-plans/limits-and-features', 'f05'),
                 exact: true,
                 sidebar: "docs"
               },
               {
-                path: '/managing-user',
-                component: ComponentCreator('/managing-user', '4ee'),
+                path: '/pricing-plans/monitor-usage',
+                component: ComponentCreator('/pricing-plans/monitor-usage', 'b13'),
                 exact: true,
                 sidebar: "docs"
               },
               {
-                path: '/monitor-usage',
-                component: ComponentCreator('/monitor-usage', 'a9a'),
+                path: '/pricing-plans/plans',
+                component: ComponentCreator('/pricing-plans/plans', '54a'),
                 exact: true,
                 sidebar: "docs"
               },
               {
-                path: '/pipelines',
-                component: ComponentCreator('/pipelines', '1ce'),
-                exact: true,
-                sidebar: "docs"
-              },
-              {
-                path: '/plans',
-                component: ComponentCreator('/plans', '40a'),
-                exact: true,
-                sidebar: "docs"
-              },
-              {
-                path: '/profile-settings',
-                component: ComponentCreator('/profile-settings', '7ef'),
-                exact: true,
-                sidebar: "docs"
-              },
-              {
-                path: '/quickstart',
-                component: ComponentCreator('/quickstart', 'e4f'),
-                exact: true,
-                sidebar: "docs"
-              },
-              {
-                path: '/roles-permissions',
-                component: ComponentCreator('/roles-permissions', '86b'),
-                exact: true,
-                sidebar: "docs"
-              },
-              {
-                path: '/security-privacy',
-                component: ComponentCreator('/security-privacy', 'f04'),
-                exact: true,
-                sidebar: "docs"
-              },
-              {
-                path: '/support-tickets',
-                component: ComponentCreator('/support-tickets', 'fbd'),
-                exact: true,
-                sidebar: "docs"
-              },
-              {
-                path: '/terms-and-services',
-                component: ComponentCreator('/terms-and-services', '430'),
-                exact: true,
-                sidebar: "docs"
-              },
-              {
-                path: '/troubleshooting',
-                component: ComponentCreator('/troubleshooting', '9bb'),
+                path: '/pricing-plans/troubleshooting',
+                component: ComponentCreator('/pricing-plans/troubleshooting', 'a75'),
                 exact: true,
                 sidebar: "docs"
               },
@@ -306,6 +251,60 @@ export default [
                 path: '/tutorial-extras/translate-your-site',
                 component: ComponentCreator('/tutorial-extras/translate-your-site', '403'),
                 exact: true
+              },
+              {
+                path: '/using-unite/alerts',
+                component: ComponentCreator('/using-unite/alerts', '3d3'),
+                exact: true,
+                sidebar: "docs"
+              },
+              {
+                path: '/using-unite/dashboard',
+                component: ComponentCreator('/using-unite/dashboard', '383'),
+                exact: true,
+                sidebar: "docs"
+              },
+              {
+                path: '/using-unite/data-sources',
+                component: ComponentCreator('/using-unite/data-sources', 'cd9'),
+                exact: true,
+                sidebar: "docs"
+              },
+              {
+                path: '/using-unite/destinations',
+                component: ComponentCreator('/using-unite/destinations', '73d'),
+                exact: true,
+                sidebar: "docs"
+              },
+              {
+                path: '/using-unite/managing-user',
+                component: ComponentCreator('/using-unite/managing-user', 'da9'),
+                exact: true,
+                sidebar: "docs"
+              },
+              {
+                path: '/using-unite/pipelines',
+                component: ComponentCreator('/using-unite/pipelines', '62a'),
+                exact: true,
+                sidebar: "docs"
+              },
+              {
+                path: '/using-unite/profile-settings',
+                component: ComponentCreator('/using-unite/profile-settings', '68a'),
+                exact: true,
+                sidebar: "docs"
+              },
+              {
+                path: '/using-unite/roles-permissions',
+                component: ComponentCreator('/using-unite/roles-permissions', '172'),
+                exact: true,
+                sidebar: "docs"
+              },
+              {
+                path: '/using-unite/support-tickets',
+                component: ComponentCreator('/using-unite/support-tickets', '266'),
+                exact: true,
+                sidebar: "docs"
               }
             ]
           }

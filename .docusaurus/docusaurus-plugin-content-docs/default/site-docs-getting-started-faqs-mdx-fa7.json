@@ -1,0 +1,29 @@
+{
+  "id": "getting-started/faqs",
+  "title": "FAQs",
+  "description": "Common questions about using Unite.",
+  "source": "@site/docs/getting-started/faqs.mdx",
+  "sourceDirName": "getting-started",
+  "slug": "/getting-started/faqs",
+  "permalink": "/getting-started/faqs",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/getting-started/faqs.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "title": "FAQs",
+    "description": "Common questions about using Unite.",
+    "sidebar_position": 4
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Free Trial",
+    "permalink": "/getting-started/freetrial"
+  },
+  "next": {
+    "title": "Dashboard",
+    "permalink": "/using-unite/dashboard"
+  }
+}

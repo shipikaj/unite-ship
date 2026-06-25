@@ -1,0 +1,29 @@
+{
+  "id": "pricing-plans/limits-and-features",
+  "title": "Limits & Features",
+  "description": "Understand how features and limits work across Unite plans.",
+  "source": "@site/docs/pricing-plans/limits-and-features.mdx",
+  "sourceDirName": "pricing-plans",
+  "slug": "/pricing-plans/limits-and-features",
+  "permalink": "/pricing-plans/limits-and-features",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/pricing-plans/limits-and-features.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "title": "Limits & Features",
+    "description": "Understand how features and limits work across Unite plans.",
+    "sidebar_position": 4
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Billing & Quotas",
+    "permalink": "/pricing-plans/billing-and-quotas"
+  },
+  "next": {
+    "title": "Monitor Usage",
+    "permalink": "/pricing-plans/monitor-usage"
+  }
+}

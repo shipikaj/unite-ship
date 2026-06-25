@@ -1,0 +1,29 @@
+{
+  "id": "using-unite/destinations",
+  "title": "Destinations",
+  "description": "Configure and manage destinations in Unite.",
+  "source": "@site/docs/using-unite/destinations.mdx",
+  "sourceDirName": "using-unite",
+  "slug": "/using-unite/destinations",
+  "permalink": "/using-unite/destinations",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/using-unite/destinations.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "title": "Destinations",
+    "description": "Configure and manage destinations in Unite.",
+    "sidebar_position": 3
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Data Sources",
+    "permalink": "/using-unite/data-sources"
+  },
+  "next": {
+    "title": "Pipelines",
+    "permalink": "/using-unite/pipelines"
+  }
+}

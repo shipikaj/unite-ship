@@ -1,0 +1,24 @@
+{
+  "id": "using-unite/support-tickets",
+  "title": "Support & Tickets",
+  "description": "Unite provides multiple ways to get help depending on the type of assistance required.",
+  "source": "@site/docs/using-unite/support-tickets.mdx",
+  "sourceDirName": "using-unite",
+  "slug": "/using-unite/support-tickets",
+  "permalink": "/using-unite/support-tickets",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/using-unite/support-tickets.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "docs",
+  "previous": {
+    "title": "Profile Settings",
+    "permalink": "/using-unite/profile-settings"
+  },
+  "next": {
+    "title": "Plans",
+    "permalink": "/pricing-plans/plans"
+  }
+}

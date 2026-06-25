@@ -1,0 +1,29 @@
+{
+  "id": "using-unite/pipelines",
+  "title": "Pipelines",
+  "description": "Create, configure, and manage synchronization pipelines in Unite.",
+  "source": "@site/docs/using-unite/pipelines.mdx",
+  "sourceDirName": "using-unite",
+  "slug": "/using-unite/pipelines",
+  "permalink": "/using-unite/pipelines",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/using-unite/pipelines.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "title": "Pipelines",
+    "description": "Create, configure, and manage synchronization pipelines in Unite.",
+    "sidebar_position": 4
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Destinations",
+    "permalink": "/using-unite/destinations"
+  },
+  "next": {
+    "title": "Alerts",
+    "permalink": "/using-unite/alerts"
+  }
+}

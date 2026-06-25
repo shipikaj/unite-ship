@@ -1,0 +1,29 @@
+{
+  "id": "pricing-plans/plans",
+  "title": "Plans",
+  "description": "Overview of Unite pricing, plans, and how billing works.",
+  "source": "@site/docs/pricing-plans/plans.mdx",
+  "sourceDirName": "pricing-plans",
+  "slug": "/pricing-plans/plans",
+  "permalink": "/pricing-plans/plans",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/pricing-plans/plans.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "Plans",
+    "description": "Overview of Unite pricing, plans, and how billing works.",
+    "sidebar_position": 1
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Support & Tickets",
+    "permalink": "/using-unite/support-tickets"
+  },
+  "next": {
+    "title": "Billing & Quotas",
+    "permalink": "/pricing-plans/billing-and-quotas"
+  }
+}

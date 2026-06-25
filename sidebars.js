@@ -7,55 +7,50 @@ const sidebars =
 {
   docs: 
   [
-      {
+    {
       type: "category",
       label: "Getting Started",
-      items: [
-        "introduction",
-        "quickstart",
-        "freetrial",
-        "faqs",
+      items: 
+      [
+        "getting-started/introduction",
+        "getting-started/quickstart",
+        "getting-started/freetrial",
+        "getting-started/faqs",
       ],
     },
-
       {
-       type: "category",
-       label: "Using Unite",
-       items: [
-       {
-       type: "category",
-       label: "Dashboard",
-       items: [
-        "dashboard-overview",
-        "data-sources",
-        "destinations",
-        "pipelines",
-        "alerts",
-            {
+      type: "category",
+      label: "Using Unite",
+      items: 
+      [
+        "using-unite/dashboard",
+        "using-unite/data-sources",
+        "using-unite/destinations",
+        "using-unite/pipelines",
+        "using-unite/alerts",
+        {
           type: "category",
           label: "User Management",
           items: [
-            "managing-user",
-            "roles-permissions"
-          ]
+            "using-unite/managing-user",
+            "using-unite/roles-permissions",
+          ],
         },
-        "profile-settings",
-        "support-tickets"
-        ]
-      }
-    ]
-  },     
+        "using-unite/profile-settings",
+        "using-unite/support-tickets",
+      ],
+    },  
 
       {
       type: "category",
       label: "Pricing & Plans",
       items: [
-        "plans",
-        "billing-and-quotas",
-        "connectors",
-        "limits-and-features",
-        "monitor-usage",
-        "troubleshooting",
+        "pricing-plans/plans",
+        "pricing-plans/billing-and-quotas",
+//      "pricing-plans/connectors",
+        "pricing-plans/limits-and-features",
+        "pricing-plans/monitor-usage",
+        "pricing-plans/troubleshooting",
       ],
     },   
 
@@ -65,9 +60,9 @@ const sidebars =
       type: "category",
       label: "Legal",
       items: [
-        "terms-and-services",
-        "security-privacy",
-        "integrated-data-processing",
+        "legal/terms-and-services",
+        "legal/security-privacy",
+        "legal/integrated-data-processing",
       ],
     },
   ],

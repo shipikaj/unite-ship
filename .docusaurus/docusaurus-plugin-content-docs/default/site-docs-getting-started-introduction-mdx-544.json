@@ -1,0 +1,23 @@
+{
+  "id": "getting-started/introduction",
+  "title": "Introduction",
+  "description": "Unite helps you connect, sync, and manage your data pipelines effortlessly.",
+  "source": "@site/docs/getting-started/introduction.mdx",
+  "sourceDirName": "getting-started",
+  "slug": "/getting-started/introduction",
+  "permalink": "/getting-started/introduction",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/getting-started/introduction.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Introduction",
+    "description": "Unite helps you connect, sync, and manage your data pipelines effortlessly."
+  },
+  "sidebar": "docs",
+  "next": {
+    "title": "Quickstart",
+    "permalink": "/getting-started/quickstart"
+  }
+}

@@ -8,121 +8,75 @@
           "label": "Next",
           "isLast": true,
           "path": "/",
-          "mainDocId": "introduction",
+          "mainDocId": "getting-started/introduction",
           "docs": [
-            {
-              "id": "alerts",
-              "path": "/alerts",
-              "sidebar": "docs"
-            },
-            {
-              "id": "billing-and-quotas",
-              "path": "/billing-and-quotas",
-              "sidebar": "docs"
-            },
             {
               "id": "billing-cancellation-refund",
               "path": "/billing-cancellation-refund",
               "sidebar": "docs"
             },
             {
-              "id": "connectors",
-              "path": "/connectors",
+              "id": "getting-started/faqs",
+              "path": "/getting-started/faqs",
               "sidebar": "docs"
             },
             {
-              "id": "dashboard-overview",
-              "path": "/dashboard-overview",
+              "id": "getting-started/freetrial",
+              "path": "/getting-started/freetrial",
               "sidebar": "docs"
             },
             {
-              "id": "data-sources",
-              "path": "/data-sources",
+              "id": "getting-started/introduction",
+              "path": "/getting-started/introduction",
               "sidebar": "docs"
             },
             {
-              "id": "destinations",
-              "path": "/destinations",
+              "id": "getting-started/quickstart",
+              "path": "/getting-started/quickstart",
               "sidebar": "docs"
             },
             {
-              "id": "faqs",
-              "path": "/faqs",
+              "id": "legal/integrated-data-processing",
+              "path": "/legal/integrated-data-processing",
               "sidebar": "docs"
             },
             {
-              "id": "freetrial",
-              "path": "/freetrial",
+              "id": "legal/security-privacy",
+              "path": "/legal/security-privacy",
               "sidebar": "docs"
             },
             {
-              "id": "integrated-data-processing",
-              "path": "/integrated-data-processing",
+              "id": "legal/terms-and-services",
+              "path": "/legal/terms-and-services",
               "sidebar": "docs"
             },
             {
-              "id": "introduction",
-              "path": "/introduction",
+              "id": "pricing-plans/billing-and-quotas",
+              "path": "/pricing-plans/billing-and-quotas",
               "sidebar": "docs"
             },
             {
-              "id": "limits-and-features",
-              "path": "/limits-and-features",
+              "id": "pricing-plans/connectors",
+              "path": "/pricing-plans/connectors"
+            },
+            {
+              "id": "pricing-plans/limits-and-features",
+              "path": "/pricing-plans/limits-and-features",
               "sidebar": "docs"
             },
             {
-              "id": "managing-user",
-              "path": "/managing-user",
+              "id": "pricing-plans/monitor-usage",
+              "path": "/pricing-plans/monitor-usage",
               "sidebar": "docs"
             },
             {
-              "id": "monitor-usage",
-              "path": "/monitor-usage",
+              "id": "pricing-plans/plans",
+              "path": "/pricing-plans/plans",
               "sidebar": "docs"
             },
             {
-              "id": "pipelines",
-              "path": "/pipelines",
-              "sidebar": "docs"
-            },
-            {
-              "id": "plans",
-              "path": "/plans",
-              "sidebar": "docs"
-            },
-            {
-              "id": "profile-settings",
-              "path": "/profile-settings",
-              "sidebar": "docs"
-            },
-            {
-              "id": "quickstart",
-              "path": "/quickstart",
-              "sidebar": "docs"
-            },
-            {
-              "id": "roles-permissions",
-              "path": "/roles-permissions",
-              "sidebar": "docs"
-            },
-            {
-              "id": "security-privacy",
-              "path": "/security-privacy",
-              "sidebar": "docs"
-            },
-            {
-              "id": "support-tickets",
-              "path": "/support-tickets",
-              "sidebar": "docs"
-            },
-            {
-              "id": "terms-and-services",
-              "path": "/terms-and-services",
-              "sidebar": "docs"
-            },
-            {
-              "id": "troubleshooting",
-              "path": "/troubleshooting",
+              "id": "pricing-plans/troubleshooting",
+              "path": "/pricing-plans/troubleshooting",
               "sidebar": "docs"
             },
             {
@@ -156,14 +110,59 @@
             {
               "id": "tutorial-extras/translate-your-site",
               "path": "/tutorial-extras/translate-your-site"
+            },
+            {
+              "id": "using-unite/alerts",
+              "path": "/using-unite/alerts",
+              "sidebar": "docs"
+            },
+            {
+              "id": "using-unite/dashboard",
+              "path": "/using-unite/dashboard",
+              "sidebar": "docs"
+            },
+            {
+              "id": "using-unite/data-sources",
+              "path": "/using-unite/data-sources",
+              "sidebar": "docs"
+            },
+            {
+              "id": "using-unite/destinations",
+              "path": "/using-unite/destinations",
+              "sidebar": "docs"
+            },
+            {
+              "id": "using-unite/managing-user",
+              "path": "/using-unite/managing-user",
+              "sidebar": "docs"
+            },
+            {
+              "id": "using-unite/pipelines",
+              "path": "/using-unite/pipelines",
+              "sidebar": "docs"
+            },
+            {
+              "id": "using-unite/profile-settings",
+              "path": "/using-unite/profile-settings",
+              "sidebar": "docs"
+            },
+            {
+              "id": "using-unite/roles-permissions",
+              "path": "/using-unite/roles-permissions",
+              "sidebar": "docs"
+            },
+            {
+              "id": "using-unite/support-tickets",
+              "path": "/using-unite/support-tickets",
+              "sidebar": "docs"
             }
           ],
           "draftIds": [],
           "sidebars": {
             "docs": {
               "link": {
-                "path": "/introduction",
-                "label": "introduction"
+                "path": "/getting-started/introduction",
+                "label": "getting-started/introduction"
               }
             }
           }

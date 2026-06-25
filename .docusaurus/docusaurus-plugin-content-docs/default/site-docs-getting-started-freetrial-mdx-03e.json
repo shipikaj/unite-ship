@@ -1,0 +1,29 @@
+{
+  "id": "getting-started/freetrial",
+  "title": "Free Trial",
+  "description": "Learn how Unite’s free trial works.",
+  "source": "@site/docs/getting-started/freetrial.mdx",
+  "sourceDirName": "getting-started",
+  "slug": "/getting-started/freetrial",
+  "permalink": "/getting-started/freetrial",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/getting-started/freetrial.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "title": "Free Trial",
+    "description": "Learn how Unite’s free trial works.",
+    "sidebar_position": 3
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Quickstart",
+    "permalink": "/getting-started/quickstart"
+  },
+  "next": {
+    "title": "FAQs",
+    "permalink": "/getting-started/faqs"
+  }
+}

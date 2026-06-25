@@ -1,0 +1,27 @@
+{
+  "id": "legal/security-privacy",
+  "title": "Security and Privacy Policy",
+  "description": "Security and Privacy Policy for Unite by Statfinity.",
+  "source": "@site/docs/legal/security-privacy.mdx",
+  "sourceDirName": "legal",
+  "slug": "/legal/security-privacy",
+  "permalink": "/legal/security-privacy",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/legal/security-privacy.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Security and Privacy Policy",
+    "description": "Security and Privacy Policy for Unite by Statfinity."
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Terms of Service",
+    "permalink": "/legal/terms-and-services"
+  },
+  "next": {
+    "title": "Integrated data processing terms",
+    "permalink": "/legal/integrated-data-processing"
+  }
+}

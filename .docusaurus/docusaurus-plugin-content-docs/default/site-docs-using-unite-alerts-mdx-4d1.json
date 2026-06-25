@@ -1,0 +1,29 @@
+{
+  "id": "using-unite/alerts",
+  "title": "Alerts",
+  "description": "Configure notifications and stay informed about important workspace activity.",
+  "source": "@site/docs/using-unite/alerts.mdx",
+  "sourceDirName": "using-unite",
+  "slug": "/using-unite/alerts",
+  "permalink": "/using-unite/alerts",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/using-unite/alerts.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "title": "Alerts",
+    "description": "Configure notifications and stay informed about important workspace activity.",
+    "sidebar_position": 5
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Pipelines",
+    "permalink": "/using-unite/pipelines"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/using-unite/managing-user"
+  }
+}
