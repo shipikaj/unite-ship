@@ -119,15 +119,15 @@ export default [
   },
   {
     path: '/',
-    component: ComponentCreator('/', 'b7d'),
+    component: ComponentCreator('/', 'ed9'),
     routes: [
       {
         path: '/',
-        component: ComponentCreator('/', '238'),
+        component: ComponentCreator('/', 'ae5'),
         routes: [
           {
             path: '/',
-            component: ComponentCreator('/', '06c'),
+            component: ComponentCreator('/', '38c'),
             routes: [
               {
                 path: '/billing-cancellation-refund',
@@ -271,8 +271,20 @@ export default [
                 sidebar: "docs"
               },
               {
+                path: '/using-unite/data-sources/google-analytics-4/prebuilt-reports',
+                component: ComponentCreator('/using-unite/data-sources/google-analytics-4/prebuilt-reports', '649'),
+                exact: true,
+                sidebar: "docs"
+              },
+              {
                 path: '/using-unite/data-sources/google-analytics-4/setup-ga4',
                 component: ComponentCreator('/using-unite/data-sources/google-analytics-4/setup-ga4', '6d4'),
+                exact: true,
+                sidebar: "docs"
+              },
+              {
+                path: '/using-unite/data-sources/google-search-console/prebuilt-reports',
+                component: ComponentCreator('/using-unite/data-sources/google-search-console/prebuilt-reports', 'c04'),
                 exact: true,
                 sidebar: "docs"
               },

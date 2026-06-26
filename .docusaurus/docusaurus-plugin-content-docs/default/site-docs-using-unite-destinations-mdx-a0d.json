@@ -19,8 +19,8 @@
   },
   "sidebar": "docs",
   "previous": {
-    "title": "Setup",
-    "permalink": "/using-unite/data-sources/google-search-console/setup-gsc"
+    "title": "Prebuilt Reports",
+    "permalink": "/using-unite/data-sources/google-search-console/prebuilt-reports"
   },
   "next": {
     "title": "Pipelines",

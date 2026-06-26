@@ -1,0 +1,29 @@
+{
+  "id": "using-unite/data-sources/google-search-console/pb",
+  "title": "Prebuilt Reports2",
+  "description": "Learn about the predefined Google Search Console reports available in Unite.",
+  "source": "@site/docs/using-unite/data-sources/google-search-console/pb.mdx",
+  "sourceDirName": "using-unite/data-sources/google-search-console",
+  "slug": "/using-unite/data-sources/google-search-console/pb",
+  "permalink": "/using-unite/data-sources/google-search-console/pb",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/using-unite/data-sources/google-search-console/pb.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "title": "Prebuilt Reports2",
+    "description": "Learn about the predefined Google Search Console reports available in Unite.",
+    "sidebar_position": 5
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Prebuilt Reports",
+    "permalink": "/using-unite/data-sources/google-search-console/prebuilt-reports"
+  },
+  "next": {
+    "title": "Prebuilt Reports3",
+    "permalink": "/using-unite/data-sources/google-search-console/pb1"
+  }
+}

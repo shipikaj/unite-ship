@@ -38,12 +38,14 @@ const sidebars =
           label: "Google Analytics 4",
            items: [
             "using-unite/data-sources/google-analytics-4/setup-ga4",
+            "using-unite/data-sources/google-analytics-4/prebuilt-reports",
                   ] 
           },
           {type: "category",
           label: "Google Search Console",
            items: [
             "using-unite/data-sources/google-search-console/setup-gsc",
+            "using-unite/data-sources/google-search-console/prebuilt-reports",
            ] 
           },
           ],
@@ -70,7 +72,6 @@ const sidebars =
       items: [
         "pricing-plans/plans",
         "pricing-plans/billing-and-quotas",
-//      "pricing-plans/connectors",
         "pricing-plans/limits-and-features",
         "pricing-plans/monitor-usage",
         "pricing-plans/troubleshooting",

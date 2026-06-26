@@ -127,8 +127,18 @@
               "sidebar": "docs"
             },
             {
+              "id": "using-unite/data-sources/google-analytics-4/prebuilt-reports",
+              "path": "/using-unite/data-sources/google-analytics-4/prebuilt-reports",
+              "sidebar": "docs"
+            },
+            {
               "id": "using-unite/data-sources/google-analytics-4/setup-ga4",
               "path": "/using-unite/data-sources/google-analytics-4/setup-ga4",
+              "sidebar": "docs"
+            },
+            {
+              "id": "using-unite/data-sources/google-search-console/prebuilt-reports",
+              "path": "/using-unite/data-sources/google-search-console/prebuilt-reports",
               "sidebar": "docs"
             },
             {

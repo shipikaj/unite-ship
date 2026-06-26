@@ -1,0 +1,151 @@
+---
+title: Prebuilt Reports
+description: Learn about the predefined Google Search Console reports available in Unite.
+sidebar_position: 3
+---
+
+# Prebuilt Reports
+
+Unite provides a collection of predefined Google Search Console reports for common SEO reporting requirements. Each report includes a predefined set of dimensions and metrics, allowing you to configure a pipeline without manually selecting report fields.
+
+Use a prebuilt report when the available field set meets your reporting requirements. Otherwise, create a custom report by selecting the required dimensions and metrics.
+
+---
+
+## Available reports
+
+| Report | Aggregation |
+|---------|-------------|
+| Keyword & Page Report | By page |
+| Keyword & Site Report (By Page) | By page |
+| Keyword & Site Report (By Site) | By property |
+| Page Report | By page |
+| Site Report (By Page) | By page |
+| Site Report (By Site) | By property |
+
+---
+
+## Keyword & Page Report
+
+**Report name:** `keyword_page_report`
+
+Returns search performance metrics for each keyword and landing page combination. This is the most granular Search Console report available in Unite.
+
+| Type | Field | Label |
+|------|-------|-------|
+| **Dimension** | `date` | Date |
+| **Dimension** | `query` | Query |
+| **Dimension** | `page` | Page |
+| **Dimension** | `country` | Country |
+| **Dimension** | `device` | Device |
+| **Metric** | `clicks` | Clicks |
+| **Metric** | `impressions` | Impressions |
+| **Metric** | `ctr` | CTR |
+| **Metric** | `position` | Average Position |
+
+**Aggregation:** By page
+
+---
+
+## Keyword & Site Report (By Page)
+
+**Report name:** `keyword_site_report_by_page`
+
+Returns keyword-level search performance with metrics aggregated by page.
+
+| Type | Field | Label |
+|------|-------|-------|
+| **Dimension** | `date` | Date |
+| **Dimension** | `query` | Query |
+| **Dimension** | `country` | Country |
+| **Dimension** | `device` | Device |
+| **Metric** | `clicks` | Clicks |
+| **Metric** | `impressions` | Impressions |
+| **Metric** | `ctr` | CTR |
+| **Metric** | `position` | Average Position |
+
+**Aggregation:** By page
+
+---
+
+## Keyword & Site Report (By Site)
+
+**Report name:** `keyword_site_report_by_site`
+
+Returns keyword-level search performance aggregated across the selected Search Console property.
+
+| Type | Field | Label |
+|------|-------|-------|
+| **Dimension** | `date` | Date |
+| **Dimension** | `query` | Query |
+| **Dimension** | `country` | Country |
+| **Dimension** | `device` | Device |
+| **Metric** | `clicks` | Clicks |
+| **Metric** | `impressions` | Impressions |
+| **Metric** | `ctr` | CTR |
+| **Metric** | `position` | Average Position |
+
+**Aggregation:** By property
+
+---
+
+## Page Report
+
+**Report name:** `page_report`
+
+Returns search performance metrics for individual landing pages without keyword-level data.
+
+| Type | Field | Label |
+|------|-------|-------|
+| **Dimension** | `date` | Date |
+| **Dimension** | `page` | Page |
+| **Dimension** | `country` | Country |
+| **Dimension** | `device` | Device |
+| **Metric** | `clicks` | Clicks |
+| **Metric** | `impressions` | Impressions |
+| **Metric** | `ctr` | CTR |
+| **Metric** | `position` | Average Position |
+
+**Aggregation:** By page
+
+---
+
+## Site Report (By Page)
+
+**Report name:** `site_report_by_page`
+
+Returns overall Search Console performance with metrics aggregated by page.
+
+| Type | Field | Label |
+|------|-------|-------|
+| **Dimension** | `date` | Date |
+| **Dimension** | `country` | Country |
+| **Dimension** | `device` | Device |
+| **Metric** | `clicks` | Clicks |
+| **Metric** | `impressions` | Impressions |
+| **Metric** | `ctr` | CTR |
+| **Metric** | `position` | Average Position |
+
+**Aggregation:** By page
+
+---
+
+## Site Report (By Site)
+
+**Report name:** `site_report_by_site`
+
+Returns overall Search Console performance aggregated across the selected Search Console property.
+
+| Type | Field | Label |
+|------|-------|-------|
+| **Dimension** | `date` | Date |
+| **Dimension** | `country` | Country |
+| **Dimension** | `device` | Device |
+| **Metric** | `clicks` | Clicks |
+| **Metric** | `impressions` | Impressions |
+| **Metric** | `ctr` | CTR |
+| **Metric** | `position` | Average Position |
+
+**Aggregation:** By property
+
+---
