@@ -122,6 +122,11 @@
               "sidebar": "docs"
             },
             {
+              "id": "using-unite/data-sources/google-ads/prebuilt-reports",
+              "path": "/using-unite/data-sources/google-ads/prebuilt-reports",
+              "sidebar": "docs"
+            },
+            {
               "id": "using-unite/data-sources/google-ads/setup-gads",
               "path": "/using-unite/data-sources/google-ads/setup-gads",
               "sidebar": "docs"

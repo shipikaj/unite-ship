@@ -32,6 +32,7 @@ const sidebars =
           label: "Google Ads",
            items: [
             "using-unite/data-sources/google-ads/setup-gads",
+            "using-unite/data-sources/google-ads/prebuilt-reports",
                   ] 
           },
           {type: "category",

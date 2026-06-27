@@ -119,15 +119,15 @@ export default [
   },
   {
     path: '/',
-    component: ComponentCreator('/', 'ed9'),
+    component: ComponentCreator('/', 'b58'),
     routes: [
       {
         path: '/',
-        component: ComponentCreator('/', 'ae5'),
+        component: ComponentCreator('/', '33d'),
         routes: [
           {
             path: '/',
-            component: ComponentCreator('/', '38c'),
+            component: ComponentCreator('/', 'd34'),
             routes: [
               {
                 path: '/billing-cancellation-refund',
@@ -261,6 +261,12 @@ export default [
               {
                 path: '/using-unite/dashboard',
                 component: ComponentCreator('/using-unite/dashboard', '383'),
+                exact: true,
+                sidebar: "docs"
+              },
+              {
+                path: '/using-unite/data-sources/google-ads/prebuilt-reports',
+                component: ComponentCreator('/using-unite/data-sources/google-ads/prebuilt-reports', 'e2e'),
                 exact: true,
                 sidebar: "docs"
               },

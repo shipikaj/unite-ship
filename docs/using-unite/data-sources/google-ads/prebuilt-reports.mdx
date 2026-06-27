@@ -1,0 +1,688 @@
+---
+title: Prebuilt Reports
+description: Learn about the predefined GA4 reports available in Unite.
+sidebar_position: 3
+---
+
+# Prebuilt Reports
+
+Unite includes a collection of predefined Google Ads reports for common advertising and campaign reporting requirements. Each report includes a predefined set of segments, metrics, and related fields, allowing you to start syncing data without manually configuring report fields.
+
+Use a prebuilt report when the available field set meets your reporting requirements. Otherwise, create a custom report by selecting the required fields and metrics.
+
+
+---
+
+## Performance Reports
+
+### Ad Performance Report
+
+**Report Name:** `AD_STATS`
+
+Report showing performance metrics for Google Ads ads.
+
+**Resource:** `ad_group_ad`
+
+| Group | Field |
+|-------|-------|
+| Segment | `segments.ad_network_type` |
+| Segment | `segments.date` |
+| Segment | `segments.device` |
+| Resource | `ad_group_ad.ad.id` |
+| Metric | `metrics.active_view_impressions` |
+| Metric | `metrics.active_view_measurability` |
+| Metric | `metrics.active_view_measurable_cost_micros` |
+| Metric | `metrics.active_view_measurable_impressions` |
+| Metric | `metrics.active_view_viewability` |
+| Metric | `metrics.clicks` |
+| Metric | `metrics.conversions` |
+| Metric | `metrics.conversions_value` |
+| Metric | `metrics.cost_micros` |
+| Metric | `metrics.cost_per_conversion` |
+| Metric | `metrics.impressions` |
+| Metric | `metrics.interaction_event_types` |
+| Metric | `metrics.interactions` |
+| Metric | `metrics.view_through_conversions` |
+| Metric | `metrics.video_trueview_views` |
+| Attributed Resource | `ad_group.base_ad_group` |
+| Attributed Resource | `ad_group.id` |
+| Attributed Resource | `campaign.base_campaign` |
+| Attributed Resource | `campaign.id` |
+| Attributed Resource | `customer.id` |
+
+---
+
+### Ad Performance Report Conversion
+
+**Report Name:** `AD_PERFORMANCE_REPORT_CONVERSION`
+
+Report showing ad conversion performance metrics over time.
+
+**Resource:** `ad_group_ad`
+
+| Group | Field |
+|-------|-------|
+| Segment | `segments.date` |
+| Segment | `segments.device` |
+| Segment | `segments.conversion_action_name` |
+| Resource | `ad_group_ad.ad.id` |
+| Metric | `metrics.all_conversions` |
+| Metric | `metrics.all_conversions_value` |
+| Metric | `metrics.conversions` |
+| Metric | `metrics.conversions_value` |
+| Attributed Resource | `ad_group.id` |
+| Attributed Resource | `customer.id` |
+
+---
+
+### Ad Report
+
+**Report Name:** `AD_REPORT`
+
+Report showing ad performance metrics, status, and creative details over time.
+
+**Resource:** `ad_group_ad`
+
+| Group | Field |
+|-------|-------|
+| Segment | `segments.date` |
+| Resource | `ad_group_ad.ad.device_preference` |
+| Resource | `ad_group_ad.ad.added_by_google_ads` |
+| Resource | `ad_group_ad.ad.display_url` |
+| Resource | `ad_group_ad.ad.final_mobile_urls` |
+| Resource | `ad_group_ad.ad.id` |
+| Resource | `ad_group_ad.ad.text_ad.description2` |
+| Resource | `ad_group_ad.ad.tracking_url_template` |
+| Resource | `ad_group_ad.ad.type` |
+| Resource | `ad_group_ad.ad.url_custom_parameters` |
+| Resource | `ad_group_ad.ad.expanded_text_ad.description` |
+| Resource | `ad_group_ad.ad.expanded_text_ad.description2` |
+| Resource | `ad_group_ad.ad.expanded_text_ad.headline_part1` |
+| Resource | `ad_group_ad.ad.expanded_text_ad.headline_part2` |
+| Resource | `ad_group_ad.ad.expanded_text_ad.headline_part3` |
+| Resource | `ad_group_ad.ad.expanded_text_ad.path1` |
+| Resource | `ad_group_ad.ad.expanded_text_ad.path2` |
+| Resource | `ad_group_ad.labels` |
+| Resource | `ad_group_ad.ad.legacy_responsive_display_ad.call_to_action_text` |
+| Resource | `ad_group_ad.ad.legacy_responsive_display_ad.description` |
+| Resource | `ad_group_ad.policy_summary.approval_status` |
+| Resource | `ad_group_ad.status` |
+| Resource | `ad_group_ad.ad.text_ad.description1` |
+| Resource | `ad_group_ad.ad.text_ad.headline` |
+| Metric | `metrics.all_conversions` |
+| Metric | `metrics.all_conversions_value` |
+| Metric | `metrics.clicks` |
+| Metric | `metrics.conversions` |
+| Metric | `metrics.conversions_value` |
+| Metric | `metrics.cost_micros` |
+| Metric | `metrics.impressions` |
+| Metric | `metrics.view_through_conversions` |
+| Attributed Resource | `ad_group.id` |
+| Attributed Resource | `ad_group.name` |
+| Attributed Resource | `ad_group.status` |
+| Attributed Resource | `campaign.id` |
+| Attributed Resource | `campaign.name` |
+| Attributed Resource | `campaign.status` |
+
+---
+
+### Ad Group Report
+
+**Report Name:** `AD_GROUP_REPORT`
+
+Report showing ad group performance, status, and conversion metrics over time.
+
+**Resource:** `ad_group_ad`
+
+| Group | Field |
+|-------|-------|
+| Segment | `segments.date` |
+| Resource | `ad_group_ad.status` |
+| Metric | `metrics.clicks` |
+| Metric | `metrics.impressions` |
+| Metric | `metrics.cost_micros` |
+| Metric | `metrics.conversions` |
+| Metric | `metrics.conversions_value` |
+| Metric | `metrics.all_conversions` |
+| Metric | `metrics.all_conversions_value` |
+| Metric | `metrics.view_through_conversions` |
+| Attributed Resource | `ad_group.id` |
+| Attributed Resource | `ad_group.name` |
+| Attributed Resource | `campaign.id` |
+| Attributed Resource | `customer.id` |
+
+---
+
+### Campaign Report
+
+**Report Name:** `CAMPAIGN_REPORT`
+
+Report showing campaign performance, impression share, and conversion metrics over time.
+
+**Resource:** `campaign`
+
+| Group | Field |
+|-------|-------|
+| Segment | `segments.date` |
+| Resource | `campaign.base_campaign` |
+| Resource | `campaign.id` |
+| Resource | `campaign.labels` |
+| Resource | `campaign.name` |
+| Resource | `campaign.status` |
+| Metric | `metrics.absolute_top_impression_percentage` |
+| Metric | `metrics.all_conversions` |
+| Metric | `metrics.clicks` |
+| Metric | `metrics.conversions` |
+| Metric | `metrics.conversions_value` |
+| Metric | `metrics.cost_micros` |
+| Metric | `metrics.impressions` |
+| Metric | `metrics.search_absolute_top_impression_share` |
+| Metric | `metrics.search_budget_lost_absolute_top_impression_share` |
+| Metric | `metrics.search_budget_lost_impression_share` |
+| Metric | `metrics.search_budget_lost_top_impression_share` |
+| Metric | `metrics.search_exact_match_impression_share` |
+| Metric | `metrics.search_impression_share` |
+| Metric | `metrics.search_rank_lost_absolute_top_impression_share` |
+| Metric | `metrics.search_rank_lost_impression_share` |
+| Metric | `metrics.search_rank_lost_top_impression_share` |
+| Metric | `metrics.search_top_impression_share` |
+| Metric | `metrics.top_impression_percentage` |
+| Attributed Resource | `customer.id` |
+
+---
+
+### Campaign Report Custom Conversions
+
+**Report Name:** `CAMPAIGN_REPORT_CUSTOM_CONVERSIONS`
+
+Report showing campaign conversion performance broken down by conversion action over time.
+
+**Resource:** `campaign`
+
+| Group | Field |
+|-------|-------|
+| Segment | `segments.date` |
+| Segment | `segments.conversion_action_name` |
+| Resource | `campaign.base_campaign` |
+| Resource | `campaign.id` |
+| Resource | `campaign.name` |
+| Resource | `campaign.status` |
+| Metric | `metrics.all_conversions` |
+| Metric | `metrics.all_conversions_value` |
+| Metric | `metrics.conversions` |
+| Metric | `metrics.conversions_value` |
+
+---
+
+### Video Report
+
+**Report Name:** `VIDEO_REPORT`
+
+Report showing video ad engagement, view rates, and conversion performance over time.
+
+**Resource:** `ad_group_ad`
+
+| Group | Field |
+|-------|-------|
+| Resource | `ad_group_ad.ad.id` |
+| Metric | `metrics.impressions` |
+| Metric | `metrics.clicks` |
+| Metric | `metrics.cost_micros` |
+| Metric | `metrics.trueview_average_cpv` |
+| Metric | `metrics.video_quartile_p25_rate` |
+| Metric | `metrics.video_quartile_p50_rate` |
+| Metric | `metrics.video_quartile_p75_rate` |
+| Metric | `metrics.video_quartile_p100_rate` |
+| Metric | `metrics.conversions` |
+| Metric | `metrics.conversions_value` |
+| Metric | `metrics.video_trueview_views` |
+| Metric | `metrics.video_trueview_view_rate` |
+| Attributed Resource | `customer.id` |
+| Attributed Resource | `campaign.id` |
+| Attributed Resource | `ad_group.id` |
+
+---
+
+## Keyword Reports
+
+### Keyword Report
+
+**Report Name:** `KEYWORD_REPORT`
+
+Report showing keyword performance, impression share, and conversion metrics over time.
+
+**Resource:** `keyword_view`
+
+| Group | Field |
+|-------|-------|
+| Segment | `segments.date` |
+| Metric | `metrics.search_impression_share` |
+| Metric | `metrics.absolute_top_impression_percentage` |
+| Metric | `metrics.all_conversions` |
+| Metric | `metrics.all_conversions_value` |
+| Metric | `metrics.clicks` |
+| Metric | `metrics.conversions` |
+| Metric | `metrics.conversions_value` |
+| Metric | `metrics.cost_micros` |
+| Metric | `metrics.impressions` |
+| Metric | `metrics.search_absolute_top_impression_share` |
+| Metric | `metrics.search_budget_lost_absolute_top_impression_share` |
+| Metric | `metrics.search_budget_lost_top_impression_share` |
+| Metric | `metrics.search_rank_lost_absolute_top_impression_share` |
+| Metric | `metrics.search_rank_lost_impression_share` |
+| Metric | `metrics.search_rank_lost_top_impression_share` |
+| Metric | `metrics.search_top_impression_share` |
+| Metric | `metrics.top_impression_percentage` |
+| Metric | `metrics.view_through_conversions` |
+| Attributed Resource | `ad_group_criterion.criterion_id` |
+| Attributed Resource | `ad_group_criterion.labels` |
+| Attributed Resource | `ad_group_criterion.keyword.text` |
+| Attributed Resource | `ad_group_criterion.keyword.match_type` |
+| Attributed Resource | `ad_group.id` |
+| Attributed Resource | `campaign.id` |
+
+---
+
+### Keyword Report Custom Conversions
+
+**Report Name:** `KEYWORD_REPORT_CUSTOM_CONVERSIONS`
+
+Report showing keyword-level conversion performance broken down by conversion action over time.
+
+**Resource:** `keyword_view`
+
+| Group | Field |
+|-------|-------|
+| Segment | `segments.date` |
+| Segment | `segments.conversion_action_name` |
+| Metric | `metrics.all_conversions` |
+| Metric | `metrics.all_conversions_value` |
+| Metric | `metrics.conversions` |
+| Metric | `metrics.conversions_value` |
+| Attributed Resource | `ad_group_criterion.criterion_id` |
+| Attributed Resource | `ad_group_criterion.keyword.text` |
+| Attributed Resource | `ad_group_criterion.keyword.match_type` |
+| Attributed Resource | `ad_group.id` |
+| Attributed Resource | `customer.id` |
+
+---
+
+## Search Term Reports
+
+### Search Term Report
+
+**Report Name:** `SEARCH_TERM_REPORT`
+
+Report showing search term performance, keyword match types, and conversion metrics over time.
+
+**Resource:** `search_term_view`
+
+| Group | Field |
+|-------|-------|
+| Segment | `segments.date` |
+| Segment | `segments.keyword.info.match_type` |
+| Segment | `segments.keyword.info.text` |
+| Segment | `segments.keyword.ad_group_criterion` |
+| Segment | `segments.search_term_match_type` |
+| Resource | `search_term_view.search_term` |
+| Metric | `metrics.clicks` |
+| Metric | `metrics.conversions` |
+| Metric | `metrics.conversions_value` |
+| Metric | `metrics.cost_micros` |
+| Metric | `metrics.impressions` |
+| Attributed Resource | `ad_group.id` |
+| Attributed Resource | `campaign.id` |
+
+---
+
+### Search Query Report Custom Conversions
+
+**Report Name:** `SEARCH_QUERY_REPORT_CUSTOM_CONVERSIONS`
+
+Report showing search query conversion performance broken down by conversion action over time.
+
+**Resource:** `search_term_view`
+
+| Group | Field |
+|-------|-------|
+| Segment | `segments.date` |
+| Segment | `segments.conversion_action_name` |
+| Segment | `segments.keyword.ad_group_criterion` |
+| Segment | `segments.search_term_match_type` |
+| Resource | `search_term_view.search_term` |
+| Metric | `metrics.all_conversions` |
+| Metric | `metrics.all_conversions_value` |
+| Metric | `metrics.conversions` |
+| Metric | `metrics.conversions_value` |
+| Attributed Resource | `ad_group.id` |
+
+---
+
+## Geographic Reports
+
+### City Report
+
+**Report Name:** `CITY_REPORT`
+
+Report showing advertising performance metrics by city over time.
+
+**Resource:** `geographic_view`
+
+| Group | Field |
+|-------|-------|
+| Segment | `segments.date` |
+| Segment | `segments.geo_target_city` |
+| Resource | `geographic_view.country_criterion_id` |
+| Metric | `metrics.clicks` |
+| Metric | `metrics.impressions` |
+| Metric | `metrics.conversions` |
+| Metric | `metrics.conversions_value` |
+| Metric | `metrics.cost_micros` |
+| Attributed Resource | `customer.id` |
+| Attributed Resource | `ad_group.id` |
+| Attributed Resource | `campaign.id` |
+
+---
+
+### City Report Custom Conversions
+
+**Report Name:** `CITY_REPORT_CUSTOM_CONVERSIONS`
+
+Report showing city-level conversion performance broken down by conversion action over time.
+
+**Resource:** `geographic_view`
+
+| Group | Field |
+|-------|-------|
+| Segment | `segments.date` |
+| Segment | `segments.conversion_action_name` |
+| Segment | `segments.geo_target_city` |
+| Resource | `geographic_view.country_criterion_id` |
+| Metric | `metrics.all_conversions` |
+| Metric | `metrics.all_conversions_value` |
+| Metric | `metrics.conversions` |
+| Metric | `metrics.conversions_value` |
+| Attributed Resource | `customer.id` |
+| Attributed Resource | `ad_group.id` |
+| Attributed Resource | `campaign.id` |
+
+---
+
+### Country Report
+
+**Report Name:** `COUNTRY_REPORT`
+
+Report showing advertising performance metrics by country over time.
+
+**Resource:** `geographic_view`
+
+| Group | Field |
+|-------|-------|
+| Segment | `segments.date` |
+| Resource | `geographic_view.country_criterion_id` |
+| Metric | `metrics.clicks` |
+| Metric | `metrics.conversions` |
+| Metric | `metrics.conversions_value` |
+| Metric | `metrics.cost_micros` |
+| Metric | `metrics.impressions` |
+| Attributed Resource | `customer.id` |
+| Attributed Resource | `ad_group.id` |
+| Attributed Resource | `campaign.id` |
+
+---
+
+### Country Report Custom Conversions
+
+**Report Name:** `COUNTRY_REPORT_CUSTOM_CONVERSIONS`
+
+Report showing country-level conversion performance broken down by conversion action over time.
+
+**Resource:** `geographic_view`
+
+| Group | Field |
+|-------|-------|
+| Segment | `segments.date` |
+| Segment | `segments.conversion_action_name` |
+| Resource | `geographic_view.country_criterion_id` |
+| Metric | `metrics.all_conversions` |
+| Metric | `metrics.all_conversions_value` |
+| Metric | `metrics.conversions` |
+| Metric | `metrics.conversions_value` |
+| Attributed Resource | `ad_group.id` |
+| Attributed Resource | `campaign.id` |
+
+---
+
+### Region Report
+
+**Report Name:** `REGION_REPORT`
+
+Report showing advertising performance metrics by region over time.
+
+**Resource:** `geographic_view`
+
+| Group | Field |
+|-------|-------|
+| Segment | `segments.date` |
+| Segment | `segments.geo_target_region` |
+| Resource | `geographic_view.country_criterion_id` |
+| Metric | `metrics.clicks` |
+| Metric | `metrics.conversions` |
+| Metric | `metrics.conversions_value` |
+| Metric | `metrics.cost_micros` |
+| Metric | `metrics.impressions` |
+| Attributed Resource | `customer.id` |
+| Attributed Resource | `ad_group.id` |
+| Attributed Resource | `campaign.id` |
+
+---
+
+### Region Report Custom Conversions
+
+**Report Name:** `REGION_REPORT_CUSTOM_CONVERSIONS`
+
+Report showing region-level conversion performance broken down by conversion action over time.
+
+**Resource:** `geographic_view`
+
+| Group | Field |
+|-------|-------|
+| Segment | `segments.date` |
+| Segment | `segments.conversion_action_name` |
+| Segment | `segments.geo_target_region` |
+| Resource | `geographic_view.country_criterion_id` |
+| Metric | `metrics.all_conversions` |
+| Metric | `metrics.all_conversions_value` |
+| Metric | `metrics.conversions` |
+| Metric | `metrics.conversions_value` |
+| Attributed Resource | `campaign.id` |
+| Attributed Resource | `ad_group.id` |
+
+---
+
+## Audience / Demographic Reports
+
+### Gender Report
+
+**Report Name:** `GENDER_REPORT`
+
+Report showing advertising performance metrics segmented by gender over time.
+
+**Resource:** `age_range_view`
+
+| Group | Field |
+|-------|-------|
+| Segment | `segments.date` |
+| Metric | `metrics.clicks` |
+| Metric | `metrics.conversions` |
+| Metric | `metrics.conversions_value` |
+| Metric | `metrics.cost_micros` |
+| Metric | `metrics.impressions` |
+| Attributed Resource | `ad_group.id` |
+| Attributed Resource | `ad_group_criterion.criterion_id` |
+| Attributed Resource | `ad_group_criterion.gender.type` |
+| Attributed Resource | `campaign.id` |
+
+---
+
+### Gender Report Custom Conversions
+
+**Report Name:** `GENDER_REPORT_CUSTOM_CONVERSIONS`
+
+Report showing gender-based conversion performance broken down by conversion action over time.
+
+**Resource:** `age_range_view`
+
+| Group | Field |
+|-------|-------|
+| Segment | `segments.date` |
+| Segment | `segments.conversion_action_name` |
+| Metric | `metrics.conversions` |
+| Metric | `metrics.conversions_value` |
+| Metric | `metrics.all_conversions` |
+| Metric | `metrics.all_conversions_value` |
+| Attributed Resource | `ad_group.id` |
+| Attributed Resource | `ad_group_criterion.criterion_id` |
+| Attributed Resource | `ad_group_criterion.gender.type` |
+| Attributed Resource | `campaign.id` |
+
+---
+
+## History Reports
+
+### Account History
+
+**Report Name:** `ACCOUNT_HISTORY`
+
+Account-level configuration and settings snapshot over time.
+
+**Resource:** `customer`
+
+| Group | Field |
+|-------|-------|
+| Segment | `segments.date` |
+| Resource | `customer.id` |
+| Resource | `customer.auto_tagging_enabled` |
+| Resource | `customer.currency_code` |
+| Resource | `customer.descriptive_name` |
+| Resource | `customer.final_url_suffix` |
+| Resource | `customer.manager` |
+| Resource | `customer.optimization_score` |
+| Resource | `customer.pay_per_conversion_eligibility_failure_reasons` |
+| Resource | `customer.test_account` |
+| Resource | `customer.time_zone` |
+| Resource | `customer.tracking_url_template` |
+
+---
+
+### Ad Group History
+
+**Report Name:** `AD_GROUP_HISTORY`
+
+Ad group configuration and settings snapshot over time.
+
+**Resource:** `ad_group`
+
+| Group | Field |
+|-------|-------|
+| Segment | `segments.date` |
+| Resource | `ad_group.id` |
+| Resource | `ad_group.ad_rotation_mode` |
+| Resource | `ad_group.base_ad_group` |
+| Resource | `ad_group.display_custom_bid_dimension` |
+| Resource | `ad_group.final_url_suffix` |
+| Resource | `ad_group.name` |
+| Resource | `ad_group.status` |
+| Resource | `ad_group.tracking_url_template` |
+| Attributed Resource | `campaign.id` |
+| Attributed Resource | `campaign.name` |
+
+---
+
+### Ad History
+
+**Report Name:** `AD_HISTORY_REPORT`
+
+Report showing ad history including policy status, creative metadata, and approval status.
+
+**Resource:** `ad_group_ad`
+
+| Group | Field |
+|-------|-------|
+| Segment | `segments.date` |
+| Resource | `ad_group_ad.ad.id` |
+| Resource | `ad_group_ad.action_items` |
+| Resource | `ad_group_ad.ad_strength` |
+| Resource | `ad_group_ad.ad.added_by_google_ads` |
+| Resource | `ad_group_ad.ad.display_url` |
+| Resource | `ad_group_ad.ad.final_app_urls` |
+| Resource | `ad_group_ad.ad.final_mobile_urls` |
+| Resource | `ad_group_ad.ad.final_url_suffix` |
+| Resource | `ad_group_ad.ad.final_urls` |
+| Resource | `ad_group_ad.ad.name` |
+| Resource | `ad_group_ad.policy_summary.approval_status` |
+| Resource | `ad_group_ad.policy_summary.review_status` |
+| Resource | `ad_group_ad.status` |
+| Resource | `ad_group_ad.ad.system_managed_resource_source` |
+| Resource | `ad_group_ad.ad.type` |
+| Resource | `ad_group_ad.ad.tracking_url_template` |
+| Attributed Resource | `ad_group.id` |
+
+---
+
+### Campaign History
+
+**Report Name:** `CAMPAIGN_HISTORY_REPORT`
+
+Report showing campaign configuration and settings snapshot over time.
+
+**Resource:** `campaign`
+
+| Group | Field |
+|-------|-------|
+| Segment | `segments.date` |
+| Resource | `campaign.id` |
+| Resource | `campaign.ad_serving_optimization_status` |
+| Resource | `campaign.advertising_channel_sub_type` |
+| Resource | `campaign.advertising_channel_type` |
+| Resource | `campaign.base_campaign` |
+| Resource | `campaign.start_date_time` |
+| Resource | `campaign.end_date_time` |
+| Resource | `campaign.experiment_type` |
+| Resource | `campaign.final_url_suffix` |
+| Resource | `campaign.frequency_caps` |
+| Resource | `campaign.name` |
+| Resource | `campaign.optimization_score` |
+| Resource | `campaign.payment_mode` |
+| Resource | `campaign.serving_status` |
+| Resource | `campaign.status` |
+| Resource | `campaign.tracking_url_template` |
+| Resource | `campaign.vanity_pharma.vanity_pharma_display_url_mode` |
+| Resource | `campaign.vanity_pharma.vanity_pharma_text` |
+| Attributed Resource | `customer.id` |
+
+---
+
+## Budget Reports
+
+### Campaign Budget Report
+
+**Report Name:** `CAMPAIGN_BUDGET_REPORT`
+
+Report showing campaign budget settings, allocation, and delivery configuration over time.
+
+**Resource:** `campaign_budget`
+
+| Group | Field |
+|-------|-------|
+| Segment | `segments.date` |
+| Resource | `campaign_budget.name` |
+| Resource | `campaign_budget.amount_micros` |
+| Resource | `campaign_budget.total_amount_micros` |
+| Resource | `campaign_budget.delivery_method` |
+| Resource | `campaign_budget.explicitly_shared` |
+| Resource | `campaign_budget.period` |
+| Resource | `campaign_budget.status` |
+| Resource | `campaign_budget.type` |
+| Attributed Resource | `customer.id` |
+| Attributed Resource | `campaign.id` |
