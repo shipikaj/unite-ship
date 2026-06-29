@@ -63,7 +63,30 @@ const sidebars =
           },
           ],
         },
-        "using-unite/destinations",
+        { type: "category",
+          label: "Destinations",
+          items: [
+            "using-unite/destinations/overview",
+          {type: "category",
+          label: "BigQuery",
+           items: [
+            "using-unite/destinations/bigquery/setup-bigquery",
+                  ] 
+          },
+          {type: "category",
+          label: "Amazon Redshift",
+           items: [
+            "using-unite/destinations/amazon-redshift/setup-redshift",
+                  ] 
+          },
+          {type: "category",
+          label: "Data Studio",
+           items: [
+            "using-unite/destinations/data-studio/setup-data-studio",
+           ] 
+          },
+          ],
+        },
         "using-unite/pipelines",
         "using-unite/alerts",
         {

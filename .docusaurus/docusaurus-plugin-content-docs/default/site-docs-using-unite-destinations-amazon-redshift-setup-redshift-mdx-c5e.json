@@ -1,0 +1,29 @@
+{
+  "id": "using-unite/destinations/amazon-redshift/setup-redshift",
+  "title": "Setup",
+  "description": "Connect Amazon Redshift as a destination in Unite.",
+  "source": "@site/docs/using-unite/destinations/amazon-redshift/setup-redshift.mdx",
+  "sourceDirName": "using-unite/destinations/amazon-redshift",
+  "slug": "/using-unite/destinations/amazon-redshift/setup-redshift",
+  "permalink": "/using-unite/destinations/amazon-redshift/setup-redshift",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/using-unite/destinations/amazon-redshift/setup-redshift.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "Setup",
+    "description": "Connect Amazon Redshift as a destination in Unite.",
+    "sidebar_position": 2
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Setup",
+    "permalink": "/using-unite/destinations/bigquery/setup-bigquery"
+  },
+  "next": {
+    "title": "setup-data-studio",
+    "permalink": "/using-unite/destinations/data-studio/setup-data-studio"
+  }
+}

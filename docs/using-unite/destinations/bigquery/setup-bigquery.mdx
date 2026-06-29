@@ -1,0 +1,105 @@
+---
+title: Setup
+description: Connect BigQuery as a destination in Unite.
+sidebar_position: 2
+---
+
+# Connect BigQuery
+
+This guide explains how to configure Google BigQuery as a destination in Unite.
+
+Once connected, Unite can automatically create tables, manage schemas, and load synchronized data into your BigQuery project.
+
+---
+
+## Before you begin
+
+Ensure you have the following:
+
+- A Google Cloud project with BigQuery enabled.
+- Access to the Google Cloud Console.
+- Permission to manage IAM roles for the project.
+- A Unite user account with permission to create and manage destinations.
+
+---
+
+## Connect your destination
+
+### Step 1 — Find your Project ID
+
+Before configuring BigQuery in Unite, you'll need your Google Cloud Project ID.
+
+1. Open the **Google Cloud Console**.
+2. Navigate to your list of projects.
+3. Locate the project you want to use.
+4. Copy the **Project ID**.
+
+You will use this Project ID when configuring the destination in Unite.
+
+---
+
+### Step 2 — Add the BigQuery destination
+
+1. Open **Destinations** in Unite.
+2. Click **Add Destination**.
+3. Enter a destination name.
+4. Select **BigQuery** as the destination type.
+5. Enter the **Project ID** from the previous step.
+
+During setup, Unite displays a **Service Account**.
+
+Copy this email address—you will grant it access to your Google Cloud project in the next step.
+
+---
+
+### Step 3 — Grant permissions
+
+Grant the Unite Service Account access to your BigQuery project.
+
+1. Return to the **Google Cloud Console**.
+2. Navigate to **IAM & Admin**.
+3. Click **Grant Access**.
+4. Enter the Unite Service Account email.
+5. Assign the following role:
+
+- **BigQuery User**
+
+6. Save the changes.
+
+This allows Unite to create and manage BigQuery resources required for data synchronization.
+
+---
+
+### Step 4 — Complete the configuration
+
+Return to Unite and finish configuring the destination.
+
+Provide the following information:
+
+- Project ID
+- Service Account
+- Data Location
+- Time Zone
+
+After entering the required details, click **Save & Test**.
+
+---
+
+## Verify the connection
+
+When you select **Save & Test**, Unite validates the destination configuration.
+
+The validation confirms that:
+
+- The Project ID is valid.
+- The Service Account has sufficient permissions.
+- Unite can connect to your BigQuery project.
+- Available datasets can be accessed.
+
+If validation succeeds, the destination status changes to **Complete** and becomes available for new pipelines.
+
+---
+
+## Next step
+
+After successfully connecting BigQuery, create a pipeline to begin syncing data from your connected data sources.

@@ -1,0 +1,24 @@
+{
+  "id": "using-unite/destinations/data-studio/setup-data-studio",
+  "title": "setup-data-studio",
+  "description": "",
+  "source": "@site/docs/using-unite/destinations/data-studio/setup-data-studio.mdx",
+  "sourceDirName": "using-unite/destinations/data-studio",
+  "slug": "/using-unite/destinations/data-studio/setup-data-studio",
+  "permalink": "/using-unite/destinations/data-studio/setup-data-studio",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/using-unite/destinations/data-studio/setup-data-studio.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "docs",
+  "previous": {
+    "title": "Setup",
+    "permalink": "/using-unite/destinations/amazon-redshift/setup-redshift"
+  },
+  "next": {
+    "title": "Pipelines",
+    "permalink": "/using-unite/pipelines"
+  }
+}

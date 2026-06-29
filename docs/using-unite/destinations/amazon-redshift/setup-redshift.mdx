@@ -1,0 +1,181 @@
+---
+title: Setup
+description: Connect Amazon Redshift as a destination in Unite.
+sidebar_position: 2
+---
+
+# Connect Amazon Redshift
+
+This guide explains how to configure Amazon Redshift Serverless as a destination in Unite.
+
+Once connected, Unite can automatically create tables and synchronize data from your pipelines into your Redshift data warehouse.
+
+---
+
+## Before you begin
+
+Ensure you have the following:
+
+- An Amazon Redshift Serverless database.
+- Access to the AWS Management Console.
+- Permission to manage Redshift Serverless and security groups.
+- A Unite user account with permission to create and manage destinations.
+
+---
+
+## Connect your destination
+
+### Step 1 — Find your endpoint details
+
+You'll need your Redshift endpoint information to configure the destination in Unite.
+
+1. Open the **Amazon Redshift Serverless Console**.
+2. Select the **Namespace** you want Unite to connect to.
+
+   *[Insert Screenshot – Select Namespace]*
+
+3. Select the associated **Workgroup**.
+
+   *[Insert Screenshot – Select Workgroup]*
+
+4. Under **General Information**, locate the **Endpoint** and copy its value.
+
+   *[Insert Screenshot – Endpoint]*
+
+> **Note**
+>
+> The endpoint includes the host, port, and database name.
+> When configuring Unite:
+> - Separate the **Host** and **Port** values.
+> - Remove the preceding colon (`:`) from the port value if copied together.
+
+---
+
+### Step 2 — Allow Unite to connect
+
+Your Redshift security group must allow inbound connections from Unite.
+
+1. From the selected **Workgroup**, open the **Data Access** tab.
+2. Scroll to **Network and security**.
+3. Select the **VPC Security Group**.
+
+   *[Insert Screenshot – Security Group]*
+
+4. Open **Inbound Rules**.
+5. Click **Edit inbound rules**.
+
+   *[Insert Screenshot – Edit Rules]*
+
+6. Add a new **Custom TCP** rule for each Unite IP address applicable to your region.
+
+For each rule:
+
+- Type: **Custom TCP**
+- Port: **Your Redshift port**
+- Source: **Unite IP Address**
+
+Click **Add rule** for each Unite IP address.
+
+*[Insert Screenshot – Add TCP Rule]*
+
+---
+
+### Step 3 — Choose a database user
+
+Unite supports connecting using either a **Master User** or a **Limited User**.
+
+We recommend using the **Master User** unless your organization requires a least-privilege configuration.
+
+---
+
+#### Option A — Master User (Recommended)
+
+1. Open the selected **Namespace**.
+2. Copy the following values:
+
+- Database Name
+- Admin Username
+
+*[Insert Screenshot – Namespace Details]*
+
+These credentials will be required when configuring the destination in Unite.
+
+---
+
+#### Option B — Limited User
+
+If you prefer not to use the administrator account, create a dedicated Redshift user for Unite.
+
+1. Connect to your Redshift database using a SQL client.
+2. Create a new user.
+
+```sql
+CREATE USER unite PASSWORD '<password>';
+```
+
+3. Grant the required permissions.
+
+```sql
+GRANT CREATE, TEMPORARY
+ON DATABASE "database"
+TO unite;
+```
+
+```sql
+GRANT USAGE, CREATE
+ON SCHEMA "schema"
+TO unite;
+```
+
+```sql
+GRANT SELECT, DROP
+ON ALL TABLES IN SCHEMA "schema"
+TO unite;
+```
+
+Replace:
+
+- `database` with your database name.
+- `schema` with your schema name.
+- `<password>` with a secure password.
+
+---
+
+### Step 4 — Complete the configuration
+
+Return to Unite and finish configuring the destination.
+
+Provide the following information:
+
+- Destination Name
+- Host
+- Port
+- Database Name
+- Username
+- Password
+- Schema
+- Time Zone (if applicable)
+
+After entering the required information, click **Save & Test**.
+
+---
+
+## Verify the connection
+
+When you select **Save & Test**, Unite validates the destination configuration.
+
+Validation includes:
+
+- Host connectivity
+- Authentication
+- Database accessibility
+- Schema permissions
+- Table creation permissions
+
+If validation succeeds, the destination status changes to **Complete** and becomes available when creating pipelines.
+
+---
+
+## Next step
+
+After successfully connecting Amazon Redshift, create a pipeline to begin syncing data from your connected data sources.

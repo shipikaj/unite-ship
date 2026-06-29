@@ -1,0 +1,29 @@
+{
+  "id": "using-unite/destinations/bigquery/setup-bigquery",
+  "title": "Setup",
+  "description": "Connect BigQuery as a destination in Unite.",
+  "source": "@site/docs/using-unite/destinations/bigquery/setup-bigquery.mdx",
+  "sourceDirName": "using-unite/destinations/bigquery",
+  "slug": "/using-unite/destinations/bigquery/setup-bigquery",
+  "permalink": "/using-unite/destinations/bigquery/setup-bigquery",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/using-unite/destinations/bigquery/setup-bigquery.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "Setup",
+    "description": "Connect BigQuery as a destination in Unite.",
+    "sidebar_position": 2
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Destinations",
+    "permalink": "/using-unite/destinations/overview"
+  },
+  "next": {
+    "title": "Setup",
+    "permalink": "/using-unite/destinations/amazon-redshift/setup-redshift"
+  }
+}

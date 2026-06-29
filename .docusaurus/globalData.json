@@ -167,8 +167,23 @@
               "sidebar": "docs"
             },
             {
-              "id": "using-unite/destinations",
-              "path": "/using-unite/destinations",
+              "id": "using-unite/destinations/amazon-redshift/setup-redshift",
+              "path": "/using-unite/destinations/amazon-redshift/setup-redshift",
+              "sidebar": "docs"
+            },
+            {
+              "id": "using-unite/destinations/bigquery/setup-bigquery",
+              "path": "/using-unite/destinations/bigquery/setup-bigquery",
+              "sidebar": "docs"
+            },
+            {
+              "id": "using-unite/destinations/data-studio/setup-data-studio",
+              "path": "/using-unite/destinations/data-studio/setup-data-studio",
+              "sidebar": "docs"
+            },
+            {
+              "id": "using-unite/destinations/overview",
+              "path": "/using-unite/destinations/overview",
               "sidebar": "docs"
             },
             {

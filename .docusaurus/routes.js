@@ -119,15 +119,15 @@ export default [
   },
   {
     path: '/',
-    component: ComponentCreator('/', 'be9'),
+    component: ComponentCreator('/', '773'),
     routes: [
       {
         path: '/',
-        component: ComponentCreator('/', 'e26'),
+        component: ComponentCreator('/', 'cfa'),
         routes: [
           {
             path: '/',
-            component: ComponentCreator('/', 'f37'),
+            component: ComponentCreator('/', '4be'),
             routes: [
               {
                 path: '/billing-cancellation-refund',
@@ -319,8 +319,26 @@ export default [
                 sidebar: "docs"
               },
               {
-                path: '/using-unite/destinations',
-                component: ComponentCreator('/using-unite/destinations', '73d'),
+                path: '/using-unite/destinations/amazon-redshift/setup-redshift',
+                component: ComponentCreator('/using-unite/destinations/amazon-redshift/setup-redshift', '028'),
+                exact: true,
+                sidebar: "docs"
+              },
+              {
+                path: '/using-unite/destinations/bigquery/setup-bigquery',
+                component: ComponentCreator('/using-unite/destinations/bigquery/setup-bigquery', '38f'),
+                exact: true,
+                sidebar: "docs"
+              },
+              {
+                path: '/using-unite/destinations/data-studio/setup-data-studio',
+                component: ComponentCreator('/using-unite/destinations/data-studio/setup-data-studio', '70c'),
+                exact: true,
+                sidebar: "docs"
+              },
+              {
+                path: '/using-unite/destinations/overview',
+                component: ComponentCreator('/using-unite/destinations/overview', 'ff0'),
                 exact: true,
                 sidebar: "docs"
               },

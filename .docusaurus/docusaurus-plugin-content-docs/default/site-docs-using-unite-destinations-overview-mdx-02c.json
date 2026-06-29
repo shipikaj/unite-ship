@@ -1,0 +1,29 @@
+{
+  "id": "using-unite/destinations/overview",
+  "title": "Destinations",
+  "description": "Configure and manage destinations in Unite.",
+  "source": "@site/docs/using-unite/destinations/overview.mdx",
+  "sourceDirName": "using-unite/destinations",
+  "slug": "/using-unite/destinations/overview",
+  "permalink": "/using-unite/destinations/overview",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/using-unite/destinations/overview.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "title": "Destinations",
+    "description": "Configure and manage destinations in Unite.",
+    "sidebar_position": 3
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Setup",
+    "permalink": "/using-unite/data-sources/hubspot/setup-hubspot"
+  },
+  "next": {
+    "title": "Setup",
+    "permalink": "/using-unite/destinations/bigquery/setup-bigquery"
+  }
+}
