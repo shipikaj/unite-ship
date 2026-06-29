@@ -1,0 +1,29 @@
+{
+  "id": "using-unite/data-sources/hubspot/setup-hubspot",
+  "title": "Setup",
+  "description": "Connect HubSpot as a data source in Unite.",
+  "source": "@site/docs/using-unite/data-sources/hubspot/setup-hubspot.mdx",
+  "sourceDirName": "using-unite/data-sources/hubspot",
+  "slug": "/using-unite/data-sources/hubspot/setup-hubspot",
+  "permalink": "/using-unite/data-sources/hubspot/setup-hubspot",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/using-unite/data-sources/hubspot/setup-hubspot.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "Setup",
+    "description": "Connect HubSpot as a data source in Unite.",
+    "sidebar_position": 2
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Setup",
+    "permalink": "/using-unite/data-sources/meta-ads/setup-meta"
+  },
+  "next": {
+    "title": "Destinations",
+    "permalink": "/using-unite/destinations"
+  }
+}

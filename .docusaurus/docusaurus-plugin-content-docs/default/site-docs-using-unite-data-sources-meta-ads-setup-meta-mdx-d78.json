@@ -1,0 +1,29 @@
+{
+  "id": "using-unite/data-sources/meta-ads/setup-meta",
+  "title": "Setup",
+  "description": "Connect Meta Ads as a data source in Unite.",
+  "source": "@site/docs/using-unite/data-sources/meta-ads/setup-meta.mdx",
+  "sourceDirName": "using-unite/data-sources/meta-ads",
+  "slug": "/using-unite/data-sources/meta-ads/setup-meta",
+  "permalink": "/using-unite/data-sources/meta-ads/setup-meta",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/using-unite/data-sources/meta-ads/setup-meta.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "Setup",
+    "description": "Connect Meta Ads as a data source in Unite.",
+    "sidebar_position": 2
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Prebuilt Reports",
+    "permalink": "/using-unite/data-sources/google-search-console/prebuilt-reports"
+  },
+  "next": {
+    "title": "Setup",
+    "permalink": "/using-unite/data-sources/hubspot/setup-hubspot"
+  }
+}

@@ -152,6 +152,16 @@
               "sidebar": "docs"
             },
             {
+              "id": "using-unite/data-sources/hubspot/setup-hubspot",
+              "path": "/using-unite/data-sources/hubspot/setup-hubspot",
+              "sidebar": "docs"
+            },
+            {
+              "id": "using-unite/data-sources/meta-ads/setup-meta",
+              "path": "/using-unite/data-sources/meta-ads/setup-meta",
+              "sidebar": "docs"
+            },
+            {
               "id": "using-unite/data-sources/overview",
               "path": "/using-unite/data-sources/overview",
               "sidebar": "docs"

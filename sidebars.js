@@ -49,6 +49,18 @@ const sidebars =
             "using-unite/data-sources/google-search-console/prebuilt-reports",
            ] 
           },
+          {type: "category",
+          label: "Meta Ads",
+           items: [
+            "using-unite/data-sources/meta-ads/setup-meta",
+           ] 
+          },
+          {type: "category",
+          label: "Hubspot",
+           items: [
+            "using-unite/data-sources/hubspot/setup-hubspot",
+           ] 
+          },
           ],
         },
         "using-unite/destinations",

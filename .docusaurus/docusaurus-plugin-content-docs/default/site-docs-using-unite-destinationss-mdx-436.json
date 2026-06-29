@@ -1,0 +1,15 @@
+{
+  "id": "using-unite/destinationss",
+  "title": "destinationss",
+  "description": "",
+  "source": "@site/docs/using-unite/destinationss.mdx",
+  "sourceDirName": "using-unite",
+  "slug": "/using-unite/destinationss",
+  "permalink": "/using-unite/destinationss",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/using-unite/destinationss.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {}
+}

@@ -256,17 +256,17 @@
     },
     "config": "config---5-e-9-4f3"
   },
-  "/-b58": {
+  "/-be9": {
     "__comp": "__comp---theme-docs-root-5-e-9-0b6",
     "__context": {
       "plugin": "plugin---aba-d70"
     }
   },
-  "/-33d": {
+  "/-e26": {
     "__comp": "__comp---theme-doc-version-roota-7-b-5de",
     "__props": "__props---22-d-307"
   },
-  "/-d34": {
+  "/-f37": {
     "__comp": "__comp---theme-doc-roota-94-67a"
   },
   "/billing-cancellation-refund-c43": {
@@ -388,6 +388,14 @@
   "/using-unite/data-sources/google-search-console/setup-gsc-9a9": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---using-unite-data-sources-google-search-console-setup-gscc-1-e-66f"
+  },
+  "/using-unite/data-sources/hubspot/setup-hubspot-15c": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---using-unite-data-sources-hubspot-setup-hubspot-8-c-0-9f4"
+  },
+  "/using-unite/data-sources/meta-ads/setup-meta-b14": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---using-unite-data-sources-meta-ads-setup-metad-78-336"
   },
   "/using-unite/data-sources/overview-e76": {
     "__comp": "__comp---theme-doc-item-178-a40",

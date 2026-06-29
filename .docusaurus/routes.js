@@ -119,15 +119,15 @@ export default [
   },
   {
     path: '/',
-    component: ComponentCreator('/', 'b58'),
+    component: ComponentCreator('/', 'be9'),
     routes: [
       {
         path: '/',
-        component: ComponentCreator('/', '33d'),
+        component: ComponentCreator('/', 'e26'),
         routes: [
           {
             path: '/',
-            component: ComponentCreator('/', 'd34'),
+            component: ComponentCreator('/', 'f37'),
             routes: [
               {
                 path: '/billing-cancellation-refund',
@@ -297,6 +297,18 @@ export default [
               {
                 path: '/using-unite/data-sources/google-search-console/setup-gsc',
                 component: ComponentCreator('/using-unite/data-sources/google-search-console/setup-gsc', '9a9'),
+                exact: true,
+                sidebar: "docs"
+              },
+              {
+                path: '/using-unite/data-sources/hubspot/setup-hubspot',
+                component: ComponentCreator('/using-unite/data-sources/hubspot/setup-hubspot', '15c'),
+                exact: true,
+                sidebar: "docs"
+              },
+              {
+                path: '/using-unite/data-sources/meta-ads/setup-meta',
+                component: ComponentCreator('/using-unite/data-sources/meta-ads/setup-meta', 'b14'),
                 exact: true,
                 sidebar: "docs"
               },

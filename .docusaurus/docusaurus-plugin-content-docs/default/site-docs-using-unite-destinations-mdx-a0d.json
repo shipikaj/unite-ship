@@ -19,8 +19,8 @@
   },
   "sidebar": "docs",
   "previous": {
-    "title": "Prebuilt Reports",
-    "permalink": "/using-unite/data-sources/google-search-console/prebuilt-reports"
+    "title": "Setup",
+    "permalink": "/using-unite/data-sources/hubspot/setup-hubspot"
   },
   "next": {
     "title": "Pipelines",
