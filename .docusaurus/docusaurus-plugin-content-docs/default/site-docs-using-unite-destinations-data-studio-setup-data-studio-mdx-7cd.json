@@ -1,7 +1,7 @@
 {
   "id": "using-unite/destinations/data-studio/setup-data-studio",
-  "title": "setup-data-studio",
-  "description": "",
+  "title": "Setup",
+  "description": "Connect Data Studio as a destination in Unite.",
   "source": "@site/docs/using-unite/destinations/data-studio/setup-data-studio.mdx",
   "sourceDirName": "using-unite/destinations/data-studio",
   "slug": "/using-unite/destinations/data-studio/setup-data-studio",
@@ -11,7 +11,12 @@
   "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/using-unite/destinations/data-studio/setup-data-studio.mdx",
   "tags": [],
   "version": "current",
-  "frontMatter": {},
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "Setup",
+    "description": "Connect Data Studio as a destination in Unite.",
+    "sidebar_position": 2
+  },
   "sidebar": "docs",
   "previous": {
     "title": "Setup",

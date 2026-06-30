@@ -8,7 +8,7 @@ sidebar_position: 2
 
 This guide explains how to configure Amazon Redshift Serverless as a destination in Unite.
 
-Once connected, Unite can automatically create tables and synchronize data from your pipelines into your Redshift data warehouse.
+Once connected, Unite can create tables and synchronize data from your pipelines into your Redshift data warehouse.
 
 ---
 
@@ -18,102 +18,75 @@ Ensure you have the following:
 
 - An Amazon Redshift Serverless database.
 - Access to the AWS Management Console.
-- Permission to manage Redshift Serverless and security groups.
+- Permission to manage Redshift Serverless resources and security groups.
 - A Unite user account with permission to create and manage destinations.
 
 ---
 
 ## Connect your destination
 
-### Step 1 — Find your endpoint details
+### Step 1 - Retrieve your connection details
 
-You'll need your Redshift endpoint information to configure the destination in Unite.
+From the Amazon Redshift Serverless console, locate the following information:
 
-1. Open the **Amazon Redshift Serverless Console**.
-2. Select the **Namespace** you want Unite to connect to.
-
-   *[Insert Screenshot – Select Namespace]*
-
-3. Select the associated **Workgroup**.
-
-   *[Insert Screenshot – Select Workgroup]*
-
-4. Under **General Information**, locate the **Endpoint** and copy its value.
-
-   *[Insert Screenshot – Endpoint]*
-
-> **Note**
->
-> The endpoint includes the host, port, and database name.
-> When configuring Unite:
-> - Separate the **Host** and **Port** values.
-> - Remove the preceding colon (`:`) from the port value if copied together.
-
----
-
-### Step 2 — Allow Unite to connect
-
-Your Redshift security group must allow inbound connections from Unite.
-
-1. From the selected **Workgroup**, open the **Data Access** tab.
-2. Scroll to **Network and security**.
-3. Select the **VPC Security Group**.
-
-   *[Insert Screenshot – Security Group]*
-
-4. Open **Inbound Rules**.
-5. Click **Edit inbound rules**.
-
-   *[Insert Screenshot – Edit Rules]*
-
-6. Add a new **Custom TCP** rule for each Unite IP address applicable to your region.
-
-For each rule:
-
-- Type: **Custom TCP**
-- Port: **Your Redshift port**
-- Source: **Unite IP Address**
-
-Click **Add rule** for each Unite IP address.
-
-*[Insert Screenshot – Add TCP Rule]*
-
----
-
-### Step 3 — Choose a database user
-
-Unite supports connecting using either a **Master User** or a **Limited User**.
-
-We recommend using the **Master User** unless your organization requires a least-privilege configuration.
-
----
-
-#### Option A — Master User (Recommended)
-
-1. Open the selected **Namespace**.
-2. Copy the following values:
-
+- Endpoint (Host)
+- Port
 - Database Name
 - Admin Username
 
-*[Insert Screenshot – Namespace Details]*
-
-These credentials will be required when configuring the destination in Unite.
+> **Note**
+>
+> The endpoint may include the host, port, and database name in a single value. Enter each value separately when configuring the destination in Unite.
 
 ---
 
-#### Option B — Limited User
+### Step 2 - Allow Unite to connect
 
-If you prefer not to use the administrator account, create a dedicated Redshift user for Unite.
+To allow Unite to connect to your Redshift instance:
 
-1. Connect to your Redshift database using a SQL client.
-2. Create a new user.
+1. Open your Redshift **Workgroup**.
+2. Navigate to **Network and Security**.
+3. Open the associated **VPC Security Group**.
+4. Edit the **Inbound Rules**.
+5. Add a **Custom TCP** rule for your Redshift port.
+6. Allow inbound access from the Unite IP addresses for your region.
+
+This enables Unite to establish a secure connection to your Redshift warehouse.
+
+---
+
+### Step 3 - Choose a database user
+
+You can connect using either:
+
+- **Master User** (recommended)
+- **Limited User**
+
+#### Option A — Master User
+
+Use your existing Redshift administrator credentials.
+
+You'll need:
+
+- Host
+- Port
+- Database Name
+- Username
+- Password
+
+---
+
+#### Option B - Limited User
+
+If you prefer not to use the administrator account, create a dedicated user for Unite.
+
+Create the user:
 
 ```sql
 CREATE USER unite PASSWORD '<password>';
 ```
 
-3. Grant the required permissions.
+Grant database permissions:
 
 ```sql
 GRANT CREATE, TEMPORARY
@@ -121,11 +94,15 @@ ON DATABASE "database"
 TO unite;
 ```
 
+Grant schema permissions:
+
 ```sql
 GRANT USAGE, CREATE
 ON SCHEMA "schema"
 TO unite;
 ```
+
+Grant table permissions:
 
 ```sql
 GRANT SELECT, DROP
@@ -141,38 +118,37 @@ Replace:
 
 ---
 
-### Step 4 — Complete the configuration
+### Step 4 - Configure the destination in Unite
 
-Return to Unite and finish configuring the destination.
+1. Open **Destinations**.
+2. Click **Add Destination**.
+3. Enter a destination name.
+4. Select **Amazon Redshift**.
+5. Enter the following information:
 
-Provide the following information:
-
-- Destination Name
 - Host
 - Port
 - Database Name
 - Username
 - Password
 - Schema
-- Time Zone (if applicable)
+- Time Zone
 
-After entering the required information, click **Save & Test**.
+6. Click **Save & Test**.
 
 ---
 
 ## Verify the connection
 
-When you select **Save & Test**, Unite validates the destination configuration.
+Unite validates the destination by checking:
 
-Validation includes:
-
-- Host connectivity
+- Network connectivity
 - Authentication
 - Database accessibility
 - Schema permissions
 - Table creation permissions
 
-If validation succeeds, the destination status changes to **Complete** and becomes available when creating pipelines.
+If validation succeeds, the destination status changes to **Complete** and is ready to be used in pipelines.
 
 ---
 
