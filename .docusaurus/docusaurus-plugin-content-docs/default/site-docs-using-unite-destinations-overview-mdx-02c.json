@@ -1,6 +1,6 @@
 {
   "id": "using-unite/destinations/overview",
-  "title": "Destinations",
+  "title": "Overview",
   "description": "Configure and manage destinations in Unite.",
   "source": "@site/docs/using-unite/destinations/overview.mdx",
   "sourceDirName": "using-unite/destinations",
@@ -13,7 +13,7 @@
   "version": "current",
   "sidebarPosition": 3,
   "frontMatter": {
-    "title": "Destinations",
+    "title": "Overview",
     "description": "Configure and manage destinations in Unite.",
     "sidebar_position": 3
   },
