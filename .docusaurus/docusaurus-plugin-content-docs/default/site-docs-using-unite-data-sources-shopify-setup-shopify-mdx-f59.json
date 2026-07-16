@@ -1,0 +1,29 @@
+{
+  "id": "using-unite/data-sources/shopify/setup-shopify",
+  "title": "Setup",
+  "description": "Connect Shopify using a custom app.",
+  "source": "@site/docs/using-unite/data-sources/shopify/setup-shopify.mdx",
+  "sourceDirName": "using-unite/data-sources/shopify",
+  "slug": "/using-unite/data-sources/shopify/setup-shopify",
+  "permalink": "/using-unite/data-sources/shopify/setup-shopify",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/using-unite/data-sources/shopify/setup-shopify.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "title": "Setup",
+    "description": "Connect Shopify using a custom app.",
+    "sidebar_position": 3
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Setup",
+    "permalink": "/using-unite/data-sources/hubspot/setup-hubspot"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/using-unite/destinations/overview"
+  }
+}

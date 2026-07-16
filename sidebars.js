@@ -61,6 +61,12 @@ const sidebars =
             "using-unite/data-sources/hubspot/setup-hubspot",
            ] 
           },
+          {type: "category",
+          label: "Shopify",
+           items: [
+            "using-unite/data-sources/shopify/setup-shopify",
+           ] 
+          },
           ],
         },
         { type: "category",

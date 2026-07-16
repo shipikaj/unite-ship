@@ -119,15 +119,15 @@ export default [
   },
   {
     path: '/',
-    component: ComponentCreator('/', '773'),
+    component: ComponentCreator('/', '7e6'),
     routes: [
       {
         path: '/',
-        component: ComponentCreator('/', 'cfa'),
+        component: ComponentCreator('/', '2ad'),
         routes: [
           {
             path: '/',
-            component: ComponentCreator('/', '4be'),
+            component: ComponentCreator('/', 'c4a'),
             routes: [
               {
                 path: '/billing-cancellation-refund',
@@ -315,6 +315,12 @@ export default [
               {
                 path: '/using-unite/data-sources/overview',
                 component: ComponentCreator('/using-unite/data-sources/overview', 'e76'),
+                exact: true,
+                sidebar: "docs"
+              },
+              {
+                path: '/using-unite/data-sources/shopify/setup-shopify',
+                component: ComponentCreator('/using-unite/data-sources/shopify/setup-shopify', '01f'),
                 exact: true,
                 sidebar: "docs"
               },

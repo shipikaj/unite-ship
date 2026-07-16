@@ -256,17 +256,17 @@
     },
     "config": "config---5-e-9-4f3"
   },
-  "/-773": {
+  "/-7e6": {
     "__comp": "__comp---theme-docs-root-5-e-9-0b6",
     "__context": {
       "plugin": "plugin---aba-d70"
     }
   },
-  "/-cfa": {
+  "/-2ad": {
     "__comp": "__comp---theme-doc-version-roota-7-b-5de",
     "__props": "__props---22-d-307"
   },
-  "/-4be": {
+  "/-c4a": {
     "__comp": "__comp---theme-doc-roota-94-67a"
   },
   "/billing-cancellation-refund-c43": {
@@ -400,6 +400,10 @@
   "/using-unite/data-sources/overview-e76": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---using-unite-data-sources-overview-489-56f"
+  },
+  "/using-unite/data-sources/shopify/setup-shopify-01f": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---using-unite-data-sources-shopify-setup-shopifyf-59-678"
   },
   "/using-unite/destinations/amazon-redshift/setup-redshift-028": {
     "__comp": "__comp---theme-doc-item-178-a40",

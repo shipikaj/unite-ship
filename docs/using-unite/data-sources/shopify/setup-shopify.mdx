@@ -1,0 +1,139 @@
+---
+title: Setup
+description: Connect Shopify using a custom app.
+sidebar_position: 3
+---
+
+# Connect Shopify Using a Custom App
+
+This guide explains how to create a custom Shopify app and connect it to Unite using the app's API credentials.
+
+Use this method when you want to authenticate using your own Shopify application instead of the standard OAuth connection.
+
+---
+
+## Before you begin
+
+Ensure you have:
+
+- A Shopify store (live or development).
+- A Shopify Partner account.
+- Permission to create custom apps.
+- Access to the Shopify Admin and Partner Dashboard.
+
+---
+
+## Step 1 - Create a custom app
+
+1. Sign in to your Shopify Admin.
+2. Click **Settings**.
+3. Select **Apps**.
+4. Click **Develop apps**.
+5. Select **Build apps in Dev Dashboard**.
+
+You will be redirected to the Shopify Developer Dashboard.
+
+---
+
+## Step 2 - Create the application
+
+1. Click **Create App**.
+2. Enter an application name.
+3. Click **Create**.
+
+---
+
+## Step 3 - Configure API scopes
+
+Open the app and configure the required Admin API access scopes.
+
+Grant the following permissions:
+
+- `read_all_orders`
+- `read_assigned_fulfillment_orders`
+- `read_customers`
+- `read_discounts`
+- `read_fulfillments`
+- `read_inventory`
+- `read_locations`
+- `read_merchant_managed_fulfillment_orders`
+- `read_orders`
+- `read_products`
+- `read_publications`
+- `read_returns`
+- `read_third_party_fulfillment_orders`
+
+> **Note**
+>
+> The `read_all_orders` scope requires approval from Shopify. Select **Request access** and complete Shopify's approval process before continuing.
+
+---
+
+## Step 4 - Configure the redirect URL
+
+Add the following Redirect URL to your application:
+
+```text
+https://development.uniteyourdata.com/api/platform/oauth/callback/shopify/custom
+```
+
+After adding the redirect URL, click **Release** to publish the application configuration.
+
+---
+
+## Step 5 - Configure app distribution
+
+1. Open the Shopify Partner Dashboard.
+2. Navigate to **App Distribution** → **All Apps**.
+3. Select the application you created.
+4. Open the **Distribution** tab.
+5. Choose **Custom Distribution**.
+6. Confirm the distribution method.
+7. Enter your Shopify store domain.
+8. Click **Generate Link**.
+
+An installation link is generated for your store.
+
+---
+
+## Step 6 - Install the application
+
+1. Open the generated installation link.
+2. Select the Shopify store.
+3. Click **Install**.
+
+Once installation is complete, the custom app is available within your Shopify store.
+
+---
+
+## Step 7 - Connect the app to Unite
+
+1. Open the Shopify Developer Dashboard.
+2. Select the application you created.
+3. Open **Settings**.
+4. Copy the following credentials:
+
+- Client ID
+- Client Secret
+
+5. In Unite, open **Data Sources**.
+6. Select **Shopify**.
+7. Choose **Connect to Custom App**.
+8. Paste the **Client ID** and **Client Secret**.
+9. Click **Connect**.
+
+---
+
+## Verify the connection
+
+After authentication:
+
+- The Shopify store appears on the **Data Sources** page.
+- The connection status changes to **Complete**.
+- The store becomes available when creating pipelines.
+
+---
+
+## Next step
+
+After successfully connecting your custom Shopify app, create a pipeline to begin syncing Shopify data to your configured destination.

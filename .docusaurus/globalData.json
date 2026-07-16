@@ -167,6 +167,11 @@
               "sidebar": "docs"
             },
             {
+              "id": "using-unite/data-sources/shopify/setup-shopify",
+              "path": "/using-unite/data-sources/shopify/setup-shopify",
+              "sidebar": "docs"
+            },
+            {
               "id": "using-unite/destinations/amazon-redshift/setup-redshift",
               "path": "/using-unite/destinations/amazon-redshift/setup-redshift",
               "sidebar": "docs"
