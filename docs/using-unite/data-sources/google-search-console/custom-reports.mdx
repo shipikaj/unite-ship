@@ -1,0 +1,56 @@
+---
+title: Custom Reports
+description: Learn about the custom GSC reports available in Unite.
+sidebar_position: 3
+---
+
+# Google Search Console Custom Report Fields
+
+**4 metrics · 7 dimensions**
+
+Complete list of Google Search Console fields that can be used in a Unite custom report. Use a custom report when the prebuilt reports do not include the fields you need.
+
+## Dimensions and metrics
+
+There are two types of fields: dimensions and metrics.
+
+- **Dimensions** (types `STRING` and `DATE`) describe or split your data, such as date, query, page, country, or device.
+- **Metrics** (type `FLOAT`) are numeric values: clicks, impressions, CTR, and average position.
+
+CTR is clicks divided by impressions, so it is returned as a fraction. For example, 0.25 means 25%.
+
+## Combining dimensions and metrics
+
+Not every combination of dimensions is supported by Google Search Console. For the supported combinations and data limits, see the [Search Analytics API reference](https://developers.google.com/webmaster-tools/v1/searchanalytics/query).
+
+## Google Search Console Fields
+
+### On this page
+
+1. [Dimensions 7](#google-search-console-dimensions-fields)
+2. [Metrics 4](#google-search-console-metrics-fields)
+
+### Google Search Console Dimensions fields
+
+The Dimensions category of the Google Search Console connector includes 7 fields.
+
+| **ID** | **Type** | **Name** | **Description** |
+|---|---|---|---|
+| `siteUrl` | STRING | Site URL | The Google Search Console site/property URL. |
+| `date` | DATE | Date | The date of the search performance record (YYYY-MM-DD). |
+| `query` | STRING | Query | The search query/keyword search term used by the user. |
+| `page` | STRING | Page | The URL/landing page to which search users were directed. |
+| `country` | STRING | Country | The country where the search query originated (in 3-letter ISO code format). |
+| `device` | STRING | Device | The type of device used to perform the search (Desktop, Mobile, Tablet). |
+| `searchAppearance` | STRING | Search appearance | How the site appeared in search results (e.g., AMP article, Review snippet, Web light). |
+
+### Google Search Console Metrics fields
+
+The Metrics category of the Google Search Console connector includes 4 fields.
+
+| **ID** | **Type** | **Name** | **Description** |
+|---|---|---|---|
+| `clicks` | FLOAT | Clicks | The total number of clicks from Google search results that sent users to your site. |
+| `impressions` | FLOAT | Impressions | The total number of links to your site that users saw in Google search results. |
+| `ctr` | FLOAT | CTR | Click-through rate: clicks divided by impressions. |
+| `position` | FLOAT | Average position | The average ranking/position of your site's URLs in Google search results (1 is the top position). |

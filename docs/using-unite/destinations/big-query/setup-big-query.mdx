@@ -1,0 +1,92 @@
+---
+title: Setup
+description: Connect BigQuery as a data destination in Unite.
+sidebar_position: 2
+---
+
+# Connect BigQuery
+
+This guide explains how to connect your BigQuery account as a data destination in Unite.
+
+Once connected, you can use your BigQuery data to build pipelines and sync data to your destination.
+
+---
+
+## Before you begin
+
+#### To connect BigQuery to Unite, you need the following:
+- A BigQuery account or a Google Apps account
+- A Unite user account with permissions to create or manage destinations.
+
+---
+
+## Connect your account
+
+### Step 1
+
+##### 1. FIND PROJECT ID
+- You need to grant Unite access to your BigQuery cluster so we can create and manage tables for your data, and periodically load data into those tables.
+- Go to your Google Cloud Console's projects list.
+- Find your project on the list and make a note of the Project ID in the ID column. You will need it to configure Unite.
+
+![bq_guide_1.png](https://d1y8p27odt6lnh.cloudfront.net/strapi-upload/bq_guide_1_2a2bc67975.png)
+
+---
+
+### Step 2
+
+#####  2. FIND SERVICE ACCOUNT
+
+- Log in to your Unite account.
+- Go to the Destinations page, and then click Add destination.
+- In the pop-up window, enter a Destination name of your choice.
+- Click Add.
+- Select BigQuery as the destination type.
+- Enter the Project ID you found in Step 1.
+- Make a note of the Unite service account. You will need to grant it permissions in BigQuery
+![0.png](https://d1y8p27odt6lnh.cloudfront.net/strapi-upload/0_a0d6ec27d6.png)
+
+---
+
+### Step 3
+
+##### 3. CONFIGURE SERVICE ACCOUNT
+
+- Go back to the IAM & admin tab, and go to the project principals list.
+- Select + GRANT ACCESS.
+- In the New Principals field, enter the Unite service account you found in Step 3
+- The service account is the entire email address.
+- Click Select a role > BigQuery > "BigQuery User" and "BigQuery Data Editor"
+
+![bq_guide_2.png](https://d1y8p27odt6lnh.cloudfront.net/strapi-upload/bq_guide_2_bed0a20df1.png)
+
+![bq_guide_3.png](https://d1y8p27odt6lnh.cloudfront.net/strapi-upload/bq_guide_3_cb8a0d69ea.png)
+
+---
+
+### Step 4
+
+##### 4. COMPLETE SETUP 
+
+- Log in to your Unite account.
+- Go to the Destinations page and click Add destination.
+- Enter a Destination name of your choice and then click Add.
+- Select BigQuery as the destination type.
+- In the destination setup form, enter the Project ID you found in Step 2.
+- Set the Service Account.
+- Enter the Data Location.
+- Choose your Time zone.
+- Click Save & Test.
+
+Unite tests and validates the BigQuery connection. On successful completion of the setup tests, you can sync your data to the BigQuery destination using Unite.
+
+Setup tests
+Unite performs the following BigQuery connection tests:
+The Connection test checks if we can connect to your BigQuery data warehouse and retrieve a list of the datasets.to configure Unite.
+
+---
+
+
+## Next step
+
+After connecting your BigQuery account, create a pipeline to begin syncing data.

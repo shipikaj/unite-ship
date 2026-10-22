@@ -1,139 +1,201 @@
 ---
 title: Setup
-description: Connect Shopify using a custom app.
-sidebar_position: 3
+description: Connect Shopify as a data source in Unite.
+sidebar_position: 2
 ---
 
-# Connect Shopify Using a Custom App
+# Connect Shopify
 
-This guide explains how to create a custom Shopify app and connect it to Unite using the app's API credentials.
+This guide explains how to connect your Shopify account as a data source in Unite.
 
-Use this method when you want to authenticate using your own Shopify application instead of the standard OAuth connection.
+Once connected, you can use your Shopify data to build pipelines and sync data to your destination.
 
 ---
 
 ## Before you begin
 
-Ensure you have:
+#### Connect Shopify to Unite
+You create a custom app for your store in Shopify's Dev Dashboard, give it read-only access, install it, and paste its credentials into Unite. Unite only reads your data. It never changes anything in your store.
 
-- A Shopify store (live or development).
-- A Shopify Partner account.
-- Permission to create custom apps.
-- Access to the Shopify Admin and Partner Dashboard.
-
----
-
-## Step 1 - Create a custom app
-
-1. Sign in to your Shopify Admin.
-2. Click **Settings**.
-3. Select **Apps**.
-4. Click **Develop apps**.
-5. Select **Build apps in Dev Dashboard**.
-
-You will be redirected to the Shopify Developer Dashboard.
+##### Before you start, you need:
+- Owner access to your Shopify store, or a staff account with the App development > Develop permission
+- Your Unite login
 
 ---
 
-## Step 2 - Create the application
+## Connect your account
 
-1. Click **Create App**.
-2. Enter an application name.
-3. Click **Create**.
+### Step 1
 
----
+##### Step 1 - Create and set up the app
 
-## Step 3 - Configure API scopes
 
-Open the app and configure the required Admin API access scopes.
 
-Grant the following permissions:
+1. Log in to your store's [Shopify admin](https://accounts.shopify.com/lookup?rid=0846854d-b2c0-4b1f-9e3b-0594edde60a9&verify=1792573773-c38dZFgeVDo2ws0eQVWgjdNJ3L9tI3pv6URjHFHNwk4%3D). If you have more than one store, open the one you're connecting.
+2. Go to Settings > Apps and click Develop apps.
+3. Click Build apps in Dev Dashboard. This opens the Dev Dashboard for your store.   
+ 
+Note : Always open the Dev Dashboard from your store's admin. The store switcher at the bottom left of the Dev Dashboard takes you to a store's admin, not to its Dev Dashboard.
 
-- `read_all_orders`
-- `read_assigned_fulfillment_orders`
-- `read_customers`
-- `read_discounts`
-- `read_fulfillments`
-- `read_inventory`
-- `read_locations`
-- `read_merchant_managed_fulfillment_orders`
-- `read_orders`
-- `read_products`
-- `read_publications`
-- `read_returns`
-- `read_third_party_fulfillment_orders`
+4. Open Apps, click Create app, then choose Create app manually. Ignore the Shopify CLI option, which is for developers building their own app.
+![newshopify1.png](https://d1y8p27odt6lnh.cloudfront.net/strapi-upload/newshopify1_cb83c7a0dc.png)
 
-> **Note**
->
-> The `read_all_orders` scope requires approval from Shopify. Select **Request access** and complete Shopify's approval process before continuing.
+5. Fill in the Create an app form:
+      - App name: for example Unite.
+      - App URL: replace https://example.com with https://uniteyourdata.com.
+      - Embed app in Shopify admin: untick it. Shopify ticks it by default.
+      - Allowed redirection URL(s): paste this exactly :  https://uniteyourdata.com/api/platform/oauth/callback/shopify/custom
+      - Use legacy install flow: leave unticked.
+      - Scopes: paste this list. It leaves out read_all_orders on purpose, because Shopify rejects that scope on this form. You add it in step 2.
+      - read_orders, read_customers, read_products, read_inventory, read_locations, read_discounts, read_fulfillments, read_returns, read_publications, read_assigned_fulfillment_orders, read_merchant_managed_fulfillment_orders, read_third_party_fulfillment_orders
+      - Leave Version name and Webhooks API version as they are. ![shop2.png](https://d1y8p27odt6lnh.cloudfront.net/strapi-upload/shop2_53d6cd9bba.png)
 
----
+6. Click Create app.
+![shop3.png](https://d1y8p27odt6lnh.cloudfront.net/strapi-upload/shop3_c21a380957.png)
 
-## Step 4 - Configure the redirect URL
-
-Add the following Redirect URL to your application:
-
-```text
-https://uniteyourdata.com/api/platform/oauth/callback/shopify/custom
-```
-
-After adding the redirect URL, click **Release** to publish the application configuration.
+Note: Every scope starts with read_, so Unite can't create, edit or delete anything in your store.
 
 ---
 
-## Step 5 - Configure app distribution
+### Step 2
 
-1. Open the Shopify Partner Dashboard.
-2. Navigate to **App Distribution** → **All Apps**.
-3. Select the application you created.
-4. Open the **Distribution** tab.
-5. Choose **Custom Distribution**.
-6. Confirm the distribution method.
-7. Enter your Shopify store domain.
-8. Click **Generate Link**.
+##### Step 2 - Add full order history
 
-An installation link is generated for your store.
 
----
+By default, Shopify only shares the last 60 days of orders. To give Unite your full history, add read_all_orders in a new version before you install the app.
 
-## Step 6 - Install the application
-
-1. Open the generated installation link.
-2. Select the Shopify store.
-3. Click **Install**.
-
-Once installation is complete, the custom app is available within your Shopify store.
+1. In your app's left menu, open Versions and click Create version. You can also click New version in the Versions card on the Overview page. The form opens with your settings from step 1. 
+![shop4.png](https://d1y8p27odt6lnh.cloudfront.net/strapi-upload/shop4_067a06c2a1.png)
+2. In Scopes, add read_all_orders, at the start, so the list reads:  read_all_orders, read_orders, read_customers, read_products, read_inventory, read_locations, read_discounts, read_fulfillments, read_returns, read_publications, read_assigned_fulfillment_orders, read_merchant_managed_fulfillment_orders, read_third_party_fulfillment_orders
+3. Check that Embed app in Shopify admin is still unticked.
+4. Click Release.
+5. Open the new version to check it. It should show embedded: false and start its scopes with read_all_orders. 
+![shop5.png](https://d1y8p27odt6lnh.cloudfront.net/strapi-upload/shop5_ea3ccfc18b.png)
 
 ---
 
-## Step 7 - Connect the app to Unite
+### Step 3
 
-1. Open the Shopify Developer Dashboard.
-2. Select the application you created.
-3. Open **Settings**.
-4. Copy the following credentials:
+##### Step 3 - Install the app on your store
 
-- Client ID
-- Client Secret
+1. On your app's Overview page, click Install app in the Installs card.
+![shop6.png](https://d1y8p27odt6lnh.cloudfront.net/strapi-upload/shop6_4f516dfcb1.png)
+2. Choose your store.
+![shop7.png](https://d1y8p27odt6lnh.cloudfront.net/strapi-upload/shop7_462c1a7cc4.png)
+3. Review the access the app requests and click Install. Shopify shows "This app hasn't been reviewed" for every custom app, so you can ignore that warning for Unite.
+![shop8.png](https://d1y8p27odt6lnh.cloudfront.net/strapi-upload/shop8_e60b1e16c2.png)
 
-5. In Unite, open **Data Sources**.
-6. Select **Shopify**.
-7. Choose **Connect to Custom App**.
-8. Paste the **Client ID**, **Client Secret** and your **Store Name**.
-9. Click **Connect**.
+Shopify then opens the Unite website in that tab. That means the app is installed. Use your browser's back button to return to your app in the Dev Dashboard.
 
 ---
 
-## Verify the connection
+### Step 4
 
-After authentication:
+##### Step 4 - Copy the app credentials
 
-- The Shopify store appears on the **Data Sources** page.
-- The connection status changes to **Complete**.
-- The store becomes available when creating pipelines.
+1. On your app's Overview page in the Dev Dashboard, find the Credentials card. Copy the Client ID with the copy button next to it.
+2. Copy the Client secret the same way.
+
+Note : Treat the client secret like a password. Don't share it in email or chat.
 
 ---
+
+### Step 5
+
+##### Step 5 - Connect in Unite
+
+1. Come back to this page and use the Connect Shopify form on the left.
+2. Enter your Shop Name, for example your-store.myshopify.com. You can find it in Shopify admin under Settings > Domains.
+3. Paste the Client ID and Client Secret. If the Client ID field fills in with your email address, your browser has autofilled it. Clear it and paste again.
+4. Click Connect Custom App.
+![shop9.png](https://d1y8p27odt6lnh.cloudfront.net/strapi-upload/shop9_e0418dfa0c.png)
+5. Your store is connected. Click Create a pipeline to start syncing.
+![shop10.png](https://d1y8p27odt6lnh.cloudfront.net/strapi-upload/shop10_e0d079374b.png)
+
+---
+
+### Step 6
+
+##### Check you have your full order history
+
+1 In Shopify admin, go to Settings > Apps and open your app.
+2 Under Activity and permissions, find Orders.
+
+It should say All order history. If it says "last 60 days", see Troubleshooting.
+![shop11.png](https://d1y8p27odt6lnh.cloudfront.net/strapi-upload/shop11_bc99e4ebef.png)
+
+---
+
+### Step 7
+
+##### Changing scopes later
+
+If you add a scope after the app is installed, the new access doesn't apply until your store approves it:
+- Create a new version with the updated scopes and click Release (as in step 2).
+- In Shopify admin, uninstall the app, then install it again (step 3).
+- In Unite, connect the store again with the same credentials (step 5).
+
+---
+
+### Step 8
+
+##### Troubleshooting
+
+- Contains invalid scopes: read_all_orders" when creating the app: Shopify doesn't accept this scope on the Create an app form. Remove it, create the app, then add it in a new version (step 2).
+
+- Unite only has orders from the last 60 days: Check that read_all_orders is in your app's released version (step 2). If you added it after installing, follow Changing scopes later.
+
+- I can't find Create app, or the Dev Dashboard shows the wrong stores: You may have opened the Dev Dashboard for a different store. Go back to your store's admin and open it from there (step 1). Don't use the store switcher in the Dev Dashboard: it opens a store's admin, not its Dev Dashboard.
+
+- I get a redirect URL error when connecting: The redirect URL must match exactly, including https:// and with no trailing slash. Copy it from step 1, fix it in a new version, and connect again.
+
+- Opening the app in Shopify admin shows a blank page: Embed app in Shopify admin is ticked. Untick it in a new version and release it.
+
+- I can't see Develop apps or Build apps in Dev Dashboard: Your account needs to be the store owner or a staff account with the App development > Develop permission. Ask the store owner to add it.
+
+---
+
+### Step 9
+
+##### Setting this up for a client?
+
+If you're an agency or freelancer connecting a client's store, you have two options.
+
+
+**Option 1:** Work inside the client's organisation (recommended)
+
+This uses the same steps as above, so it's the quickest route and full order history works straight away.
+
+1.  Ask the client to add you as a staff member on their store with the App development > Develop permission. Collaborator accounts won't work, because collaborators can't open the Dev Dashboard.
+2. Log in with that staff account, open the client's store admin, and follow steps 1 to 5.
+Or send the client this guide and let them do it themselves.
+
+
+
+**Option 2:** Build the app in your own Partner organisation
+
+Use this if the client can't give you staff access. It takes longer, because Shopify has to approve full order history for apps built outside the store's organisation.
+
+1. Create the app in your Partner organisation's Dev Dashboard, using the form in step 1.
+2. Choose custom distribution. On the app's Distribution card, click Select distribution method and choose Custom distribution. This can't be changed later.
+3. Generate an install link. Enter the client's store domain, for example client-store.myshopify.com, click Generate link and send it to the client. They open it and click Install.
+4. Request full order history. In the [Partner Dashboard](https://www.shopify.com/in/partners), open your app, go to API access requests, and click Request access on the Read all orders scope card. Explain that the app loads the client's order history into their own analytics warehouse. Shopify reviews each request.
+5. Connect in Unite with the client's shop name and your app's Client ID and Client secret (step 5). Until Shopify approves the request, Unite only gets the last 60 days of orders.
+6. When Shopify approves, add read_all_orders to the scopes in a new version, ask the client to approve the updated access in their Shopify admin, then connect again in Unite.
+
+See Shopify's guides to [selecting a distribution method](https://shopify.dev/docs/apps/launch/distribution/select-distribution-method) and [access scopes](https://shopify.dev/docs/api/usage/access-scopes).
+
+---
+
+### Step 10
+
+##### Removing access
+
+To disconnect Unite, uninstall the app in [Shopify admin](https://accounts.shopify.com/lookup?rid=f03dcc58-4f14-4cba-8280-d7170610cb52&verify=1792573705-43UDJe0OpjcpJrgF5luCNawVgfv0lTqAvDbnStuLzXE%3D) under Settings > Apps. Once it is uninstalled, Unite can no longer access your store.
+
+---
+
 
 ## Next step
 
-After successfully connecting your custom Shopify app, create a pipeline to begin syncing Shopify data to your configured destination.
+After connecting your Shopify account, create a pipeline to begin syncing data.

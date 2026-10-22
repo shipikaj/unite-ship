@@ -33,6 +33,7 @@ const sidebars =
            items: [
             "using-unite/data-sources/google-ads/setup-gads",
             "using-unite/data-sources/google-ads/prebuilt-reports",
+            "using-unite/data-sources/google-ads/custom-reports",
                   ] 
           },
           {type: "category",
@@ -40,6 +41,7 @@ const sidebars =
            items: [
             "using-unite/data-sources/google-analytics-4/setup-ga4",
             "using-unite/data-sources/google-analytics-4/prebuilt-reports",
+            "using-unite/data-sources/google-analytics-4/custom-reports",
                   ] 
           },
           {type: "category",
@@ -47,24 +49,28 @@ const sidebars =
            items: [
             "using-unite/data-sources/google-search-console/setup-gsc",
             "using-unite/data-sources/google-search-console/prebuilt-reports",
+            "using-unite/data-sources/google-search-console/custom-reports",
            ] 
           },
           {type: "category",
           label: "Meta Ads",
            items: [
             "using-unite/data-sources/meta-ads/setup-meta",
+            "using-unite/data-sources/meta-ads/custom-reports",
            ] 
           },
           {type: "category",
           label: "Hubspot",
            items: [
             "using-unite/data-sources/hubspot/setup-hubspot",
+            "using-unite/data-sources/hubspot/custom-reports",
            ] 
           },
           {type: "category",
           label: "Shopify",
            items: [
             "using-unite/data-sources/shopify/setup-shopify",
+            "using-unite/data-sources/shopify/custom-reports",
            ] 
           },
           ],

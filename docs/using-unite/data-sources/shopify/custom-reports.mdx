@@ -1,0 +1,611 @@
+---
+title: Custom Reports
+description: Learn about the custom Shopify reports available in Unite.
+sidebar_position: 2
+---
+
+# Shopify Custom Report Fields
+
+**450 fields across 15 resources**
+
+Complete list of Shopify fields that can be used in a Unite custom report. Use a custom report when the prebuilt reports do not include the fields you need.
+
+## Resources and fields
+
+Shopify data is organized into resources, such as orders, products, and customers. Each field ID starts with the resource it belongs to. Select the resource first, then the fields you need from it.
+
+Nested values are flattened into separate fields. For example, `orders.billingAddress.city` is the city of an order's billing address, and fields ending in `_count` and `_precision` are the two parts of a count.
+
+## Shopify Fields
+
+### On this page
+
+1. [Shop 5](#shopify-shop-fields)
+2. [Orders 126](#shopify-orders-fields)
+3. [Order discounts 1](#shopify-order-discounts-fields)
+4. [Order transactions 31](#shopify-order-transactions-fields)
+5. [Order line items 29](#shopify-order-line-items-fields)
+6. [Order shipping tax lines 11](#shopify-order-shipping-tax-lines-fields)
+7. [Customers 36](#shopify-customers-fields)
+8. [Products 54](#shopify-products-fields)
+9. [Product variants 30](#shopify-product-variants-fields)
+10. [Inventory levels 12](#shopify-inventory-levels-fields)
+11. [Locations 20](#shopify-locations-fields)
+12. [Fulfillments 20](#shopify-fulfillments-fields)
+13. [Fulfillment orders 39](#shopify-fulfillment-orders-fields)
+14. [Fulfillment order line items 14](#shopify-fulfillment-order-line-items-fields)
+15. [Fulfillment order line 22](#shopify-fulfillment-order-line-fields)
+
+### Shopify Shop fields
+
+The Shop resource of the Shopify connector includes 5 fields.
+
+| **ID** | **Type** | **Name** | **Description** |
+|---|---|---|---|
+| `shop.shop_id` | STRING | Shop ID | The ID of the shop. |
+| `shop.name` | STRING | Name | The shop's name. |
+| `shop.myshopify_domain` | STRING | Myshopify domain | The shop's myshopify.com domain. |
+| `shop.currency_code` | STRING | Currency code | The shop's currency code. |
+| `shop.iana_timezone` | STRING | IANA timezone | The shop's time zone as an IANA time zone name. |
+
+### Shopify Orders fields
+
+The Orders resource of the Shopify connector includes 126 fields.
+
+#### Shopify Orders fields (part 1 of 3)
+
+| **ID** | **Type** | **Name** | **Description** |
+|---|---|---|---|
+| `orders.additionalFees` | STRING | Additional fees | A list of additional fees applied to an order, such as duties, import fees, or [tax lines](https://shopify.dev/docs/api/admin-graphql/latest/objects/order#field-Order.fields.additionalFees.taxLines). |
+| `orders.alerts` | STRING | Alerts | A list of messages that appear on the **Orders** page in the Shopify admin. These alerts provide merchants with important information about an order's status or required actions. |
+| `orders.app` | STRING | App | The application that created the order. For example, "Online Store", "Point of Sale", or a custom app name. Use this to identify the order source for attribution and fulfillment workflows. Learn more about [building apps for orders and fulfillment](https://shopify.dev/docs/apps/build/orders-fulfillment). |
+| `orders.billingAddress.address1` | STRING | Billing address address 1 | The first line of the street address of the order's billing address. |
+| `orders.billingAddress.address2` | STRING | Billing address address 2 | The second line of the street address, such as an apartment or unit number of the order's billing address. |
+| `orders.billingAddress.city` | STRING | Billing address city | The city of the order's billing address. |
+| `orders.billingAddress.province` | STRING | Billing address province | The province, state, or region name of the order's billing address. |
+| `orders.billingAddress.provinceCode` | STRING | Billing address province code | The province, state, or region code of the order's billing address. |
+| `orders.billingAddress.country` | STRING | Billing address country | The country name of the order's billing address. |
+| `orders.billingAddress.countryCodeV2` | STRING | Billing address country code | The two-letter country code (ISO 3166-1 alpha-2) of the order's billing address. |
+| `orders.billingAddress.zip` | STRING | Billing address ZIP | The ZIP or postal code of the order's billing address. |
+| `orders.billingAddress.phone` | STRING | Billing address phone | The phone number of the order's billing address. |
+| `orders.billingAddressMatchesShippingAddress` | BOOLEAN | Billing address matches shipping address | Whether the billing address matches the [shipping address](https://shopify.dev/docs/api/admin-graphql/latest/objects/order#field-Order.fields.shippingAddress). Returns `true` if both addresses are the same, and `false` if they're different or if an address is missing. |
+| `orders.canMarkAsPaid` | BOOLEAN | Can mark as paid | Whether an order can be manually marked as paid. Returns `false` if the order is already paid, is canceled, has pending [Shopify Payments](https://help.shopify.com/en/manual/payments/shopify-payments/payouts) transactions, or has a negative payment amount. |
+| `orders.canNotifyCustomer` | BOOLEAN | Can notify customer | Whether order notifications can be sent to the customer. Returns `true` if the customer has a valid [email address](https://shopify.dev/docs/api/admin-graphql/latest/objects/order#field-Order.fields.email). |
+| `orders.cancelReason` | STRING | Cancel reason | The reason provided for an order cancellation. For example, a merchant might cancel an order if there's insufficient inventory. Returns `null` if the order hasn't been canceled. |
+| `orders.cancelledAt` | TIMESTAMP | Cancelled at | The date and time in [ISO 8601 format](https://en.wikipedia.org/wiki/ISO_8601) when an order was canceled. Returns `null` if the order hasn't been canceled. |
+| `orders.capturable` | BOOLEAN | Capturable | Whether an authorized payment for an order can be captured. Returns `true` if an authorized payment exists that hasn't been fully captured yet. Learn more about [capturing payments](https://help.shopify.com/en/manual/fulfillment/managing-orders/payments/capturing-payments). |
+| `orders.cartDiscountAmountSet` | STRING | Cart discount amount set | The total discount amount applied at the time the order was created, displayed in both shop and presentment currencies, before returns, refunds, order edits, and cancellations. This field only includes discounts applied to the entire order. |
+| `orders.clientIp` | STRING | Client ip | The IP address of the customer who placed the order. Useful for fraud detection and geographic analysis. |
+| `orders.closed` | BOOLEAN | Closed | Whether an order is closed. An order is considered closed if all its line items have been fulfilled or canceled, and all financial transactions are complete. |
+| `orders.closedAt` | TIMESTAMP | Closed at | The date and time [ISO 8601 format](https://en.wikipedia.org/wiki/ISO_8601) when an order was closed. Shopify automatically records this timestamp when all items have been fulfilled or canceled, and all financial transactions are complete. Returns `null` if the order isn't closed. |
+| `orders.confirmationNumber` | STRING | Confirmation number | A customer-facing order identifier, often shown instead of the sequential order name. It uses a random alphanumeric format (for example, `XPAV284CT`) and isn't guaranteed to be unique across orders. |
+| `orders.confirmed` | BOOLEAN | Confirmed | Whether inventory has been reserved for an order. Returns `true` if inventory quantities for an order's [line items](https://shopify.dev/docs/api/admin-graphql/latest/objects/LineItem) have been reserved. Learn more about [managing inventory quantities and states](https://shopify.dev/docs/apps/build/orders-fulfillment/inventory-management-apps/manage-quantities-states). |
+| `orders.createdAt` | TIMESTAMP | Created at | The date and time in [ISO 8601 format](https://en.wikipedia.org/wiki/ISO_8601) when an order was created. This timestamp is set when the customer completes checkout and remains unchanged throughout an order's lifecycle. |
+| `orders.currencyCode` | STRING | Currency code | The shop currency when the order was placed. For example, "USD" or "CAD". |
+| `orders.currentCartDiscountAmountSet` | STRING | Current cart discount amount set | The current total of all discounts applied to the entire order, after returns, refunds, order edits, and cancellations. This includes discount codes, automatic discounts, and other promotions that affect the whole order rather than individual line items. To get the original discount amount at the time of order creation, use the [`cartDiscountAmountSet`](https://shopify.dev/docs/api/admin-graphql/latest/objects/order#field-Order.fields.cartDiscountAmountSet) field. |
+| `orders.currentShippingPriceSet` | STRING | Current shipping price set | The current shipping price after applying refunds and discounts. If the parent `order.taxesIncluded` field is true, then this price includes taxes. Otherwise, this field is the pre-tax price. |
+| `orders.currentSubtotalLineItemsQuantity` | INTEGER | Current subtotal line items quantity | The current sum of the quantities for all line items that contribute to the order's subtotal price, after returns, refunds, order edits, and cancellations. |
+| `orders.currentSubtotalPriceSet` | STRING | Current subtotal price set | The total price of the order, after returns and refunds, in shop and presentment currencies. This includes taxes and discounts. |
+| `orders.currentTaxLines` | STRING | Current tax lines | A list of all tax lines applied to line items on the order, after returns. Tax line prices represent the total price for all tax lines with the same `rate` and `title`. |
+| `orders.currentTotalAdditionalFeesSet` | STRING | Current total additional fees set | The current total of all additional fees for an order, after any returns or modifications. Modifications include returns, refunds, order edits, and cancellations. Additional fees can include charges such as duties, import fees, and special handling. |
+| `orders.currentTotalDiscountsSet` | STRING | Current total discounts set | The total amount discounted on the order after returns and refunds, in shop and presentment currencies. This includes both order and line level discounts. |
+| `orders.currentTotalDutiesSet` | STRING | Current total duties set | The current total duties amount for an order, after any returns or modifications. Modifications include returns, refunds, order edits, and cancellations. |
+| `orders.currentTotalPriceSet` | STRING | Current total price set | The total price of the order, after returns, in shop and presentment currencies. This includes taxes and discounts. |
+| `orders.currentTotalTaxSet` | STRING | Current total tax set | The sum of the prices of all tax lines applied to line items on the order, after returns and refunds, in shop and presentment currencies. |
+| `orders.currentTotalWeight` | INTEGER | Current total weight | The total weight of the order after returns and refunds, in grams. |
+| `orders.customAttributes` | STRING | Custom attributes | A list of additional information that has been attached to the order. For example, gift message, delivery instructions, or internal notes. |
+| `orders.customer` | STRING | Customer | The customer who placed an order. Returns `null` if an order was created through a checkout without customer authentication, such as a guest checkout. Learn more about [customer accounts](https://help.shopify.com/manual/customers/customer-accounts). |
+| `orders.customerAcceptsMarketing` | BOOLEAN | Customer accepts marketing | Whether the customer agreed to receive marketing emails at the time of purchase. Use this to ensure compliance with marketing consent laws and to segment customers for email campaigns. Learn more about [building customer segments](https://shopify.dev/docs/apps/build/marketing-analytics/customer-segments). |
+| `orders.customerLocale` | STRING | Customer locale | The customer's language and region preference at the time of purchase. For example, "en" for English, "fr-CA" for French (Canada), or "es-MX" for Spanish (Mexico). Use this to provide localized customer service and targeted marketing in the customer's preferred language. |
+| `orders.discountCode` | STRING | Discount code | The discount code used for an order. Returns `null` if no discount code was applied. |
+| `orders.discountCodes` | STRING | Discount codes | The discount codes used for the order. Multiple codes can be applied to a single order. |
+| `orders.displayAddress.address1` | STRING | Display address address 1 | The first line of the street address of the order's display address (the address shown for the order). |
+| `orders.displayAddress.address2` | STRING | Display address address 2 | The second line of the street address, such as an apartment or unit number of the order's display address (the address shown for the order). |
+| `orders.displayAddress.city` | STRING | Display address city | The city of the order's display address (the address shown for the order). |
+| `orders.displayAddress.province` | STRING | Display address province | The province, state, or region name of the order's display address (the address shown for the order). |
+| `orders.displayAddress.provinceCode` | STRING | Display address province code | The province, state, or region code of the order's display address (the address shown for the order). |
+| `orders.displayAddress.country` | STRING | Display address country | The country name of the order's display address (the address shown for the order). |
+| `orders.displayAddress.countryCodeV2` | STRING | Display address country code | The two-letter country code (ISO 3166-1 alpha-2) of the order's display address (the address shown for the order). |
+
+#### Shopify Orders fields (part 2 of 3)
+
+| **ID** | **Type** | **Name** | **Description** |
+|---|---|---|---|
+| `orders.displayAddress.zip` | STRING | Display address ZIP | The ZIP or postal code of the order's display address (the address shown for the order). |
+| `orders.displayAddress.phone` | STRING | Display address phone | The phone number of the order's display address (the address shown for the order). |
+| `orders.displayFinancialStatus` | STRING | Display financial status | An order's financial status for display in the Shopify admin. |
+| `orders.displayFulfillmentStatus` | STRING | Display fulfillment status | The order's fulfillment status that displays in the Shopify admin to merchants. For example, an order might be unfulfilled or scheduled. For detailed processing, use the [`FulfillmentOrder`](https://shopify.dev/docs/api/admin-graphql/latest/objects/FulfillmentOrder) object. |
+| `orders.dutiesIncluded` | BOOLEAN | Duties included | Whether duties are included in the subtotal price of the order. Duties are import taxes charged by customs authorities when goods cross international borders. |
+| `orders.edited` | BOOLEAN | Edited | Whether the order has had any edits applied. For example, adding or removing line items, updating quantities, or changing prices. |
+| `orders.email` | STRING | Email | The email address associated with the customer for this order. Used for sending order confirmations, shipping notifications, and other order-related communications. Returns `null` if no email address was provided during checkout. |
+| `orders.estimatedTaxes` | BOOLEAN | Estimated taxes | Whether taxes on the order are estimated. This field returns `false` when taxes on the order are finalized and aren't subject to any changes. |
+| `orders.fulfillable` | BOOLEAN | Fulfillable | Whether there are line items that can be fulfilled. This field returns `false` when the order has no fulfillable line items. For a more granular view of the fulfillment status, refer to the [FulfillmentOrder](https://shopify.dev/api/admin-graphql/latest/objects/FulfillmentOrder) object. |
+| `orders.fulfillments` | STRING | Fulfillments | A list of shipments for the order. Fulfillments represent the physical shipment of products to customers. |
+| `orders.fulfillmentsCount_count` | INTEGER | Fulfillments count | The number of fulfillments on the order. |
+| `orders.fulfillmentsCount_precision` | STRING | Fulfillments count precision | Whether the count is exact or a lower bound (`EXACT` or `AT_LEAST`). |
+| `orders.fullyPaid` | BOOLEAN | Fully paid | Whether the order has been paid in full. This field returns `true` when the total amount received equals or exceeds the order total. |
+| `orders.hasTimelineComment` | BOOLEAN | Has timeline comment | Whether the merchant has added a timeline comment to the order. |
+| `orders.id` | STRING | ID | A globally-unique ID. |
+| `orders.legacyResourceId` | INTEGER | Legacy resource ID | The ID of the corresponding resource in the REST Admin API. |
+| `orders.lineItems` | ARRAY | Line items | A list of the order's line items. Line items represent the individual products and quantities that make up the order. |
+| `orders.merchantEditable` | BOOLEAN | Merchant editable | Whether the order can be edited by the merchant. Returns `false` for orders that can't be modified, such as canceled orders or orders with specific payment statuses. |
+| `orders.merchantEditableErrors` | STRING | Merchant editable errors | A list of reasons why the order can't be edited. For example, canceled orders can't be edited. |
+| `orders.merchantOfRecordApp` | STRING | Merchant of record app | The application acting as the Merchant of Record for the order. The Merchant of Record is responsible for tax collection and remittance. |
+| `orders.name` | STRING | Name | The unique identifier for the order that appears on the order page in the Shopify admin and the **Order status** page. For example, "#1001", "EN1001", or "1001-A". This value isn't unique across multiple stores. Use this field to identify orders in the Shopify admin and for order tracking. |
+| `orders.netPaymentSet` | STRING | Net payment set | The net payment for the order, based on the total amount received minus the total amount refunded, in shop and presentment currencies. |
+| `orders.note` | STRING | Note | The note associated with the order. Contains additional information or instructions added by merchants or customers during the order process. Commonly used for special delivery instructions, gift messages, or internal processing notes. The maximum length is 5000 characters. |
+| `orders.number` | INTEGER | Number | The order number used to generate the name using the store's configured order number prefix/suffix. This number isn't guaranteed to follow a consecutive integer sequence (e.g. 1, 2, 3..), nor is it guaranteed to be unique across multiple stores, or even for a single store. |
+| `orders.originalTotalAdditionalFeesSet` | STRING | Original total additional fees set | The total amount of all additional fees, such as import fees or taxes, that were applied when an order was created. Returns `null` if additional fees aren't applicable. |
+| `orders.originalTotalDutiesSet` | STRING | Original total duties set | The total amount of duties calculated when an order was created, before any modifications. Modifications include returns, refunds, order edits, and cancellations. Use [`currentTotalDutiesSet`](https://shopify.dev/docs/api/admin-graphql/latest/objects/order#field-Order.fields.currentTotalDutiesSet) to retrieve the current duties amount after adjustments. |
+| `orders.originalTotalPriceSet` | STRING | Original total price set | The total price of the order at the time of order creation, in shop and presentment currencies. Use this to compare the original order value against the current total after edits, returns, or refunds. |
+| `orders.paymentGatewayNames` | STRING | Payment gateway names | A list of the names of all payment gateways used for the order. For example, "Shopify Payments" and "Cash on Delivery (COD)". |
+| `orders.phone` | STRING | Phone | The phone number associated with the customer for this order. Useful for contacting customers about shipping updates, delivery notifications, or order issues. Returns `null` if no phone number was provided during checkout. |
+| `orders.poNumber` | STRING | Po number | The purchase order (PO) number that's associated with an order. This is typically provided by business customers who require a PO number for their procurement. |
+| `orders.presentmentCurrencyCode` | STRING | Presentment currency code | The currency used by the customer when placing the order. For example, "USD", "EUR", or "CAD". This may differ from the shop's base currency when serving international customers or using multi-currency pricing. |
+| `orders.processedAt` | TIMESTAMP | Processed at | The date and time in [ISO 8601 format](https://en.wikipedia.org/wiki/ISO_8601) when the order was processed. This date and time might not match the date and time when the order was created. |
+| `orders.productNetwork` | BOOLEAN | Product network | Whether the customer also purchased items from other stores in the network. |
+| `orders.refundDiscrepancySet` | STRING | Refund discrepancy set | The difference between the suggested and actual refund amount of all refunds that have been applied to the order. A positive value indicates a difference in the merchant's favor, and a negative value indicates a difference in the customer's favor. |
+| `orders.refundable` | BOOLEAN | Refundable | Whether the order can be refunded based on its payment transactions. Returns `false` for orders with no eligible payment transactions, such as fully refunded orders or orders with non-refundable payment methods. |
+| `orders.refunds` | STRING | Refunds | A list of refunds that have been applied to the order. Refunds represent money returned to customers for returned items, cancellations, or adjustments. |
+| `orders.registeredSourceUrl` | STRING | Registered source URL | The URL of the source that the order originated from, if found in the domain registry. Returns `null` if the source URL isn't in the domain registry. |
+| `orders.requiresShipping` | BOOLEAN | Requires shipping | Whether the order requires physical shipping to the customer. Returns `false` for digital-only orders (such as gift cards or downloadable products) and `true` for orders with physical products that need delivery. Use this to determine shipping workflows and logistics requirements. |
+| `orders.restockable` | BOOLEAN | Restockable | Whether any line items on the order can be restocked into inventory. Returns `false` for digital products, custom items, or items that can't be resold. |
+| `orders.retailLocation` | STRING | Retail location | The physical location where a retail order is created or completed, except for draft POS orders completed using the "mark as paid" flow in the Shopify admin, which return `null`. Transactions associated with the order might have been processed at a different location. |
+| `orders.returnStatus` | STRING | Return status | The order's aggregated return status for display purposes. Indicates the overall state of returns for the order, helping merchants track and manage the return process. |
+| `orders.shippingAddress.address1` | STRING | Shipping address address 1 | The first line of the street address of the order's shipping address. |
+| `orders.shippingAddress.address2` | STRING | Shipping address address 2 | The second line of the street address, such as an apartment or unit number of the order's shipping address. |
+| `orders.shippingAddress.city` | STRING | Shipping address city | The city of the order's shipping address. |
+| `orders.shippingAddress.province` | STRING | Shipping address province | The province, state, or region name of the order's shipping address. |
+| `orders.shippingAddress.provinceCode` | STRING | Shipping address province code | The province, state, or region code of the order's shipping address. |
+| `orders.shippingAddress.country` | STRING | Shipping address country | The country name of the order's shipping address. |
+| `orders.shippingAddress.countryCodeV2` | STRING | Shipping address country code | The two-letter country code (ISO 3166-1 alpha-2) of the order's shipping address. |
+| `orders.shippingAddress.zip` | STRING | Shipping address ZIP | The ZIP or postal code of the order's shipping address. |
+| `orders.shippingAddress.phone` | STRING | Shipping address phone | The phone number of the order's shipping address. |
+
+#### Shopify Orders fields (part 3 of 3)
+
+| **ID** | **Type** | **Name** | **Description** |
+|---|---|---|---|
+| `orders.sourceIdentifier` | STRING | Source identifier | A unique POS or third party order identifier. For example, "1234-12-1000" or "111-98567-54". The [`receiptNumber`](https://shopify.dev/docs/api/admin-graphql/latest/objects/Order#field-receiptNumber) field is derived from this value for POS orders. |
+| `orders.sourceName` | STRING | Source name | The name of the source associated with the order, such as "web", "mobile_app", or "pos". Use this field to identify the platform where the order was placed. |
+| `orders.statusPageUrl` | STRING | Status page URL | The URL where customers can check their order's current status, including tracking information and delivery updates. Provides order tracking links in emails, apps, or customer communications. |
+| `orders.subtotalLineItemsQuantity` | INTEGER | Subtotal line items quantity | The sum of quantities for all line items that contribute to the order's subtotal price. This excludes quantities for items like tips, shipping costs, or gift cards that don't affect the subtotal. Use this to quickly understand the total item count for pricing calculations. |
+| `orders.subtotalPriceSet` | STRING | Subtotal price set | The sum of the prices for all line items after discounts and before returns, in shop and presentment currencies. If `taxesIncluded` is `true`, then the subtotal also includes tax. |
+| `orders.tags` | STRING | Tags | A comma separated list of tags associated with the order. Updating `tags` overwrites any existing tags that were previously added to the order. To add new tags without overwriting existing tags, use the [tagsAdd](https://shopify.dev/api/admin-graphql/latest/mutations/tagsadd) mutation. |
+| `orders.taxExempt` | BOOLEAN | Tax exempt | Whether taxes are exempt on the order. Returns `true` for orders where the customer or business has a valid tax exemption, such as non-profit organizations or tax-free purchases. Use this to understand if tax calculations were skipped during checkout. |
+| `orders.taxLines` | STRING | Tax lines | A list of all tax lines applied to line items on the order, before returns. Tax line prices represent the total price for all tax lines with the same `rate` and `title`. |
+| `orders.taxesIncluded` | BOOLEAN | Taxes included | Whether taxes are included in the subtotal price of the order. When `true`, the subtotal and line item prices include tax amounts. When `false`, taxes are calculated and displayed separately. |
+| `orders.test` | BOOLEAN | Test | Whether the order is a test. Test orders are made using the Shopify Bogus Gateway or a payment provider with test mode enabled. A test order can't be converted into a real order and vice versa. |
+| `orders.totalCapturableSet` | STRING | Total capturable set | The authorized amount that's uncaptured or undercaptured, in shop and presentment currencies. This amount isn't adjusted for returns. |
+| `orders.totalDiscountsSet` | STRING | Total discounts set | The total amount discounted on the order before returns, in shop and presentment currencies. This includes both order and line level discounts. |
+| `orders.totalOutstandingSet` | STRING | Total outstanding set | The total amount not yet transacted for the order, in shop and presentment currencies. A positive value indicates a difference in the merchant's favor (payment from customer to merchant) and a negative value indicates a difference in the customer's favor (refund from merchant to customer). |
+| `orders.totalPriceSet` | STRING | Total price set | The total price of the order, before returns, in shop and presentment currencies. This includes taxes and discounts. |
+| `orders.totalReceivedSet` | STRING | Total received set | The total amount received from the customer before returns, in shop and presentment currencies. |
+| `orders.totalRefundedSet` | STRING | Total refunded set | The total amount that was refunded, in shop and presentment currencies. |
+| `orders.totalRefundedShippingSet` | STRING | Total refunded shipping set | The total amount of shipping that was refunded, in shop and presentment currencies. |
+| `orders.totalShippingPriceSet` | STRING | Total shipping price set | The total shipping costs returned to the customer, in shop and presentment currencies. This includes fees and any related discounts that were refunded. |
+| `orders.totalTaxSet` | STRING | Total tax set | The total tax amount before returns, in shop and presentment currencies. |
+| `orders.totalTipReceivedSet` | STRING | Total tip received set | The sum of all tip amounts for the order, in shop and presentment currencies. |
+| `orders.totalWeight` | INTEGER | Total weight | The total weight of the order before returns, in grams. |
+| `orders.transactions` | STRING | Transactions | A list of transactions associated with the order. |
+| `orders.transactionsCount_count` | INTEGER | Transactions count | The number of transactions on the order. |
+| `orders.transactionsCount_precision` | STRING | Transactions count precision | Whether the count is exact or a lower bound (`EXACT` or `AT_LEAST`). |
+| `orders.unpaid` | BOOLEAN | Unpaid | Whether no payments have been made for the order. |
+| `orders.updatedAt` | TIMESTAMP | Updated at | The date and time in [ISO 8601 format](https://en.wikipedia.org/wiki/ISO_8601) when the order was last modified. |
+
+### Shopify Order discounts fields
+
+The Order discounts resource of the Shopify connector includes 1 field.
+
+| **ID** | **Type** | **Name** | **Description** |
+|---|---|---|---|
+| `orders_discounts.allocatedAmountSet` | STRING | Allocated amount set | The money amount that's allocated to a line based on the associated discount application in shop and presentment currencies. |
+
+### Shopify Order transactions fields
+
+The Order transactions resource of the Shopify connector includes 31 fields.
+
+| **ID** | **Type** | **Name** | **Description** |
+|---|---|---|---|
+| `orders_transactions.accountNumber` | STRING | Account number | The masked account number associated with the payment method. |
+| `orders_transactions.amountRoundingSet` | STRING | Amount rounding set | The rounding adjustment applied on the cash amount in shop and presentment currencies. |
+| `orders_transactions.amountSet` | STRING | Amount set | The amount and currency of the transaction in shop and presentment currencies. |
+| `orders_transactions.authorizationExpiresAt` | TIMESTAMP | Authorization expires at | The time when the authorization expires. This field is available only to stores on a Shopify Plus plan. |
+| `orders_transactions.createdAt` | TIMESTAMP | Created at | Date and time when the transaction was created. |
+| `orders_transactions.currencyExchangeAdjustment` | STRING | Currency exchange adjustment | An adjustment on the transaction showing the amount lost or gained due to fluctuations in the currency exchange rate. |
+| `orders_transactions.device` | STRING | Device | The Shopify Point of Sale device used to process the transaction. |
+| `orders_transactions.errorCode` | STRING | Error code | A standardized error code, independent of the payment provider. |
+| `orders_transactions.fees` | STRING | Fees | The transaction fees charged on the order transaction. Only present for Shopify Payments transactions. |
+| `orders_transactions.formattedGateway` | STRING | Formatted gateway | The human-readable payment gateway name used to process the transaction. |
+| `orders_transactions.gateway` | STRING | Gateway | The payment gateway used to process the transaction. |
+| `orders_transactions.id` | STRING | ID | A globally-unique ID. |
+| `orders_transactions.kind` | STRING | Kind | The kind of transaction. |
+| `orders_transactions.location` | STRING | Location | The physical location where the transaction was processed. |
+| `orders_transactions.manualPaymentGateway` | BOOLEAN | Manual payment gateway | Whether the transaction is processed by manual payment gateway. |
+| `orders_transactions.manuallyCapturable` | BOOLEAN | Manually capturable | Whether the transaction can be manually captured. |
+| `orders_transactions.maximumRefundableV2` | STRING | Maximum refundable | Specifies the available amount with currency to refund on the gateway. This value is only available for transactions of type `SuggestedRefund`. |
+| `orders_transactions.multiCapturable` | BOOLEAN | Multi capturable | Whether the transaction can be captured multiple times. |
+| `orders_transactions.order` | STRING | Order | The associated order. |
+| `orders_transactions.parentTransaction` | STRING | Parent transaction | The associated parent transaction, for example the authorization of a capture. |
+| `orders_transactions.paymentIcon` | STRING | Payment icon | The payment icon to display for the transaction. |
+| `orders_transactions.paymentId` | STRING | Payment ID | The payment ID associated with the transaction. |
+| `orders_transactions.processedAt` | TIMESTAMP | Processed at | Date and time when the transaction was processed. |
+| `orders_transactions.receiptJson` | STRING | Receipt json | The transaction receipt that the payment gateway attaches to the transaction. > **Note:** This field is **gateway-specific** and **not a stable contract**. > Its structure and contents can vary by payment gateway and may change without notice. > Apps **shouldn't parse or rely on this field for business logic**; prefer typed fields on `OrderTransaction` and related objects. |
+| `orders_transactions.settlementCurrency` | STRING | Settlement currency | The settlement currency. |
+| `orders_transactions.settlementCurrencyRate` | FLOAT | Settlement currency rate | The rate used when converting the transaction amount to settlement currency. |
+| `orders_transactions.shopifyPaymentsSet` | STRING | Shopify payments set | Contains all Shopify Payments information related to an order transaction. This field is available only to stores on a Shopify Plus plan. |
+| `orders_transactions.status` | STRING | Status | The status of this transaction. |
+| `orders_transactions.test` | BOOLEAN | Test | Whether the transaction is a test transaction. |
+| `orders_transactions.totalUnsettledSet` | STRING | Total unsettled set | The amount of the original authorization that remains unsettled, in shop and presentment currencies. During a pending capture, this reflects the full outstanding balance including the pending amount. When no capture is pending, this equals the capturable amount. Only available when an amount is capturable or manually marked as paid. |
+| `orders_transactions.user` | STRING | User | Staff member who was logged into the Shopify POS device when the transaction was processed. |
+
+### Shopify Order line items fields
+
+The Order line items resource of the Shopify connector includes 29 fields.
+
+| **ID** | **Type** | **Name** | **Description** |
+|---|---|---|---|
+| `order_line_items.currentQuantity` | INTEGER | Current quantity | The number of units ordered, excluding refunded and removed units. |
+| `order_line_items.customAttributes` | STRING | Custom attributes | A list of attributes that represent custom features or special requests. |
+| `order_line_items.discountedTotalSet` | STRING | Discounted total set | The total discounted price of the line item in shop and presentment currencies, including refunded and removed quantities. This value doesn't include order-level discounts. Code-based discounts aren't included by default. |
+| `order_line_items.discountedUnitPriceAfterAllDiscountsSet` | STRING | Discounted unit price after all discounts set | The approximate unit price of the line item in shop and presentment currencies. This value includes discounts applied to refunded and removed quantities. |
+| `order_line_items.discountedUnitPriceSet` | STRING | Discounted unit price set | The approximate unit price of the line item in shop and presentment currencies. This value includes line-level discounts and discounts applied to refunded and removed quantities. It doesn't include order-level or code-based discounts. |
+| `order_line_items.id` | STRING | ID | A globally-unique ID. |
+| `order_line_items.image` | STRING | Image | The image associated to the line item's variant. |
+| `order_line_items.isGiftCard` | BOOLEAN | Is gift card | Whether the line item represents the purchase of a gift card. |
+| `order_line_items.merchantEditable` | BOOLEAN | Merchant editable | Whether the line item can be edited or not. |
+| `order_line_items.name` | STRING | Name | The title of the product, optionally appended with the title of the variant (if applicable). |
+| `order_line_items.nonFulfillableQuantity` | INTEGER | Non fulfillable quantity | The total number of units that can't be fulfilled. For example, if items have been refunded, or the item is not something that can be fulfilled, like a tip. Please see the [FulfillmentOrder](https://shopify.dev/api/admin-graphql/latest/objects/FulfillmentOrder) object for more fulfillment details. |
+| `order_line_items.originalTotalSet` | STRING | Original total set | In shop and presentment currencies, the total price of the line item when the order was created. This value doesn't include discounts. |
+| `order_line_items.originalUnitPriceSet` | STRING | Original unit price set | In shop and presentment currencies, the unit price of the line item when the order was created. This value doesn't include discounts. |
+| `order_line_items.product` | STRING | Product | The Product object associated with this line item's variant. |
+| `order_line_items.quantity` | INTEGER | Quantity | The number of units ordered, including refunded and removed units. |
+| `order_line_items.refundableQuantity` | INTEGER | Refundable quantity | The number of units ordered, excluding refunded units and removed units. |
+| `order_line_items.requiresShipping` | BOOLEAN | Requires shipping | Whether physical shipping is required for the variant. |
+| `order_line_items.restockable` | BOOLEAN | Restockable | Whether the line item can be restocked. |
+| `order_line_items.sku` | STRING | SKU | The variant SKU number. |
+| `order_line_items.taxLines` | STRING | Tax lines | The taxes charged for the line item, including taxes charged for refunded and removed quantities. |
+| `order_line_items.taxable` | BOOLEAN | Taxable | Whether the variant is taxable. |
+| `order_line_items.title` | STRING | Title | The title of the product at time of order creation. |
+| `order_line_items.totalDiscountSet` | STRING | Total discount set | The total discount allocated to the line item in shop and presentment currencies, including the total allocated to refunded and removed quantities. This value doesn't include order-level discounts. |
+| `order_line_items.unfulfilledDiscountedTotalSet` | STRING | Unfulfilled discounted total set | In shop and presentment currencies, the total discounted price of the unfulfilled quantity for the line item. |
+| `order_line_items.unfulfilledOriginalTotalSet` | STRING | Unfulfilled original total set | In shop and presentment currencies, the total price of the unfulfilled quantity for the line item. This value doesn't include discounts. |
+| `order_line_items.unfulfilledQuantity` | INTEGER | Unfulfilled quantity | The number of units not yet fulfilled. |
+| `order_line_items.variant` | STRING | Variant | The Variant object associated with this line item. |
+| `order_line_items.variantTitle` | STRING | Variant title | The title of the variant at time of order creation. |
+| `order_line_items.vendor` | STRING | Vendor | The name of the vendor who made the variant. |
+
+### Shopify Order shipping tax lines fields
+
+The Order shipping tax lines resource of the Shopify connector includes 11 fields.
+
+| **ID** | **Type** | **Name** | **Description** |
+|---|---|---|---|
+| `order_shipping_tax_lines.index` | INTEGER | Index | The position of the shipping tax line in its list. |
+| `order_shipping_tax_lines.order_shipping_line_id` | STRING | Order shipping line ID | The ID of the shipping line the tax line applies to. |
+| `order_shipping_tax_lines.price_set_shop_amount` | FLOAT | Price set shop amount | The price in the shop currency. |
+| `order_shipping_tax_lines.price_set_shop_currency_code` | STRING | Price set shop currency code | The shop currency code of the price. |
+| `order_shipping_tax_lines.price_set_pres_amount` | FLOAT | Price set presentment amount | The price in the presentment (customer-facing) currency. |
+| `order_shipping_tax_lines.price_set_pres_currency_code` | STRING | Price set presentment currency code | The presentment currency code of the price. |
+| `order_shipping_tax_lines.channel_liable` | BOOLEAN | Channel liable | Whether the sales channel is liable for remitting the tax. |
+| `order_shipping_tax_lines.rate` | FLOAT | Rate | The tax rate, as a decimal fraction. |
+| `order_shipping_tax_lines.rate_percentage` | FLOAT | Rate percentage | The tax rate, as a percentage. |
+| `order_shipping_tax_lines.source` | STRING | Source | The source of the tax line. |
+| `order_shipping_tax_lines.title` | STRING | Title | The title of the shipping tax line. |
+
+### Shopify Customers fields
+
+The Customers resource of the Shopify connector includes 36 fields.
+
+| **ID** | **Type** | **Name** | **Description** |
+|---|---|---|---|
+| `customers.amountSpent` | STRING | Amount spent | The total amount that the customer has spent on orders in their lifetime. |
+| `customers.canDelete` | BOOLEAN | Can delete | Whether the merchant can delete the customer from their store. A customer can be deleted from a store only if they haven't yet made an order. After a customer makes an order, they can't be deleted from a store. |
+| `customers.companyContactProfiles` | STRING | Company contact profiles | A list of the customer's company contact profiles. |
+| `customers.createdAt` | TIMESTAMP | Created at | The date and time when the customer was added to the store. |
+| `customers.dataSaleOptOut` | BOOLEAN | Data sale opt out | Whether the customer has opted out of having their data sold. |
+| `customers.defaultAddress.address1` | STRING | Default address address 1 | The first line of the street address of the customer's default address. |
+| `customers.defaultAddress.address2` | STRING | Default address address 2 | The second line of the street address, such as an apartment or unit number of the customer's default address. |
+| `customers.defaultAddress.city` | STRING | Default address city | The city of the customer's default address. |
+| `customers.defaultAddress.province` | STRING | Default address province | The province, state, or region name of the customer's default address. |
+| `customers.defaultAddress.provinceCode` | STRING | Default address province code | The province, state, or region code of the customer's default address. |
+| `customers.defaultAddress.country` | STRING | Default address country | The country name of the customer's default address. |
+| `customers.defaultAddress.countryCodeV2` | STRING | Default address country code | The two-letter country code (ISO 3166-1 alpha-2) of the customer's default address. |
+| `customers.defaultAddress.zip` | STRING | Default address ZIP | The ZIP or postal code of the customer's default address. |
+| `customers.defaultAddress.phone` | STRING | Default address phone | The phone number of the customer's default address. |
+| `customers.defaultEmailAddress` | STRING | Default email address | The customer's default email address. |
+| `customers.defaultPhoneNumber` | STRING | Default phone number | The customer's default phone number. |
+| `customers.displayName` | STRING | Display name | The full name of the customer, based on the values for first_name and last_name. If the first_name and last_name are not available, then this falls back to the customer's email address, and if that is not available, the customer's phone number. |
+| `customers.firstName` | STRING | First name | The customer's first name. |
+| `customers.id` | STRING | ID | A globally-unique ID. |
+| `customers.image` | STRING | Image | The image associated with the customer. |
+| `customers.lastName` | STRING | Last name | The customer's last name. |
+| `customers.lastOrder` | STRING | Last order | The customer's last order. |
+| `customers.legacyResourceId` | INTEGER | Legacy resource ID | The ID of the corresponding resource in the REST Admin API. |
+| `customers.lifetimeDuration` | STRING | Lifetime duration | The amount of time since the customer was first added to the store. Example: 'about 12 years'. |
+| `customers.locale` | STRING | Locale | The customer's locale. |
+| `customers.multipassIdentifier` | STRING | Multipass identifier | A unique identifier for the customer that's used with Multipass login. |
+| `customers.note` | STRING | Note | A note about the customer. |
+| `customers.numberOfOrders` | INTEGER | Number of orders | The number of orders that the customer has made at the store in their lifetime. |
+| `customers.productSubscriberStatus` | STRING | Product subscriber status | Possible subscriber states of a customer defined by their subscription contracts. |
+| `customers.state` | STRING | State | The state of the customer's account with the shop. Please note that this only meaningful when Classic Customer Accounts is active. |
+| `customers.statistics` | STRING | Statistics | The statistics for a given customer. |
+| `customers.tags` | STRING | Tags | A comma separated list of tags that have been added to the customer. |
+| `customers.taxExempt` | BOOLEAN | Tax exempt | Whether the customer is exempt from being charged taxes on their orders. |
+| `customers.taxExemptions` | STRING | Tax exemptions | The list of tax exemptions applied to the customer. |
+| `customers.updatedAt` | TIMESTAMP | Updated at | The date and time when the customer was last updated. |
+| `customers.verifiedEmail` | BOOLEAN | Verified email | Whether the customer has verified their email address. Defaults to `true` if the customer is created through the Shopify admin or API. |
+
+### Shopify Products fields
+
+The Products resource of the Shopify connector includes 54 fields.
+
+#### Shopify Products fields (part 1 of 2)
+
+| **ID** | **Type** | **Name** | **Description** |
+|---|---|---|---|
+| `products.bundleConsolidatedOptions` | STRING | Bundle consolidated options | A list of consolidated options for a product in a bundle. |
+| `products.category_ancestorIds` | STRING | Category ancestor IDs | The IDs of the ancestor categories of the product category in the Shopify product taxonomy. |
+| `products.category_childrenIds` | STRING | Category children IDs | The IDs of the child categories of the product category. |
+| `products.category_fullName` | STRING | Category full name | The full name of the product category, including its ancestor categories. |
+| `products.category_id` | STRING | Category ID | The ID of the product category in the Shopify product taxonomy. |
+| `products.category_isArchived` | BOOLEAN | Category is archived | Whether the product category is archived. |
+| `products.category_isLeaf` | BOOLEAN | Category is leaf | Whether the product category has no child categories. |
+| `products.category_isRoot` | BOOLEAN | Category is root | Whether the product category is a top-level category. |
+| `products.category_level` | INTEGER | Category level | The depth of the product category in the taxonomy tree. |
+| `products.category_name` | STRING | Category name | The name of the product category. |
+| `products.category_parentId` | STRING | Category parent ID | The ID of the parent of the product category. |
+| `products.combinedListing` | STRING | Combined listing | A special product type that combines separate products from a store into a single product listing. [Combined listings](https://shopify.dev/apps/build/product-merchandising/combined-listings) are connected by a shared option, such as color, model, or dimension. |
+| `products.combinedListingRole` | STRING | Combined listing role | The [role of the product](https://shopify.dev/docs/apps/build/product-merchandising/combined-listings/build-for-combined-listings) in a combined listing. If `null`, then the product isn't part of any combined listing. |
+| `products.compareAtPriceRange` | STRING | Compare at price range | The [compare-at price range](https://help.shopify.com/manual/products/details/product-pricing/sale-pricing) of the product in the shop's default currency. |
+| `products.createdAt` | TIMESTAMP | Created at | The date and time when the product was created. |
+| `products.defaultCursor` | STRING | Default cursor | A default [cursor](https://shopify.dev/api/usage/pagination-graphql) that returns the single next record, sorted ascending by ID. |
+| `products.description` | STRING | Description | A single-line description of the product, with [HTML tags](https://developer.mozilla.org/en-US/docs/Web/HTML) removed. |
+| `products.descriptionHtml` | STRING | Description html | The description of the product, with HTML tags. For example, the description might include bold `<strong></strong>` and italic `<i></i>` text. |
+| `products.feedback` | STRING | Feedback | The information that lets merchants know what steps they need to take to make sure that the app is set up correctly. For example, if a merchant hasn't set up a product correctly in the app, then the feedback might include a message that says "You need to add a price to this product". |
+| `products.giftCardTemplateSuffix` | STRING | Gift card template suffix | The [theme template](https://shopify.dev/docs/storefronts/themes/architecture/templates) that's used when customers view the gift card in a store. |
+| `products.handle` | STRING | Handle | A unique, human-readable string of the product's title. A handle can contain letters, hyphens (`-`), and numbers, but no spaces. The handle is used in the online store URL for the product. |
+| `products.hasOnlyDefaultVariant` | BOOLEAN | Has only default variant | Whether the product has only a single variant with the default option and value. |
+| `products.hasOutOfStockVariants` | BOOLEAN | Has out of stock variants | Whether the product has variants that are out of stock. |
+| `products.hasVariantsThatRequiresComponents` | BOOLEAN | Has variants that requires components | Whether at least one of the product variants requires [bundle components](https://shopify.dev/docs/apps/build/product-merchandising/bundles/add-product-fixed-bundle). Learn more about [store eligibility for bundles](https://shopify.dev/docs/apps/build/product-merchandising/bundles#store-eligibility). |
+| `products.id` | STRING | ID | A globally-unique ID. |
+| `products.isGiftCard` | BOOLEAN | Is gift card | Whether the product is a gift card. |
+| `products.legacyResourceId` | INTEGER | Legacy resource ID | The ID of the corresponding resource in the REST Admin API. |
+| `products.mediaCount_count` | INTEGER | Media count | The number of media items attached to the product. |
+| `products.mediaCount_precision` | STRING | Media count precision | Whether the count is exact or a lower bound (`EXACT` or `AT_LEAST`). |
+| `products.onlineStorePreviewUrl` | STRING | Online store preview URL | The [preview URL](https://help.shopify.com/manual/online-store/setting-up#preview-your-store) for the online store. |
+| `products.onlineStoreUrl` | STRING | Online store URL | The product's URL on the online store. If `null`, then the product isn't published to the online store sales channel. |
+| `products.options` | STRING | Options | A list of product options. The limit is defined by the [shop's resource limits for product options](https://shopify.dev/docs/api/admin-graphql/latest/objects/Shop#field-resourcelimits) (`Shop.resourceLimits.maxProductOptions`). |
+| `products.priceRangeV2_maxVariantPrice` | STRING | Price range max variant price | The highest price among the product variants. |
+| `products.priceRangeV2_minVariantPrice` | STRING | Price range min variant price | The lowest price among the product variants. |
+| `products.productComponentsCount_count` | INTEGER | Product components count | The number of components of the product. |
+| `products.productComponentsCount_precision` | STRING | Product components count precision | Whether the count is exact or a lower bound (`EXACT` or `AT_LEAST`). |
+| `products.productType` | STRING | Product type | The [product type](https://help.shopify.com/manual/products/details/product-type) that merchants define. |
+| `products.publishedAt` | TIMESTAMP | Published at | The date and time when the product was published to the online store. |
+| `products.requiresSellingPlan` | BOOLEAN | Requires selling plan | Whether the product can only be purchased with a [selling plan](https://shopify.dev/docs/apps/build/purchase-options/subscriptions/selling-plans). Products that are sold on subscription (`requiresSellingPlan: true`) can be updated only for online stores. If you update a product to be subscription-only (`requiresSellingPlan:false`), then the product is unpublished from all channels, except the online store. |
+| `products.sellingPlanGroupsCount_count` | INTEGER | Selling plan groups count | The number of selling plan groups (subscription options) that include the item. |
+| `products.sellingPlanGroupsCount_precision` | STRING | Selling plan groups count precision | Whether the count is exact or a lower bound (`EXACT` or `AT_LEAST`). |
+| `products.seo_description` | STRING | SEO description | The search engine optimization (SEO) meta description of the product. |
+| `products.seo_title` | STRING | SEO title | The search engine optimization (SEO) page title of the product. |
+| `products.status` | STRING | Status | The [product status](https://help.shopify.com/manual/products/details/product-details-page#product-status), which controls visibility across all sales channels. |
+| `products.tags` | STRING | Tags | A comma-separated list of searchable keywords that are associated with the product. For example, a merchant might apply the `sports` and `summer` tags to products that are associated with sportwear for summer. Updating `tags` overwrites any existing tags that were previously added to the product. To add new tags without overwriting existing tags, use the [`tagsAdd`](https://shopify.dev/api/admin-graphql/latest/mutations/tagsadd) mutation. |
+| `products.templateSuffix` | STRING | Template suffix | The [theme template](https://shopify.dev/docs/storefronts/themes/architecture/templates) that's used when customers view the product in a store. |
+| `products.title` | STRING | Title | The name for the product that displays to customers. The title is used to construct the product's handle. For example, if a product is titled "Black Sunglasses", then the handle is `black-sunglasses`. |
+| `products.totalInventory` | INTEGER | Total inventory | The quantity of inventory that's in stock. |
+| `products.tracksInventory` | BOOLEAN | Tracks inventory | Whether [inventory tracking](https://help.shopify.com/manual/products/inventory/getting-started-with-inventory/set-up-inventory-tracking) has been enabled for the product. |
+| `products.updatedAt` | TIMESTAMP | Updated at | The date and time when the product was last modified. A product's `updatedAt` value can change for different reasons. For example, if an order is placed for a product that has inventory tracking set up, then the inventory adjustment is counted as an update. |
+
+#### Shopify Products fields (part 2 of 2)
+
+| **ID** | **Type** | **Name** | **Description** |
+|---|---|---|---|
+| `products.variants` | ARRAY | Variants | A list of [variants](https://shopify.dev/docs/api/admin-graphql/latest/objects/ProductVariant) associated with the product. If querying a single product at the root, you can fetch up to 2048 variants. |
+| `products.variantsCount_count` | INTEGER | Variants count | The number of variants of the product. |
+| `products.variantsCount_precision` | STRING | Variants count precision | Whether the count is exact or a lower bound (`EXACT` or `AT_LEAST`). |
+| `products.vendor` | STRING | Vendor | The name of the product's vendor. |
+
+### Shopify Product variants fields
+
+The Product variants resource of the Shopify connector includes 30 fields.
+
+| **ID** | **Type** | **Name** | **Description** |
+|---|---|---|---|
+| `product_variants.availableForSale` | BOOLEAN | Available for sale | Whether the product variant is available for sale. |
+| `product_variants.barcode` | STRING | Barcode | The value of the barcode associated with the product. |
+| `product_variants.compareAtPrice` | FLOAT | Compare at price | The compare-at price of the variant in the default shop currency. |
+| `product_variants.createdAt` | TIMESTAMP | Created at | The date and time when the variant was created. |
+| `product_variants.defaultCursor` | STRING | Default cursor | A default [cursor](https://shopify.dev/api/usage/pagination-graphql) that returns the single next record, sorted ascending by ID. |
+| `product_variants.displayName` | STRING | Display name | Display name of the variant, based on product's title + variant's title. |
+| `product_variants.id` | STRING | ID | A globally-unique ID. |
+| `product_variants.inventoryItem` | STRING | Inventory item | The inventory item, which is used to query for inventory information. |
+| `product_variants.inventoryPolicy` | STRING | Inventory policy | Whether customers are allowed to place an order for the product variant when it's out of stock. |
+| `product_variants.inventoryQuantity` | INTEGER | Inventory quantity | The total sellable quantity of the variant. |
+| `product_variants.legacyResourceId` | INTEGER | Legacy resource ID | The ID of the corresponding resource in the REST Admin API. |
+| `product_variants.position` | INTEGER | Position | The order of the product variant in the list of product variants. The first position in the list is 1. |
+| `product_variants.price` | FLOAT | Price | The price of the product variant in the default shop currency. |
+| `product_variants.product` | STRING | Product | The product that this variant belongs to. |
+| `product_variants.requiresComponents` | BOOLEAN | Requires components | Whether a product variant requires components. The default value is `false`. If `true`, then the product variant can only be purchased as a parent bundle with components and it will be omitted from channels that don't support bundles. |
+| `product_variants.selectedOptions` | STRING | Selected options | List of product options applied to the variant. |
+| `product_variants.sellableOnlineQuantity` | INTEGER | Sellable online quantity | The total sellable quantity of the variant for online channels. This doesn't represent the total available inventory or capture [limitations based on customer location](https://help.shopify.com/manual/markets/inventory_and_fulfillment). |
+| `product_variants.sellingPlanGroupsCount_count` | INTEGER | Selling plan groups count | The number of selling plan groups (subscription options) that include the item. |
+| `product_variants.sellingPlanGroupsCount_precision` | STRING | Selling plan groups count precision | Whether the count is exact or a lower bound (`EXACT` or `AT_LEAST`). |
+| `product_variants.showUnitPrice` | BOOLEAN | Show unit price | Whether to show the unit price for this product variant. |
+| `product_variants.sku` | STRING | SKU | A case-sensitive identifier for the product variant in the shop. Required in order to connect to a fulfillment service. |
+| `product_variants.taxable` | BOOLEAN | Taxable | Whether a tax is charged when the product variant is sold. |
+| `product_variants.title` | STRING | Title | The title of the product variant. |
+| `product_variants.unitPrice` | STRING | Unit price | The unit price value for the variant based on the variant measurement. |
+| `product_variants.unitPriceMeasurement_measuredType` | STRING | Unit price measurement measured type | The type of measurement used for the unit price, such as volume, weight, or length. |
+| `product_variants.unitPriceMeasurement_quantityUnit` | STRING | Unit price measurement quantity unit | The unit of the quantity measured for the variant. |
+| `product_variants.unitPriceMeasurement_quantityValue` | FLOAT | Unit price measurement quantity value | The quantity of the variant measured in its quantity unit. |
+| `product_variants.unitPriceMeasurement_referenceUnit` | STRING | Unit price measurement reference unit | The reference unit used to calculate the unit price. |
+| `product_variants.unitPriceMeasurement_referenceValue` | INTEGER | Unit price measurement reference value | The reference quantity used to calculate the unit price. |
+| `product_variants.updatedAt` | TIMESTAMP | Updated at | The date and time (ISO 8601 format) when the product variant was last modified. |
+
+### Shopify Inventory levels fields
+
+The Inventory levels resource of the Shopify connector includes 12 fields.
+
+| **ID** | **Type** | **Name** | **Description** |
+|---|---|---|---|
+| `inventory_levels.inventory_level_id` | STRING | Inventory level ID | The ID of the inventory level. |
+| `inventory_levels.inventory_item_id` | STRING | Inventory item ID | The ID of the inventory item. |
+| `inventory_levels.sku` | STRING | SKU | The SKU of the inventory item. |
+| `inventory_levels.tracked` | BOOLEAN | Tracked | Whether inventory is tracked for the item. |
+| `inventory_levels.location_id` | STRING | Location ID | The ID of the location that holds the inventory. |
+| `inventory_levels.location_name` | STRING | Location name | The name of the location that holds the inventory. |
+| `inventory_levels.location_active` | BOOLEAN | Location active | Whether the location is active. |
+| `inventory_levels.available_quantity` | INTEGER | Available quantity | The quantity available to sell at the location. |
+| `inventory_levels.on_hand_quantity` | INTEGER | On hand quantity | The quantity physically on hand at the location. |
+| `inventory_levels.committed_quantity` | INTEGER | Committed quantity | The quantity committed to orders at the location. |
+| `inventory_levels.reserved_quantity` | INTEGER | Reserved quantity | The quantity reserved at the location. |
+| `inventory_levels.unit_cost_amount` | FLOAT | Unit cost amount | The cost of one unit of the inventory item. |
+
+### Shopify Locations fields
+
+The Locations resource of the Shopify connector includes 20 fields.
+
+| **ID** | **Type** | **Name** | **Description** |
+|---|---|---|---|
+| `locations.activatable` | BOOLEAN | Activatable | Whether the location can be reactivated. If `false`, then trying to activate the location with the [`LocationActivate`](https://shopify.dev/docs/api/admin-graphql/latest/mutations/locationActivate) mutation will return an error that describes why the location can't be activated. |
+| `locations.address` | STRING | Address | The address of this location. |
+| `locations.addressVerified` | BOOLEAN | Address verified | Whether the location address has been verified. |
+| `locations.createdAt` | TIMESTAMP | Created at | The date and time ([ISO 8601 format](http://en.wikipedia.org/wiki/ISO_8601)) that the location was added to a shop. |
+| `locations.deactivatable` | BOOLEAN | Deactivatable | Whether this location can be deactivated. If `true`, then the location can be deactivated by calling the [`LocationDeactivate`](https://shopify.dev/docs/api/admin-graphql/latest/mutations/locationDeactivate) mutation. If `false`, then calling the mutation to deactivate it will return an error that describes why the location can't be deactivated. |
+| `locations.deactivatedAt` | STRING | Deactivated at | The date and time ([ISO 8601 format](http://en.wikipedia.org/wiki/ISO_8601)) that the location was deactivated at. For example, 3:30 pm on September 7, 2019 in the time zone of UTC (Universal Time Coordinated) is represented as `"2019-09-07T15:50:00Z`". |
+| `locations.deletable` | BOOLEAN | Deletable | Whether this location can be deleted. |
+| `locations.fulfillmentService` | STRING | Fulfillment service | Name of the service provider that fulfills from this location. |
+| `locations.fulfillsOnlineOrders` | BOOLEAN | Fulfills online orders | Whether this location can fulfill online orders. |
+| `locations.hasActiveInventory` | BOOLEAN | Has active inventory | Whether this location has active inventory. |
+| `locations.hasUnfulfilledOrders` | BOOLEAN | Has unfulfilled orders | Whether this location has orders that need to be fulfilled. |
+| `locations.id` | STRING | ID | A globally-unique ID. |
+| `locations.isActive` | BOOLEAN | Is active | Whether the location is active. A deactivated location can be activated (change `isActive: true`) if it has `activatable` set to `true` by calling the [`locationActivate`](https://shopify.dev/docs/api/admin-graphql/latest/mutations/locationActivate) mutation. |
+| `locations.isFulfillmentService` | BOOLEAN | Is fulfillment service | Whether this location is a fulfillment service. |
+| `locations.legacyResourceId` | INTEGER | Legacy resource ID | The ID of the corresponding resource in the REST Admin API. |
+| `locations.localPickupSettingsV2` | STRING | Local pickup settings | Local pickup settings for the location. |
+| `locations.name` | STRING | Name | The name of the location. |
+| `locations.shipsInventory` | BOOLEAN | Ships inventory | Legacy field indicating this location was designated for shipping. All locations with valid addresses can now ship. |
+| `locations.suggestedAddresses` | STRING | Suggested addresses | List of suggested addresses for this location (empty if none). |
+| `locations.updatedAt` | TIMESTAMP | Updated at | The date and time ([ISO 8601 format](http://en.wikipedia.org/wiki/ISO_8601)) when the location was last updated. |
+
+### Shopify Fulfillments fields
+
+The Fulfillments resource of the Shopify connector includes 20 fields.
+
+| **ID** | **Type** | **Name** | **Description** |
+|---|---|---|---|
+| `fulfillments.id` | STRING | ID | A globally-unique ID. |
+| `fulfillments.location_id` | STRING | Location ID | The ID of the location. |
+| `fulfillments.order_id` | STRING | Order ID | The ID of the order. |
+| `fulfillments.service_id` | STRING | Service ID | The ID of the fulfillment service. |
+| `fulfillments.created_at` | STRING | Created at | The date and time the fulfillment was created. |
+| `fulfillments.delivered_at` | STRING | Delivered at | The date and time the fulfillment was delivered. |
+| `fulfillments.display_status` | STRING | Display status | The status of the fulfillment as displayed in the Shopify admin. |
+| `fulfillments.estimated_delivery_at` | STRING | Estimated delivery at | The estimated date and time of delivery. |
+| `fulfillments.in_transit_at` | STRING | In transit at | The date and time the fulfillment went in transit. |
+| `fulfillments.name` | STRING | Name | Human readable reference identifier for this fulfillment. |
+| `fulfillments.requires_shipping` | BOOLEAN | Requires shipping | Whether the fulfillment requires shipping. |
+| `fulfillments.status` | STRING | Status | The status of the fulfillment. |
+| `fulfillments.total_quantity` | INTEGER | Total quantity | The total quantity of items in the fulfillment. |
+| `fulfillments.updated_at` | STRING | Updated at | The date and time the fulfillment was last updated. |
+| `fulfillments.origin_address_address_1` | STRING | Origin address address 1 | The first line of the street address the fulfillment ships from. |
+| `fulfillments.origin_address_address_2` | STRING | Origin address address 2 | The second line of the street address the fulfillment ships from. |
+| `fulfillments.origin_address_city` | STRING | Origin address city | The city the fulfillment ships from. |
+| `fulfillments.origin_address_country_code` | STRING | Origin address country code | The country code the fulfillment ships from. |
+| `fulfillments.origin_address_province_code` | STRING | Origin address province code | The province or state code the fulfillment ships from. |
+| `fulfillments.origin_address_zip` | STRING | Origin address ZIP | The ZIP or postal code the fulfillment ships from. |
+
+### Shopify Fulfillment orders fields
+
+The Fulfillment orders resource of the Shopify connector includes 39 fields.
+
+| **ID** | **Type** | **Name** | **Description** |
+|---|---|---|---|
+| `fulfillment_orders.id` | STRING | ID | The ID of the fulfillment order. |
+| `fulfillment_orders.order_id` | STRING | Order ID | The ID of the order. |
+| `fulfillment_orders.assigned_location_id` | STRING | Assigned location ID | The ID of the location assigned to fulfill the order. |
+| `fulfillment_orders.destination_location_id` | STRING | Destination location ID | The ID of the destination location. |
+| `fulfillment_orders.assigned_location_address_1` | STRING | Assigned location address 1 | The first line of the street address of the assigned location. |
+| `fulfillment_orders.assigned_location_address_2` | STRING | Assigned location address 2 | The second line of the street address of the assigned location. |
+| `fulfillment_orders.assigned_location_city` | STRING | Assigned location city | The city of the assigned location. |
+| `fulfillment_orders.assigned_location_country_code` | STRING | Assigned location country code | The country code of the assigned location. |
+| `fulfillment_orders.assigned_location_name` | STRING | Assigned location name | The name of the assigned location. |
+| `fulfillment_orders.assigned_location_phone` | STRING | Assigned location phone | The phone number of the assigned location. |
+| `fulfillment_orders.assigned_location_province` | STRING | Assigned location province | The province or state of the assigned location. |
+| `fulfillment_orders.assigned_location_zip` | STRING | Assigned location ZIP | The ZIP or postal code of the assigned location. |
+| `fulfillment_orders.channel_id` | STRING | Channel ID | The ID of the sales channel the order came from. |
+| `fulfillment_orders.created_at` | STRING | Created at | The date and time the fulfillment order was created. |
+| `fulfillment_orders.destination_address_1` | STRING | Destination address 1 | The first line of the street address of the destination. |
+| `fulfillment_orders.destination_address_2` | STRING | Destination address 2 | The second line of the street address of the destination. |
+| `fulfillment_orders.destination_city` | STRING | Destination city | The city of the destination. |
+| `fulfillment_orders.destination_company` | STRING | Destination company | The company name at the destination. |
+| `fulfillment_orders.destination_country_code` | STRING | Destination country code | The country code of the destination. |
+| `fulfillment_orders.destination_email` | STRING | Destination email | The email address of the recipient. |
+| `fulfillment_orders.destination_first_name` | STRING | Destination first name | The first name of the recipient. |
+| `fulfillment_orders.destination_id` | STRING | Destination ID | The ID of the destination. |
+| `fulfillment_orders.destination_last_name` | STRING | Destination last name | The last name of the recipient. |
+| `fulfillment_orders.destination_phone` | STRING | Destination phone | The phone number of the recipient. |
+| `fulfillment_orders.destination_province` | STRING | Destination province | The province or state of the destination. |
+| `fulfillment_orders.destination_zip` | STRING | Destination ZIP | The ZIP or postal code of the destination. |
+| `fulfillment_orders.fulfill_at` | STRING | Fulfill at | The date and time at which the fulfillment order is scheduled to be fulfilled. |
+| `fulfillment_orders.fulfill_by` | STRING | Fulfill by | The date and time by which the fulfillment order should be fulfilled. |
+| `fulfillment_orders.international_duties_incoterm` | STRING | International duties incoterm | The Incoterm used for international duties on the order. |
+| `fulfillment_orders.order_name` | STRING | Order name | The name of the order, such as #1001. |
+| `fulfillment_orders.order_processed_at` | STRING | Order processed at | The date and time the order was processed. |
+| `fulfillment_orders.request_status` | STRING | Request status | The fulfillment request status of the fulfillment order. |
+| `fulfillment_orders.status` | STRING | Status | The status of the fulfillment order. |
+| `fulfillment_orders.supported_actions` | STRING | Supported actions | The actions that can be taken on the fulfillment order. |
+| `fulfillment_orders.updated_at` | STRING | Updated at | The date and time the fulfillment order was last updated. |
+| `fulfillment_orders.delivery_method_id` | STRING | Delivery method ID | The ID of the delivery method. |
+| `fulfillment_orders.delivery_method_method_type` | STRING | Delivery method method type | The type of the delivery method, such as shipping, pickup, or local delivery. |
+| `fulfillment_orders.delivery_method_min_delivery_date_time` | STRING | Delivery method min delivery date time | The earliest date and time the delivery is expected. |
+| `fulfillment_orders.delivery_method_max_delivery_date_time` | STRING | Delivery method max delivery date time | The latest date and time the delivery is expected. |
+
+### Shopify Fulfillment order line items fields
+
+The Fulfillment order line items resource of the Shopify connector includes 14 fields.
+
+| **ID** | **Type** | **Name** | **Description** |
+|---|---|---|---|
+| `fulfillment_order_line_items.id` | STRING | ID | The ID of the fulfillment order line item. |
+| `fulfillment_order_line_items.fulfillment_order_id` | STRING | Fulfillment order ID | The ID of the fulfillment order the line item belongs to. |
+| `fulfillment_order_line_items.inventory_item_id` | STRING | Inventory item ID | The ID of the inventory item. |
+| `fulfillment_order_line_items.order_line_item_id` | STRING | Order line item ID | The ID of the order line item. |
+| `fulfillment_order_line_items.product_variant_id` | STRING | Product variant ID | The ID of the product variant. |
+| `fulfillment_order_line_items.product_title` | STRING | Product title | The title of the product. |
+| `fulfillment_order_line_items.remaining_quantity` | INTEGER | Remaining quantity | The quantity of the line item that still needs to be fulfilled. |
+| `fulfillment_order_line_items.requires_shipping` | BOOLEAN | Requires shipping | Whether the line item requires shipping. |
+| `fulfillment_order_line_items.sku` | STRING | SKU | The SKU of the item. |
+| `fulfillment_order_line_items.total_quantity` | INTEGER | Total quantity | The total quantity of items in the fulfillment order line item. |
+| `fulfillment_order_line_items.variant_title` | STRING | Variant title | The title of the product variant. |
+| `fulfillment_order_line_items.vendor` | STRING | Vendor | The vendor of the item. |
+| `fulfillment_order_line_items.weight_unit` | STRING | Weight unit | The unit of the item weight. |
+| `fulfillment_order_line_items.weight_value` | FLOAT | Weight value | The weight of the item, in the weight unit. |
+
+### Shopify Fulfillment order line fields
+
+The Fulfillment order line resource of the Shopify connector includes 22 fields.
+
+| **ID** | **Type** | **Name** | **Description** |
+|---|---|---|---|
+| `fulfillment_order_line.order_line_id` | STRING | Order line ID | The ID of the order line item. |
+| `fulfillment_order_line.fulfillment_id` | STRING | Fulfillment ID | The ID of the fulfillment the line item belongs to. |
+| `fulfillment_order_line.order_id` | STRING | Order ID | The ID of the order. |
+| `fulfillment_order_line.product_id` | STRING | Product ID | The ID of the product. |
+| `fulfillment_order_line.variant_id` | STRING | Variant ID | The ID of the product variant. |
+| `fulfillment_order_line.fulfillable_quantity` | INTEGER | Fulfillable quantity | The quantity of the line item that can still be fulfilled. |
+| `fulfillment_order_line.gift_card` | BOOLEAN | Gift card | Whether the line item is a gift card. |
+| `fulfillment_order_line.grams` | INTEGER | Grams | The weight of the line item, in grams. |
+| `fulfillment_order_line.name` | STRING | Name | The name of the line item. |
+| `fulfillment_order_line.price` | FLOAT | Price | The price of the line item. |
+| `fulfillment_order_line.price_set_shop_amount` | FLOAT | Price set shop amount | The price in the shop currency. |
+| `fulfillment_order_line.price_set_shop_currency_code` | STRING | Price set shop currency code | The shop currency code of the price. |
+| `fulfillment_order_line.price_set_pres_amount` | FLOAT | Price set presentment amount | The price in the presentment (customer-facing) currency. |
+| `fulfillment_order_line.price_set_pres_currency_code` | STRING | Price set presentment currency code | The presentment currency code of the price. |
+| `fulfillment_order_line.properties` | STRING | Properties | The custom properties of the line item. |
+| `fulfillment_order_line.quantity` | INTEGER | Quantity | The quantity of the item. |
+| `fulfillment_order_line.requires_shipping` | BOOLEAN | Requires shipping | Whether the fulfilled line item requires shipping. |
+| `fulfillment_order_line.sku` | STRING | SKU | The SKU of the item. |
+| `fulfillment_order_line.taxable` | BOOLEAN | Taxable | Whether the line item is taxable. |
+| `fulfillment_order_line.title` | STRING | Title | The title of the fulfilled line item. |
+| `fulfillment_order_line.variant_title` | STRING | Variant title | The title of the product variant. |
+| `fulfillment_order_line.vendor` | STRING | Vendor | The vendor of the item. |

@@ -1,0 +1,171 @@
+---
+title: Custom Reports
+description: Learn about the custom Meta Ads reports available in Unite.
+sidebar_position: 2
+---
+
+
+# Meta Ads Custom Report Fields
+
+**27 metrics · 28 dimensions**
+
+Complete list of Meta Ads fields that can be used in a Unite custom report. Use a custom report when the prebuilt reports do not include the fields you need.
+
+## Dimensions and metrics
+
+There are two types of fields: dimensions and metrics.
+
+- **Dimensions** (types `STRING` and `DATE`) describe or split your data, such as campaign, ad set, country, or placement. Breakdown fields, such as age, gender, and platform, split metrics into more rows.
+- **Metrics** (types `INTEGER` and `FLOAT`) are numeric values, such as impressions, clicks, spend, and reach.
+
+## Combining dimensions and metrics
+
+Not every breakdown can be combined with every metric or with every other breakdown. For the supported combinations, see the [Meta Marketing API breakdowns reference](https://developers.facebook.com/docs/marketing-api/insights/breakdowns).
+
+## Meta Ads Fields
+
+### On this page
+
+1. [Time 2](#meta-ads-time-fields)
+2. [Account 2](#meta-ads-account-fields)
+3. [Campaign 3](#meta-ads-campaign-fields)
+4. [Ad set 3](#meta-ads-ad-set-fields)
+5. [Ad 2](#meta-ads-ad-fields)
+6. [Performance 14](#meta-ads-performance-fields)
+7. [Conversions 6](#meta-ads-conversions-fields)
+8. [Video 7](#meta-ads-video-fields)
+9. [Audience breakdowns 5](#meta-ads-audience-breakdowns-fields)
+10. [Placement and device breakdowns 5](#meta-ads-placement-and-device-breakdowns-fields)
+11. [Action and product breakdowns 6](#meta-ads-action-and-product-breakdowns-fields)
+
+### Meta Ads Time fields
+
+The Time category of the Meta Ads connector includes 2 fields.
+
+| **ID** | **Type** | **Name** | **Description** |
+|---|---|---|---|
+| `date_start` | DATE | Date start | Start date of the reporting period (YYYY-MM-DD). |
+| `date_stop` | DATE | Date stop | End date of the reporting period (YYYY-MM-DD). |
+
+### Meta Ads Account fields
+
+The Account category of the Meta Ads connector includes 2 fields.
+
+| **ID** | **Type** | **Name** | **Description** |
+|---|---|---|---|
+| `account_id` | STRING | Account ID | The ID of the Meta ad account. |
+| `account_name` | STRING | Account name | The name of the Meta ad account. |
+
+### Meta Ads Campaign fields
+
+The Campaign category of the Meta Ads connector includes 3 fields.
+
+| **ID** | **Type** | **Name** | **Description** |
+|---|---|---|---|
+| `campaign_id` | STRING | Campaign ID | The ID of the campaign. |
+| `campaign_name` | STRING | Campaign name | The name of the campaign. |
+| `objective` | STRING | Objective | The objective of the campaign (e.g. lead generation, conversions). |
+
+### Meta Ads Ad set fields
+
+The Ad set category of the Meta Ads connector includes 3 fields.
+
+| **ID** | **Type** | **Name** | **Description** |
+|---|---|---|---|
+| `adset_id` | STRING | Ad set ID | The ID of the ad set. |
+| `adset_name` | STRING | Ad set name | The name of the ad set. |
+| `optimization_goal` | STRING | Optimization goal | The optimization goal set at the ad set level. |
+
+### Meta Ads Ad fields
+
+The Ad category of the Meta Ads connector includes 2 fields.
+
+| **ID** | **Type** | **Name** | **Description** |
+|---|---|---|---|
+| `ad_id` | STRING | Ad ID | The ID of the ad. |
+| `ad_name` | STRING | Ad name | The name of the ad. |
+
+### Meta Ads Performance fields
+
+The Performance category of the Meta Ads connector includes 14 fields.
+
+| **ID** | **Type** | **Name** | **Description** |
+|---|---|---|---|
+| `impressions` | INTEGER | Impressions | The total number of times your ads were on screen. |
+| `clicks` | INTEGER | Clicks | The total number of clicks on your ads. |
+| `reach` | INTEGER | Reach | The number of unique people who saw your ads at least once. |
+| `spend` | FLOAT | Spend | The total amount of money spent on your campaign. |
+| `frequency` | FLOAT | Frequency | The average number of times each person saw your ad. |
+| `cpc` | FLOAT | CPC | The average cost for each click (cost per click). |
+| `ctr` | FLOAT | CTR | Click-through rate (percentage of impressions that resulted in a click). |
+| `cpp` | FLOAT | CPP | Cost per 1,000 people reached. |
+| `cpm` | FLOAT | CPM | Cost per 1,000 impressions. |
+| `outbound_clicks` | INTEGER | Outbound clicks | The number of clicks on links that take people off Meta technologies. |
+| `inline_link_clicks` | INTEGER | Inline link clicks | The number of clicks on links to select destinations. |
+| `inline_link_click_ctr` | FLOAT | Inline link click CTR | The CTR for inline link clicks. |
+| `cost_per_inline_link_click` | FLOAT | Cost per inline link click | The average cost for inline link clicks. |
+| `post_engagement` | INTEGER | Post engagement | The total number of actions related to your page post. |
+
+### Meta Ads Conversions fields
+
+The Conversions category of the Meta Ads connector includes 6 fields.
+
+| **ID** | **Type** | **Name** | **Description** |
+|---|---|---|---|
+| `actions` | INTEGER | Actions | The total number of actions taken on your ad, page, or app. |
+| `action_values` | FLOAT | Action values | The total value of actions/conversions taken. |
+| `cost_per_action_type` | FLOAT | Cost per action type | The average cost per action type. |
+| `purchase_roas` | FLOAT | Purchase ROAS | Return on ad spend for purchases. |
+| `website_purchase_roas` | FLOAT | Website purchase ROAS | Return on ad spend for website purchases. |
+| `mobile_app_purchase_roas` | FLOAT | Mobile app purchase ROAS | Return on ad spend for mobile app purchases. |
+
+### Meta Ads Video fields
+
+The Video category of the Meta Ads connector includes 7 fields.
+
+| **ID** | **Type** | **Name** | **Description** |
+|---|---|---|---|
+| `video_avg_time_watched_actions` | FLOAT | Video average watch time | The average watch time of video. |
+| `video_p25_watched_actions` | INTEGER | Video plays at 25% | Number of video plays at 25% of length. |
+| `video_p50_watched_actions` | INTEGER | Video plays at 50% | Number of video plays at 50% of length. |
+| `video_p75_watched_actions` | INTEGER | Video plays at 75% | Number of video plays at 75% of length. |
+| `video_p95_watched_actions` | INTEGER | Video plays at 95% | Number of video plays at 95% of length. |
+| `video_p100_watched_actions` | INTEGER | Video plays at 100% | Number of video plays at 100% of length. |
+| `cost_per_thruplay` | FLOAT | Cost per ThruPlay | The average cost for each ThruPlay. |
+
+### Meta Ads Audience breakdowns fields
+
+The Audience breakdowns category of the Meta Ads connector includes 5 fields.
+
+| **ID** | **Type** | **Name** | **Description** |
+|---|---|---|---|
+| `age` | STRING | Age | Age breakdown of the target audience. |
+| `gender` | STRING | Gender | Gender breakdown of the target audience. |
+| `country` | STRING | Country | Country breakdown of the target audience. |
+| `dma` | STRING | DMA | Designated Market Area breakdown of the audience. |
+| `region` | STRING | Region | Region breakdown of the audience. |
+
+### Meta Ads Placement and device breakdowns fields
+
+The Placement and device breakdowns category of the Meta Ads connector includes 5 fields.
+
+| **ID** | **Type** | **Name** | **Description** |
+|---|---|---|---|
+| `publisher_platform` | STRING | Publisher platform | Platform where ad appeared (e.g. Facebook, Instagram). |
+| `platform_position` | STRING | Platform position | Position where ad appeared (e.g. Feed, Stories). |
+| `device_platform` | STRING | Device platform | Device platform used (e.g. Desktop, Mobile). |
+| `impression_device` | STRING | Impression device | Specific device type used when impression was counted. |
+| `hourly_stats_aggregated_by_advertiser_time_zone` | STRING | Hour of day (advertiser time zone) | Time of day based on advertiser time zone. |
+
+### Meta Ads Action and product breakdowns fields
+
+The Action and product breakdowns category of the Meta Ads connector includes 6 fields.
+
+| **ID** | **Type** | **Name** | **Description** |
+|---|---|---|---|
+| `action_device` | STRING | Action device | Device on which the action occurred. |
+| `action_type` | STRING | Action type | Type of action taken (e.g. link_click, purchase). |
+| `action_reaction` | STRING | Action reaction | Reaction to the post (e.g. like, love). |
+| `action_target_id` | STRING | Action target ID | ID of target action. |
+| `action_destination` | STRING | Action destination | Destination of click. |
+| `product_id` | STRING | Product ID | Product catalog ID. |

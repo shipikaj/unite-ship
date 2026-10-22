@@ -33,6 +33,7 @@ Before configuring BigQuery in Unite, you'll need your Google Cloud Project ID.
 2. Navigate to your list of projects.
 3. Locate the project you want to use.
 4. Copy the **Project ID**.
+   ![Find Project ID](https://d1y8p27odt6lnh.cloudfront.net/strapi-upload/bq_guide_1_2a2bc67975.png)
 
 You will use this **Project ID** when configuring the destination in Unite.
 
@@ -45,6 +46,7 @@ You will use this **Project ID** when configuring the destination in Unite.
 3. Select **BigQuery** as the destination type.
 4. Enter a **Destination Name**.
 5. Enter the **Project ID** from the previous step.
+   ![Find Service Account](https://d1y8p27odt6lnh.cloudfront.net/strapi-upload/0_a0d6ec27d6.png)
 
 During setup, Unite displays a **Service Account** email address. Copy this email, as you'll use it in the next step to grant access to your Google Cloud project.
 
@@ -59,6 +61,8 @@ Grant the Unite Service Account access to your BigQuery project.
 3. Click **Grant Access**.
 4. Paste the Unite Service Account email that you copied earlier. 
 5. Assign these two role to Unite Service Account: **BigQuery user** & **Bigquery data editor**.
+   ![Configure Service Account 1](https://d1y8p27odt6lnh.cloudfront.net/strapi-upload/bq_guide_2_bed0a20df1.png)
+   ![Configure Service Account 2](https://d1y8p27odt6lnh.cloudfront.net/strapi-upload/bq_guide_3_cb8a0d69ea.png)
 6. Save the changes.
 
 This allows Unite to create and manage BigQuery resources required for data synchronization.

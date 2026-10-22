@@ -1,157 +1,90 @@
 ---
 title: Setup
-description: Connect Amazon Redshift as a destination in Unite.
+description: Connect Amazon Redshift as a data destination in Unite.
 sidebar_position: 2
 ---
 
 # Connect Amazon Redshift
 
-This guide explains how to configure Amazon Redshift as a destination in Unite.
+This guide explains how to connect your Amazon Redshift account as a data destination in Unite.
 
-Once connected, Unite can create tables and synchronize data from your pipelines into your Redshift data warehouse.
+Once connected, you can use your Amazon Redshift data to build pipelines and sync data to your destination.
 
 ---
 
 ## Before you begin
 
-Ensure you have the following:
-
-- An Amazon Redshift database.
-- Access to the AWS Management Console.
-- Permission to manage Redshift resources and security groups.
-- A Unite user account with permission to create and manage destinations.
+#### You need to have a redshift database.
 
 ---
 
-## Connect your destination
+## Connect your account
 
-### Step 1 - Retrieve your connection details
+### Step 1
 
-From the Amazon Redshift console, locate the following information:
+##### 1: Find endpoint details
+1. Open the Redshift Serverless console.
+2. Select the namespace you want Unite to connect to.
+![r1.webp](https://d1y8p27odt6lnh.cloudfront.net/strapi-upload/r1_a48254c54a.webp)
+3. Select your workgroup.
+![r2.webp](https://d1y8p27odt6lnh.cloudfront.net/strapi-upload/r2_d100024c82.webp)
+4. In the General Information pane's Endpoint field, click the Copy icon to copy the endpoint details. You will need them to complete the destination setup in Unite
+![r3.webp](https://d1y8p27odt6lnh.cloudfront.net/strapi-upload/r3_a58f108b8b.webp)
 
-- Endpoint (Host)
-- Port
-- Database Name
-- Admin Username
-
-> **Note**
->
-> The endpoint may include the host, port, and database name in a single value. Enter each value separately when configuring the destination in Unite.
-
----
-
-### Step 2 - Allow Unite to connect
-
-To allow Unite to connect to your Redshift instance:
-
-1. Open your Redshift **Workgroup**.
-2. Navigate to **Network and Security**.
-3. Open the associated **VPC Security Group**.
-4. Edit the **Inbound Rules**.
-5. Add a **Custom TCP** rule for your Redshift port.
-6. Allow inbound access from the Unite IP addresses for your region.
-
-This enables Unite to establish a secure connection to your Redshift warehouse.
+Note: Be sure to separate the port and database and remove the preceding colon (:) from the host string.
 
 ---
 
-### Step 3 - Choose a database user
+### Step 2
 
-You can connect using either:
-
-- **Master User** (recommended)
-- **Limited User**
-
-#### Option A - Master User
-
-Use your existing Redshift administrator credentials.
-
-You'll need:
-
-- Host
-- Port
-- Database Name
-- Username
-- Password
-
----
-
-#### Option B - Limited User
-
-If you prefer not to use the administrator account, create a dedicated user for Unite.
-
-Create the user:
-
-```sql
-CREATE USER unite PASSWORD '<password>';
-```
-
-Grant database permissions:
-
-```sql
-GRANT CREATE, TEMPORARY
-ON DATABASE "database"
-TO unite;
-```
-
-Grant schema permissions:
-
-```sql
-GRANT USAGE, CREATE
-ON SCHEMA "schema"
-TO unite;
-```
-
-Grant table permissions:
-
-```sql
-GRANT SELECT, DROP
-ON ALL TABLES IN SCHEMA "schema"
-TO unite;
-```
-
-Replace:
-
-- `database` with your database name.
-- `schema` with your schema name.
-- `<password>` with a secure password.
+##### 2: Allow Unite to connect
+1. Select the namespace you want Unite to connect to.
+2. Select your workgroup.
+3. In the Data Access tab, scroll down to the Network and security section.
+4. In the VPC security group field, click the security group to open it and make a note of the security group ID.
+![r4.webp](https://d1y8p27odt6lnh.cloudfront.net/strapi-upload/r4_bee1ff1583.webp)
+5. In the Security Groups window, click Inbound rules. The security group you clicked in the previous view should be pre-selected here. Ensure that you selected the same security group from the previous screen.
+6. Click Edit inbound rules.
+![r5.webp](https://d1y8p27odt6lnh.cloudfront.net/strapi-upload/r5_e987f1bf07.webp)
+7. In the Edit Inbound rules window, follow the steps below to create custom TCP rules for each of Unite's IPs in your region:
+   - Select Custom TCP in the drop-down menu.
+   - Enter your Redshift port number.
+   - Enter the Unite IP address.
+   - Click Add rule.
+![r6.webp](https://d1y8p27odt6lnh.cloudfront.net/strapi-upload/r6_f4874cfdb5.webp)
+![r7.webp](https://d1y8p27odt6lnh.cloudfront.net/strapi-upload/r7_c4858d0f0c.webp)
 
 ---
 
-### Step 4 - Configure the destination in Unite
+### Step 3
 
-1. Open **Destinations**.
-2. Click **Connect Destination**.
-3. Enter a destination name.
-4. Select **Amazon Redshift**.
-5. Enter the following information:
+##### 3: Connect as Master or Limited user
+You can connect as either a "Master" or "Limited" user. The master username inherently has permissions that Unite needs to function, so we recommend connecting as a master user. If you don't want to connect as a master user, you must create a new limited user for Unite.
 
-- Host
-- Port
-- Database Name
-- Username
-- Password
-- Schema
-- Time Zone
 
-6. Click **Save & Test**.
+##### a. Master User
+Select the namespace you want Unite to connect to. Copy Database name and the Admin user name values. You will need them to complete the destination setup in Unite
 
----
+##### b. Limited User
+To connect as a limited user, you must create a Redshift user for Unite.
+1. Connect to Redshift using a SQL client tool.
+2. Create a Redshift User for Unite Execute the following query to create a user (replace `<password>` with a password of your choice):
+CREATE USER unite PASSWORD `<password>`;
 
-## Verify the connection
+3. Execute the following query to grant the unite user the following privileges (replace "database" with your database name, and "schema" with your schema name.):
 
-Unite validates the destination by checking:
+  - Allow user to create new schemas in the database
+    GRANT CREATE, TEMPORARY ON DATABASE "database" TO unite;
 
-- Network connectivity
-- Authentication
-- Database accessibility
-- Schema permissions
-- Table creation permissions
+  - Allow user to access and create tables within the schema
+    GRANT USAGE, CREATE ON SCHEMA "schema" TO unite;
 
-If validation succeeds, the destination status changes to **Complete** and is ready to be used in pipelines.
+  - Allow user to query and drop tables within the schema
+    GRANT SELECT, DROP ON ALL TABLES IN SCHEMA "schema" TO unite;
 
 ---
+
 
 ## Next step
 
-After successfully connecting Amazon Redshift, create a pipeline to begin syncing data from your connected data sources.
+After connecting your Amazon Redshift account, create a pipeline to begin syncing data.
