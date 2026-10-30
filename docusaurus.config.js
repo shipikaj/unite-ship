@@ -10,7 +10,7 @@ import { themes as prismThemes } from "prism-react-renderer";
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "Unite Documentations",
+  title: "Unite Documentation",
   tagline: "Move data seamlessly. Stay in control.",
   favicon: "img/logo.svg",
   trailingSlash: false,

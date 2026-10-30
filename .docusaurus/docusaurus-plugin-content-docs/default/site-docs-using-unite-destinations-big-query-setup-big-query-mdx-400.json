@@ -1,0 +1,19 @@
+{
+  "id": "using-unite/destinations/big-query/setup-big-query",
+  "title": "Setup",
+  "description": "Connect BigQuery as a data destination in Unite.",
+  "source": "@site/docs/using-unite/destinations/big-query/setup-big-query.mdx",
+  "sourceDirName": "using-unite/destinations/big-query",
+  "slug": "/using-unite/destinations/big-query/setup-big-query",
+  "permalink": "/using-unite/destinations/big-query/setup-big-query",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "Setup",
+    "description": "Connect BigQuery as a data destination in Unite.",
+    "sidebar_position": 2
+  }
+}

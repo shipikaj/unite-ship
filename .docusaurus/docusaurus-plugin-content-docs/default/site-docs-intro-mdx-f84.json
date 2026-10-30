@@ -1,0 +1,18 @@
+{
+  "id": "intro",
+  "title": "Introduction",
+  "description": "Unite helps you connect, sync, and manage your data pipelines effortlessly.",
+  "source": "@site/docs/intro.mdx",
+  "sourceDirName": ".",
+  "slug": "/",
+  "permalink": "/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Introduction",
+    "description": "Unite helps you connect, sync, and manage your data pipelines effortlessly.",
+    "slug": "/"
+  }
+}

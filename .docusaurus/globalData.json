@@ -8,7 +8,7 @@
           "label": "Next",
           "isLast": true,
           "path": "/",
-          "mainDocId": "getting-started/introduction",
+          "mainDocId": "intro",
           "docs": [
             {
               "id": "billing-cancellation-refund",
@@ -34,6 +34,10 @@
               "id": "getting-started/quickstart",
               "path": "/getting-started/quickstart",
               "sidebar": "docs"
+            },
+            {
+              "id": "intro",
+              "path": "/"
             },
             {
               "id": "legal/integrated-data-processing",
@@ -122,6 +126,11 @@
               "sidebar": "docs"
             },
             {
+              "id": "using-unite/data-sources/google-ads/custom-reports",
+              "path": "/using-unite/data-sources/google-ads/custom-reports",
+              "sidebar": "docs"
+            },
+            {
               "id": "using-unite/data-sources/google-ads/prebuilt-reports",
               "path": "/using-unite/data-sources/google-ads/prebuilt-reports",
               "sidebar": "docs"
@@ -129,6 +138,11 @@
             {
               "id": "using-unite/data-sources/google-ads/setup-gads",
               "path": "/using-unite/data-sources/google-ads/setup-gads",
+              "sidebar": "docs"
+            },
+            {
+              "id": "using-unite/data-sources/google-analytics-4/custom-reports",
+              "path": "/using-unite/data-sources/google-analytics-4/custom-reports",
               "sidebar": "docs"
             },
             {
@@ -142,6 +156,11 @@
               "sidebar": "docs"
             },
             {
+              "id": "using-unite/data-sources/google-search-console/custom-reports",
+              "path": "/using-unite/data-sources/google-search-console/custom-reports",
+              "sidebar": "docs"
+            },
+            {
               "id": "using-unite/data-sources/google-search-console/prebuilt-reports",
               "path": "/using-unite/data-sources/google-search-console/prebuilt-reports",
               "sidebar": "docs"
@@ -152,8 +171,18 @@
               "sidebar": "docs"
             },
             {
+              "id": "using-unite/data-sources/hubspot/custom-reports",
+              "path": "/using-unite/data-sources/hubspot/custom-reports",
+              "sidebar": "docs"
+            },
+            {
               "id": "using-unite/data-sources/hubspot/setup-hubspot",
               "path": "/using-unite/data-sources/hubspot/setup-hubspot",
+              "sidebar": "docs"
+            },
+            {
+              "id": "using-unite/data-sources/meta-ads/custom-reports",
+              "path": "/using-unite/data-sources/meta-ads/custom-reports",
               "sidebar": "docs"
             },
             {
@@ -167,6 +196,11 @@
               "sidebar": "docs"
             },
             {
+              "id": "using-unite/data-sources/shopify/custom-reports",
+              "path": "/using-unite/data-sources/shopify/custom-reports",
+              "sidebar": "docs"
+            },
+            {
               "id": "using-unite/data-sources/shopify/setup-shopify",
               "path": "/using-unite/data-sources/shopify/setup-shopify",
               "sidebar": "docs"
@@ -175,6 +209,10 @@
               "id": "using-unite/destinations/amazon-redshift/setup-redshift",
               "path": "/using-unite/destinations/amazon-redshift/setup-redshift",
               "sidebar": "docs"
+            },
+            {
+              "id": "using-unite/destinations/big-query/setup-big-query",
+              "path": "/using-unite/destinations/big-query/setup-big-query"
             },
             {
               "id": "using-unite/destinations/bigquery/setup-bigquery",

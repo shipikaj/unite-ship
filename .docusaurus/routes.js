@@ -113,21 +113,26 @@ export default [
     exact: true
   },
   {
+    path: '/search',
+    component: ComponentCreator('/search', '822'),
+    exact: true
+  },
+  {
     path: '/',
     component: ComponentCreator('/', '2e1'),
     exact: true
   },
   {
     path: '/',
-    component: ComponentCreator('/', '7e6'),
+    component: ComponentCreator('/', 'd8d'),
     routes: [
       {
         path: '/',
-        component: ComponentCreator('/', '2ad'),
+        component: ComponentCreator('/', 'd0a'),
         routes: [
           {
             path: '/',
-            component: ComponentCreator('/', 'c4a'),
+            component: ComponentCreator('/', 'e0b'),
             routes: [
               {
                 path: '/billing-cancellation-refund',
@@ -265,6 +270,12 @@ export default [
                 sidebar: "docs"
               },
               {
+                path: '/using-unite/data-sources/google-ads/custom-reports',
+                component: ComponentCreator('/using-unite/data-sources/google-ads/custom-reports', 'a90'),
+                exact: true,
+                sidebar: "docs"
+              },
+              {
                 path: '/using-unite/data-sources/google-ads/prebuilt-reports',
                 component: ComponentCreator('/using-unite/data-sources/google-ads/prebuilt-reports', 'e2e'),
                 exact: true,
@@ -273,6 +284,12 @@ export default [
               {
                 path: '/using-unite/data-sources/google-ads/setup-gads',
                 component: ComponentCreator('/using-unite/data-sources/google-ads/setup-gads', '72c'),
+                exact: true,
+                sidebar: "docs"
+              },
+              {
+                path: '/using-unite/data-sources/google-analytics-4/custom-reports',
+                component: ComponentCreator('/using-unite/data-sources/google-analytics-4/custom-reports', 'f46'),
                 exact: true,
                 sidebar: "docs"
               },
@@ -289,6 +306,12 @@ export default [
                 sidebar: "docs"
               },
               {
+                path: '/using-unite/data-sources/google-search-console/custom-reports',
+                component: ComponentCreator('/using-unite/data-sources/google-search-console/custom-reports', '26e'),
+                exact: true,
+                sidebar: "docs"
+              },
+              {
                 path: '/using-unite/data-sources/google-search-console/prebuilt-reports',
                 component: ComponentCreator('/using-unite/data-sources/google-search-console/prebuilt-reports', 'c04'),
                 exact: true,
@@ -301,8 +324,20 @@ export default [
                 sidebar: "docs"
               },
               {
+                path: '/using-unite/data-sources/hubspot/custom-reports',
+                component: ComponentCreator('/using-unite/data-sources/hubspot/custom-reports', '5de'),
+                exact: true,
+                sidebar: "docs"
+              },
+              {
                 path: '/using-unite/data-sources/hubspot/setup-hubspot',
                 component: ComponentCreator('/using-unite/data-sources/hubspot/setup-hubspot', '15c'),
+                exact: true,
+                sidebar: "docs"
+              },
+              {
+                path: '/using-unite/data-sources/meta-ads/custom-reports',
+                component: ComponentCreator('/using-unite/data-sources/meta-ads/custom-reports', '974'),
                 exact: true,
                 sidebar: "docs"
               },
@@ -319,6 +354,12 @@ export default [
                 sidebar: "docs"
               },
               {
+                path: '/using-unite/data-sources/shopify/custom-reports',
+                component: ComponentCreator('/using-unite/data-sources/shopify/custom-reports', 'd23'),
+                exact: true,
+                sidebar: "docs"
+              },
+              {
                 path: '/using-unite/data-sources/shopify/setup-shopify',
                 component: ComponentCreator('/using-unite/data-sources/shopify/setup-shopify', '01f'),
                 exact: true,
@@ -329,6 +370,11 @@ export default [
                 component: ComponentCreator('/using-unite/destinations/amazon-redshift/setup-redshift', '028'),
                 exact: true,
                 sidebar: "docs"
+              },
+              {
+                path: '/using-unite/destinations/big-query/setup-big-query',
+                component: ComponentCreator('/using-unite/destinations/big-query/setup-big-query', '90e'),
+                exact: true
               },
               {
                 path: '/using-unite/destinations/bigquery/setup-bigquery',
@@ -377,6 +423,11 @@ export default [
                 component: ComponentCreator('/using-unite/support-tickets', '266'),
                 exact: true,
                 sidebar: "docs"
+              },
+              {
+                path: '/',
+                component: ComponentCreator('/', '790'),
+                exact: true
               }
             ]
           }

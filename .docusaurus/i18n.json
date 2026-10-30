@@ -12,8 +12,8 @@
       "htmlLang": "en",
       "calendar": "gregory",
       "path": "en",
-      "translate": false,
-      "url": "https://d3cqgx0nfm61lc.cloudfront.net",
+      "translate": true,
+      "url": "https://docs.development.uniteyourdata.com",
       "baseUrl": "/"
     }
   }

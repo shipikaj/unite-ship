@@ -1,0 +1,28 @@
+{
+  "id": "using-unite/data-sources/google-search-console/custom-reports",
+  "title": "Custom Reports",
+  "description": "Learn about the custom GSC reports available in Unite.",
+  "source": "@site/docs/using-unite/data-sources/google-search-console/custom-reports.mdx",
+  "sourceDirName": "using-unite/data-sources/google-search-console",
+  "slug": "/using-unite/data-sources/google-search-console/custom-reports",
+  "permalink": "/using-unite/data-sources/google-search-console/custom-reports",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "title": "Custom Reports",
+    "description": "Learn about the custom GSC reports available in Unite.",
+    "sidebar_position": 3
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Prebuilt Reports",
+    "permalink": "/using-unite/data-sources/google-search-console/prebuilt-reports"
+  },
+  "next": {
+    "title": "Setup",
+    "permalink": "/using-unite/data-sources/meta-ads/setup-meta"
+  }
+}

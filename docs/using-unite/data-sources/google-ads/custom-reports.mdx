@@ -744,7 +744,7 @@ The Ad category of the Google Ads connector includes 157 fields.
 | `ad_group_ad.policy_summary.review_status` | ENUM | Policy summary review status | Where in the review process this ad is. |
 | `ad_group_ad.primary_status` | ENUM | Primary status | Provides aggregated view into why an ad group ad is not serving or not serving optimally. |
 | `ad_group_ad.primary_status_reasons` | ENUM | Primary status reasons | Provides reasons for why an ad group ad is not serving or not serving optimally. |
-| `ad_group_ad.resource_name` | RESOURCE_NAME | Resource name | The resource name of the ad. Ad group ad resource names have the form: customers/\{customer_id\}/adGroupAds/\{ad_group_id\}~\{ad_id\} |
+| `ad_group_ad.resource_name` | RESOURCE_NAME | Resource name | The resource name of the ad. Ad group ad resource names have the form: customers/\{customer_id\}/adGroupAds/\{ad_group_id\}/\{ad_id\} |
 | `ad_group_ad.status` | ENUM | Status | The status of the ad. |
 
 ### Google Ads Ad group criterion fields
@@ -833,7 +833,7 @@ The Ad group criterion category of the Google Ads connector includes 87 fields.
 | `ad_group_criterion.quality_info.post_click_quality_score` | ENUM | Quality info post click quality score | The quality score component for the landing page experience, as a rating such as below average, average, or above average. |
 | `ad_group_criterion.quality_info.quality_score` | INT32 | Quality info quality score | The keyword Quality Score, an estimate of ad quality on a scale from 1 to 10. Not available for keywords with insufficient data. |
 | `ad_group_criterion.quality_info.search_predicted_ctr` | ENUM | Quality info search predicted CTR | The quality score component for expected click-through rate, as a rating such as below average, average, or above average. |
-| `ad_group_criterion.resource_name` | RESOURCE_NAME | Resource name | The resource name of the criterion, in the form customers/\{customer_id\}/adGroupCriteria/\{ad_group_id\}~\{criterion_id\}. |
+| `ad_group_criterion.resource_name` | RESOURCE_NAME | Resource name | The resource name of the criterion, in the form customers/\{customer_id\}/adGroupCriteria/\{ad_group_id\}/\{criterion_id\}. |
 | `ad_group_criterion.status` | ENUM | Status | The status of the criterion (enabled, paused, or removed). |
 | `ad_group_criterion.system_serving_status` | ENUM | System serving status | The serving status of the criterion, such as eligible or rarely served. |
 | `ad_group_criterion.topic.path` | STRING | Topic path | The category to target or exclude. Each subsequent element in the list is a more specific sub-category. |
@@ -911,7 +911,7 @@ The Keyword view category of the Google Ads connector includes 1 fields.
 
 | **ID** | **Type** | **Name** | **Description** |
 |---|---|---|---|
-| `keyword_view.resource_name` | RESOURCE_NAME | Resource name | The resource name of the keyword view. Keyword view resource names have the form: customers/\{customer_id\}/keywordViews/\{ad_group_id\}~\{criterion_id\} |
+| `keyword_view.resource_name` | RESOURCE_NAME | Resource name | The resource name of the keyword view. Keyword view resource names have the form: customers/\{customer_id\}/keywordViews/\{ad_group_id\}/\{criterion_id\} |
 
 ### Google Ads Search term view fields
 
@@ -920,7 +920,7 @@ The Search term view category of the Google Ads connector includes 4 fields.
 | **ID** | **Type** | **Name** | **Description** |
 |---|---|---|---|
 | `search_term_view.ad_group` | RESOURCE_NAME | Ad group | The ad group the search term served in. |
-| `search_term_view.resource_name` | RESOURCE_NAME | Resource name | The resource name of the search term view. Search term view resource names have the form: customers/\{customer_id\}/searchTermViews/\{campaign_id\}~\{ad_group_id\}~\{URL-base64_search_term\} |
+| `search_term_view.resource_name` | RESOURCE_NAME | Resource name | The resource name of the search term view. Search term view resource names have the form: customers/\{customer_id\}/searchTermViews/\{campaign_id\}/\{ad_group_id\}/\{URL-base64_search_term\} |
 | `search_term_view.search_term` | STRING | Search term | The search term. |
 | `search_term_view.status` | ENUM | Status | Indicates whether the search term is currently one of your targeted or excluded keywords. |
 
@@ -931,7 +931,7 @@ The Campaign search term view category of the Google Ads connector includes 3 fi
 | **ID** | **Type** | **Name** | **Description** |
 |---|---|---|---|
 | `campaign_search_term_view.campaign` | RESOURCE_NAME | Campaign | The campaign the search term served in. |
-| `campaign_search_term_view.resource_name` | RESOURCE_NAME | Resource name | The resource name of the campaign search term view. Campaign search term view resource names have the form: customers/\{customer_id\}/campaignSearchTermViews/\{campaign_id\}~\{URL-base64_search_term\} |
+| `campaign_search_term_view.resource_name` | RESOURCE_NAME | Resource name | The resource name of the campaign search term view. Campaign search term view resource names have the form: customers/\{customer_id\}/campaignSearchTermViews/\{campaign_id\}/\{URL-base64_search_term\} |
 | `campaign_search_term_view.search_term` | STRING | Search term | The search term. |
 
 ### Google Ads Geographic view fields
@@ -942,7 +942,7 @@ The Geographic view category of the Google Ads connector includes 3 fields.
 |---|---|---|---|
 | `geographic_view.country_criterion_id` | INT64 | Country criterion ID | Criterion Id for the country. |
 | `geographic_view.location_type` | ENUM | Location type | Type of the geo targeting of the campaign. |
-| `geographic_view.resource_name` | RESOURCE_NAME | Resource name | The resource name of the geographic view. Geographic view resource names have the form: customers/\{customer_id\}/geographicViews/\{country_criterion_id\}~\{location_type\} |
+| `geographic_view.resource_name` | RESOURCE_NAME | Resource name | The resource name of the geographic view. Geographic view resource names have the form: customers/\{customer_id\}/geographicViews/\{country_criterion_id\}/\{location_type\} |
 
 ### Google Ads Age range view fields
 
@@ -950,7 +950,7 @@ The Age range view category of the Google Ads connector includes 1 fields.
 
 | **ID** | **Type** | **Name** | **Description** |
 |---|---|---|---|
-| `age_range_view.resource_name` | RESOURCE_NAME | Resource name | The resource name of the age range view. Age range view resource names have the form: customers/\{customer_id\}/ageRangeViews/\{ad_group_id\}~\{criterion_id\} |
+| `age_range_view.resource_name` | RESOURCE_NAME | Resource name | The resource name of the age range view. Age range view resource names have the form: customers/\{customer_id\}/ageRangeViews/\{ad_group_id\}/\{criterion_id\} |
 
 ### Google Ads Gender view fields
 
@@ -958,4 +958,4 @@ The Gender view category of the Google Ads connector includes 1 fields.
 
 | **ID** | **Type** | **Name** | **Description** |
 |---|---|---|---|
-| `gender_view.resource_name` | RESOURCE_NAME | Resource name | The resource name of the gender view. Gender view resource names have the form: customers/\{customer_id\}/genderViews/\{ad_group_id\}~\{criterion_id\} |
+| `gender_view.resource_name` | RESOURCE_NAME | Resource name | The resource name of the gender view. Gender view resource names have the form: customers/\{customer_id\}/genderViews/\{ad_group_id\}/\{criterion_id\} |

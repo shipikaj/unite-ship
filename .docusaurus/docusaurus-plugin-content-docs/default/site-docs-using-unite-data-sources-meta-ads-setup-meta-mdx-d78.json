@@ -8,7 +8,6 @@
   "permalink": "/using-unite/data-sources/meta-ads/setup-meta",
   "draft": false,
   "unlisted": false,
-  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/using-unite/data-sources/meta-ads/setup-meta.mdx",
   "tags": [],
   "version": "current",
   "sidebarPosition": 2,
@@ -19,11 +18,11 @@
   },
   "sidebar": "docs",
   "previous": {
-    "title": "Prebuilt Reports",
-    "permalink": "/using-unite/data-sources/google-search-console/prebuilt-reports"
+    "title": "Custom Reports",
+    "permalink": "/using-unite/data-sources/google-search-console/custom-reports"
   },
   "next": {
-    "title": "Setup",
-    "permalink": "/using-unite/data-sources/hubspot/setup-hubspot"
+    "title": "Custom Reports",
+    "permalink": "/using-unite/data-sources/meta-ads/custom-reports"
   }
 }

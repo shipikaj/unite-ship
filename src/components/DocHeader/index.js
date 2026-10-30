@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './styles.module.css';
 
-export default function DocHeader({ title = "Documentations", subtitle = "Move data seamlessly. Stay in control." }) {
+export default function DocHeader({ title = "Documentation", subtitle = "Move data seamlessly. Stay in control." }) {
   return (
     <div className={styles.headerContainer}>
       <h1 className={styles.title}>{title}</h1>

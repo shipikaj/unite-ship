@@ -1,0 +1,28 @@
+{
+  "id": "using-unite/data-sources/google-analytics-4/custom-reports",
+  "title": "Custom Reports",
+  "description": "Learn about the predefined Google Analytics 4 reports available in Unite.",
+  "source": "@site/docs/using-unite/data-sources/google-analytics-4/custom-reports.mdx",
+  "sourceDirName": "using-unite/data-sources/google-analytics-4",
+  "slug": "/using-unite/data-sources/google-analytics-4/custom-reports",
+  "permalink": "/using-unite/data-sources/google-analytics-4/custom-reports",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "title": "Custom Reports",
+    "description": "Learn about the predefined Google Analytics 4 reports available in Unite.",
+    "sidebar_position": 3
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Prebuilt Reports",
+    "permalink": "/using-unite/data-sources/google-analytics-4/prebuilt-reports"
+  },
+  "next": {
+    "title": "Setup",
+    "permalink": "/using-unite/data-sources/google-search-console/setup-gsc"
+  }
+}

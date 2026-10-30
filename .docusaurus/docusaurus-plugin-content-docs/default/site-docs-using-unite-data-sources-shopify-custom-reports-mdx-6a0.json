@@ -1,0 +1,28 @@
+{
+  "id": "using-unite/data-sources/shopify/custom-reports",
+  "title": "Custom Reports",
+  "description": "Learn about the custom Shopify reports available in Unite.",
+  "source": "@site/docs/using-unite/data-sources/shopify/custom-reports.mdx",
+  "sourceDirName": "using-unite/data-sources/shopify",
+  "slug": "/using-unite/data-sources/shopify/custom-reports",
+  "permalink": "/using-unite/data-sources/shopify/custom-reports",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "Custom Reports",
+    "description": "Learn about the custom Shopify reports available in Unite.",
+    "sidebar_position": 2
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Setup",
+    "permalink": "/using-unite/data-sources/shopify/setup-shopify"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/using-unite/destinations/overview"
+  }
+}

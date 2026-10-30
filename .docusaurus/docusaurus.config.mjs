@@ -4,9 +4,10 @@
  * Modify the docusaurus.config.js file at your site's root instead.
  */
 export default {
-  "title": "My Site",
-  "tagline": "Dinosaurs are cool",
-  "favicon": "img/favicon.ico",
+  "title": "Unite Documentation",
+  "tagline": "Move data seamlessly. Stay in control.",
+  "favicon": "img/logo.svg",
+  "trailingSlash": false,
   "future": {
     "v4": {
       "removeLegacyPostBuildHeadAttribute": true,
@@ -29,7 +30,15 @@ export default {
       "gitEagerVcs": true
     }
   },
-  "url": "https://d3cqgx0nfm61lc.cloudfront.net",
+  "headTags": [
+    {
+      "tagName": "script",
+      "attributes": {},
+      "innerHTML": "(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\nnew Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\nj=d.createElement(s);j.async=true;j.src=\n\"https://load.ss.uniteyourdata.com/8eaniaekeunu.js?\"+i;f.parentNode.insertBefore(j,f);\n})(window,document,'script','dataLayer','csnndg=HApIIj8oTFwzOiE2IC8lTwNTR0taQwUHSBsbDB8AGAYAHBEEHwRPChoD');",
+      "customElement": false
+    }
+  ],
+  "url": "https://docs.development.uniteyourdata.com",
   "baseUrl": "/",
   "onBrokenLinks": "warn",
   "i18n": {
@@ -46,8 +55,7 @@ export default {
       {
         "docs": {
           "sidebarPath": "./sidebars.js",
-          "routeBasePath": "/",
-          "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/"
+          "routeBasePath": "/"
         },
         "blog": {
           "showReadingTime": true,
@@ -58,7 +66,6 @@ export default {
             ],
             "xslt": true
           },
-          "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
           "onInlineTags": "warn",
           "onInlineAuthors": "warn",
           "onUntruncatedBlogPosts": "warn"
@@ -69,83 +76,43 @@ export default {
       }
     ]
   ],
+  "plugins": [
+    "./src/plugins/docusaurus-plugin-strapi-docs"
+  ],
+  "themes": [
+    [
+      "@easyops-cn/docusaurus-search-local",
+      {
+        "hashed": true,
+        "searchBarPosition": "left"
+      }
+    ]
+  ],
   "themeConfig": {
-    "image": "img/docusaurus-social-card.jpg",
+    "image": "img/logo-card.png",
     "colorMode": {
-      "respectPrefersColorScheme": true,
       "defaultMode": "light",
-      "disableSwitch": false
+      "disableSwitch": true,
+      "respectPrefersColorScheme": false
     },
     "navbar": {
-      "title": "My Site",
+      "title": "Unite Documentations",
       "logo": {
-        "alt": "My Site Logo",
-        "src": "img/logo.svg"
+        "alt": "Unite Logo",
+        "src": "img/uniteFullLogo.svg",
+        "href": "https://uniteyourdata.com"
       },
       "items": [
         {
-          "type": "docSidebar",
-          "sidebarId": "docs",
-          "position": "left",
-          "label": "Docs"
-        },
-        {
-          "to": "/blog",
-          "label": "Blog",
+          "type": "custom-doc-title",
           "position": "left"
         },
         {
-          "href": "https://github.com/facebook/docusaurus",
-          "label": "GitHub",
+          "type": "custom-dashboard-back",
           "position": "right"
         }
       ],
       "hideOnScroll": false
-    },
-    "footer": {
-      "style": "dark",
-      "links": [
-        {
-          "title": "Docs",
-          "items": [
-            {
-              "label": "Tutorial",
-              "to": "/docs/introduction"
-            }
-          ]
-        },
-        {
-          "title": "Community",
-          "items": [
-            {
-              "label": "Stack Overflow",
-              "href": "https://stackoverflow.com/questions/tagged/docusaurus"
-            },
-            {
-              "label": "Discord",
-              "href": "https://discordapp.com/invite/docusaurus"
-            },
-            {
-              "label": "X",
-              "href": "https://x.com/docusaurus"
-            }
-          ]
-        },
-        {
-          "title": "More",
-          "items": [
-            {
-              "label": "Blog",
-              "to": "/blog"
-            },
-            {
-              "label": "GitHub",
-              "href": "https://github.com/facebook/docusaurus"
-            }
-          ]
-        }
-      ],
-      "copyright": "Copyright © 2026 My Project, Inc. Built with Docusaurus."
     },
     "prism": {
       "theme": {
@@ -380,10 +347,7 @@ export default {
     "static"
   ],
   "customFields": {},
-  "plugins": [],
-  "themes": [],
   "scripts": [],
-  "headTags": [],
   "stylesheets": [],
   "clientModules": [],
   "titleDelimiter": "|",

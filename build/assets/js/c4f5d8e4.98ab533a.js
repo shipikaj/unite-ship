@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkunite_docs=self.webpackChunkunite_docs||[]).push([["4823"],{7176(t,e,n){n.r(e),n.d(e,{default:()=>s});var u=n(4848);n(6540);var r=n(6347);function s(){return(0,u.jsx)(r.rd,{to:"/getting-started/introduction"})}}}]);

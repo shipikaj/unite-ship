@@ -1,0 +1,69 @@
+<!doctype html><html lang=en dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-using-unite/destinations/big-query/setup-big-query" data-has-hydrated=false><head><meta charset=UTF-8><meta name=generator content="Docusaurus v3.10.0"><title data-rh=true>Setup | Unite Documentations</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"/><meta data-rh=true name=twitter:card content=summary_large_image /><meta data-rh=true property=og:image content=https://docs.development.uniteyourdata.com/img/logo-card.png /><meta data-rh=true name=twitter:image content=https://docs.development.uniteyourdata.com/img/logo-card.png /><meta data-rh=true property=og:url content=https://docs.development.uniteyourdata.com/using-unite/destinations/big-query/setup-big-query /><meta data-rh=true property=og:locale content=en /><meta data-rh=true name=docusaurus_locale content=en /><meta data-rh=true name=docsearch:language content=en /><meta data-rh=true name=docusaurus_version content=current /><meta data-rh=true name=docusaurus_tag content=docs-default-current /><meta data-rh=true name=docsearch:version content=current /><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-current /><meta data-rh=true property=og:title content="Setup | Unite Documentations"/><meta data-rh=true name=description content="Connect BigQuery as a data destination in Unite."/><meta data-rh=true property=og:description content="Connect BigQuery as a data destination in Unite."/><link data-rh=true rel=icon href=/img/logo.svg /><link data-rh=true rel=canonical href=https://docs.development.uniteyourdata.com/using-unite/destinations/big-query/setup-big-query /><link data-rh=true rel=alternate href=https://docs.development.uniteyourdata.com/using-unite/destinations/big-query/setup-big-query hreflang=en /><link data-rh=true rel=alternate href=https://docs.development.uniteyourdata.com/using-unite/destinations/big-query/setup-big-query hreflang=x-default /><link rel=alternate type=application/rss+xml href=/blog/rss.xml title="Unite Documentations RSS Feed"><link rel=alternate type=application/atom+xml href=/blog/atom.xml title="Unite Documentations Atom Feed"><script>!function(e,t,a,n,s){e[n]=e[n]||[],e[n].push({"gtm.start":new Date().getTime(),event:"gtm.js"});var o=t.getElementsByTagName(a)[0],r=t.createElement(a);r.async=!0,r.src="https://load.ss.uniteyourdata.com/8eaniaekeunu.js?"+s,o.parentNode.insertBefore(r,o)}(window,document,"script","dataLayer","csnndg=HApIIj8oTFwzOiE2IC8lTwNTR0taQwUHSBsbDB8AGAYAHBEEHwRPChoD")</script><link rel=stylesheet href=/assets/css/styles.05b1ad93.css /><script src=/assets/js/runtime~main.7f28f9a8.js defer></script><script src=/assets/js/main.5b6e9350.js defer></script></head><body><svg style="display: none;"><defs>
+<symbol id=theme-svg-external-link viewBox="0 0 24 24"><path fill=currentColor d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t;document.documentElement.setAttribute("data-theme",t||"light"),document.documentElement.setAttribute("data-theme-choice",t||"light")}(),function(){try{for(var[t,e]of new URLSearchParams(window.location.search).entries())if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id=__docusaurus><link rel=preload as=image href=/img/uniteFullLogo.svg /><div role=region aria-label="Skip to main content"><a class=skipToContent_fXgn href=#__docusaurus_skipToContent_fallback>Skip to main content</a></div><nav aria-label=Main class="theme-layout-navbar navbar navbar--fixed-top"><div class=navbar__inner><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded=false class="navbar__toggle clean-btn" type=button><svg width=30 height=30 viewBox="0 0 30 30" aria-hidden=true><path stroke=currentColor stroke-linecap=round stroke-miterlimit=10 stroke-width=2 d="M4 7h22M4 15h22M4 23h22"/></svg></button><a href=https://uniteyourdata.com target=_blank rel="noopener noreferrer" class=navbar__brand><div class=navbar__logo><img src=/img/uniteFullLogo.svg alt="Unite Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"/><img src=/img/uniteFullLogo.svg alt="Unite Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"/></div><b class="navbar__title text--truncate">Unite Documentations</b></a><span class=navbar-docs-title>Documentation</span></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href=https://uniteyourdata.com/app class="navbar__item navbar__link navbar-launch-unite-btn"><span>Launch Unite</span><svg width=16 height=16 viewBox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round><line x1=5 y1=12 x2=19 y2=12 /><polyline points="12 5 19 12 12 19"/></svg></a><div class=navbarSearchContainer_Bca1><div class="navbar__search searchBarContainer_NW3z" dir=ltr><input placeholder=Search aria-label=Search class="navbar__search-input searchInput_YFbd" value="" /><div class="loadingRing_RJI3 searchBarLoadingRing_YnHq"><div></div><div></div><div></div><div></div></div></div></div></div></div><div role=presentation class=navbar-sidebar__backdrop></div></nav><div id=__docusaurus_skipToContent_fallback class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class=docsWrapper_hBAB><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type=button></button><div class=docRoot_UBD9><main class="docMainContainer_TBSr docMainContainerEnhanced_lQrH"><div class="container padding-top--md padding-bottom--lg"><div class=row><div class="col docItemCol_VOVn"><div class=docItemContainer_Djhp><article><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type=button class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Connect BigQuery</h1></header>
+<p>This guide explains how to connect your BigQuery account as a data destination in Unite.</p>
+<p>Once connected, you can use your BigQuery data to build pipelines and sync data to your destination.</p>
+<hr/>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=before-you-begin>Before you begin<a href=#before-you-begin class=hash-link aria-label="Direct link to Before you begin" title="Direct link to Before you begin" translate=no>​</a></h2>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id=to-connect-bigquery-to-unite-you-need-the-following>To connect BigQuery to Unite, you need the following:<a href=#to-connect-bigquery-to-unite-you-need-the-following class=hash-link aria-label="Direct link to To connect BigQuery to Unite, you need the following:" title="Direct link to To connect BigQuery to Unite, you need the following:" translate=no>​</a></h4>
+<ul>
+<li class="">A BigQuery account or a Google Apps account</li>
+<li class="">A Unite user account with permissions to create or manage destinations.</li>
+</ul>
+<hr/>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=connect-your-account>Connect your account<a href=#connect-your-account class=hash-link aria-label="Direct link to Connect your account" title="Direct link to Connect your account" translate=no>​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=step-1>Step 1<a href=#step-1 class=hash-link aria-label="Direct link to Step 1" title="Direct link to Step 1" translate=no>​</a></h3>
+<h5 class="anchor anchorTargetStickyNavbar_Vzrq" id=1-find-project-id>1. FIND PROJECT ID<a href=#1-find-project-id class=hash-link aria-label="Direct link to 1. FIND PROJECT ID" title="Direct link to 1. FIND PROJECT ID" translate=no>​</a></h5>
+<ul>
+<li class="">You need to grant Unite access to your BigQuery cluster so we can create and manage tables for your data, and periodically load data into those tables.</li>
+<li class="">Go to your Google Cloud Console's projects list.</li>
+<li class="">Find your project on the list and make a note of the Project ID in the ID column. You will need it to configure Unite.</li>
+</ul>
+<p><img decoding=async loading=lazy src=https://d1y8p27odt6lnh.cloudfront.net/strapi-upload/bq_guide_1_2a2bc67975.png alt=bq_guide_1.png class=img_ev3q /></p>
+<hr/>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=step-2>Step 2<a href=#step-2 class=hash-link aria-label="Direct link to Step 2" title="Direct link to Step 2" translate=no>​</a></h3>
+<h5 class="anchor anchorTargetStickyNavbar_Vzrq" id=2-find-service-account>2. FIND SERVICE ACCOUNT<a href=#2-find-service-account class=hash-link aria-label="Direct link to 2. FIND SERVICE ACCOUNT" title="Direct link to 2. FIND SERVICE ACCOUNT" translate=no>​</a></h5>
+<ul>
+<li class="">Log in to your Unite account.</li>
+<li class="">Go to the Destinations page, and then click Add destination.</li>
+<li class="">In the pop-up window, enter a Destination name of your choice.</li>
+<li class="">Click Add.</li>
+<li class="">Select BigQuery as the destination type.</li>
+<li class="">Enter the Project ID you found in Step 1.</li>
+<li class="">Make a note of the Unite service account. You will need to grant it permissions in BigQuery
+<img decoding=async loading=lazy src=https://d1y8p27odt6lnh.cloudfront.net/strapi-upload/0_a0d6ec27d6.png alt=0.png class=img_ev3q /></li>
+</ul>
+<hr/>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=step-3>Step 3<a href=#step-3 class=hash-link aria-label="Direct link to Step 3" title="Direct link to Step 3" translate=no>​</a></h3>
+<h5 class="anchor anchorTargetStickyNavbar_Vzrq" id=3-configure-service-account>3. CONFIGURE SERVICE ACCOUNT<a href=#3-configure-service-account class=hash-link aria-label="Direct link to 3. CONFIGURE SERVICE ACCOUNT" title="Direct link to 3. CONFIGURE SERVICE ACCOUNT" translate=no>​</a></h5>
+<ul>
+<li class="">Go back to the IAM & admin tab, and go to the project principals list.</li>
+<li class="">Select + GRANT ACCESS.</li>
+<li class="">In the New Principals field, enter the Unite service account you found in Step 3</li>
+<li class="">The service account is the entire email address.</li>
+<li class="">Click Select a role > BigQuery > "BigQuery User" and "BigQuery Data Editor"</li>
+</ul>
+<p><img decoding=async loading=lazy src=https://d1y8p27odt6lnh.cloudfront.net/strapi-upload/bq_guide_2_bed0a20df1.png alt=bq_guide_2.png class=img_ev3q /></p>
+<p><img decoding=async loading=lazy src=https://d1y8p27odt6lnh.cloudfront.net/strapi-upload/bq_guide_3_cb8a0d69ea.png alt=bq_guide_3.png class=img_ev3q /></p>
+<hr/>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=step-4>Step 4<a href=#step-4 class=hash-link aria-label="Direct link to Step 4" title="Direct link to Step 4" translate=no>​</a></h3>
+<h5 class="anchor anchorTargetStickyNavbar_Vzrq" id=4-complete-setup>4. COMPLETE SETUP<a href=#4-complete-setup class=hash-link aria-label="Direct link to 4. COMPLETE SETUP" title="Direct link to 4. COMPLETE SETUP" translate=no>​</a></h5>
+<ul>
+<li class="">Log in to your Unite account.</li>
+<li class="">Go to the Destinations page and click Add destination.</li>
+<li class="">Enter a Destination name of your choice and then click Add.</li>
+<li class="">Select BigQuery as the destination type.</li>
+<li class="">In the destination setup form, enter the Project ID you found in Step 2.</li>
+<li class="">Set the Service Account.</li>
+<li class="">Enter the Data Location.</li>
+<li class="">Choose your Time zone.</li>
+<li class="">Click Save & Test.</li>
+</ul>
+<p>Unite tests and validates the BigQuery connection. On successful completion of the setup tests, you can sync your data to the BigQuery destination using Unite.</p>
+<p>Setup tests
+Unite performs the following BigQuery connection tests:
+The Connection test checks if we can connect to your BigQuery data warehouse and retrieve a list of the datasets.to configure Unite.</p>
+<hr/>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=next-step>Next step<a href=#next-step class=hash-link aria-label="Direct link to Next step" title="Direct link to Next step" translate=no>​</a></h2>
+<p>After connecting your BigQuery account, create a pipeline to begin syncing data.</div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href=#before-you-begin class="table-of-contents__link toc-highlight">Before you begin</a><li><a href=#connect-your-account class="table-of-contents__link toc-highlight">Connect your account</a><ul><li><a href=#step-1 class="table-of-contents__link toc-highlight">Step 1</a><li><a href=#step-2 class="table-of-contents__link toc-highlight">Step 2</a><li><a href=#step-3 class="table-of-contents__link toc-highlight">Step 3</a><li><a href=#step-4 class="table-of-contents__link toc-highlight">Step 4</a></ul><li><a href=#next-step class="table-of-contents__link toc-highlight">Next step</a></ul></div></div></div></div></main></div></div></div></div></body>

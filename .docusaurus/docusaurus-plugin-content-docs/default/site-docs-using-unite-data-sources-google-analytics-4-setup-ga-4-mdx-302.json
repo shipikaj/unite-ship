@@ -8,7 +8,6 @@
   "permalink": "/using-unite/data-sources/google-analytics-4/setup-ga4",
   "draft": false,
   "unlisted": false,
-  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/using-unite/data-sources/google-analytics-4/setup-ga4.mdx",
   "tags": [],
   "version": "current",
   "sidebarPosition": 2,
@@ -19,8 +18,8 @@
   },
   "sidebar": "docs",
   "previous": {
-    "title": "Prebuilt Reports",
-    "permalink": "/using-unite/data-sources/google-ads/prebuilt-reports"
+    "title": "Custom Reports",
+    "permalink": "/using-unite/data-sources/google-ads/custom-reports"
   },
   "next": {
     "title": "Prebuilt Reports",

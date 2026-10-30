@@ -1,0 +1,28 @@
+{
+  "id": "using-unite/data-sources/hubspot/custom-reports",
+  "title": "Custom Reports",
+  "description": "Learn about the custom Hubspot reports available in Unite.",
+  "source": "@site/docs/using-unite/data-sources/hubspot/custom-reports.mdx",
+  "sourceDirName": "using-unite/data-sources/hubspot",
+  "slug": "/using-unite/data-sources/hubspot/custom-reports",
+  "permalink": "/using-unite/data-sources/hubspot/custom-reports",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "title": "Custom Reports",
+    "description": "Learn about the custom Hubspot reports available in Unite.",
+    "sidebar_position": 3
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Setup",
+    "permalink": "/using-unite/data-sources/hubspot/setup-hubspot"
+  },
+  "next": {
+    "title": "Setup",
+    "permalink": "/using-unite/data-sources/shopify/setup-shopify"
+  }
+}
