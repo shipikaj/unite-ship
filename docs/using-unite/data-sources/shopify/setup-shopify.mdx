@@ -25,9 +25,7 @@ You create a custom app for your store in Shopify's Dev Dashboard, give it read-
 
 ## Connect your account
 
-### Step 1
-
-##### Step 1 - Create and set up the app
+### Step 1 - Create and set up the app
 
 
 
@@ -57,9 +55,7 @@ Note: Every scope starts with read_, so Unite can't create, edit or delete anyth
 
 ---
 
-### Step 2
-
-##### Step 2 - Add full order history
+### Step 2 - Add full order history
 
 
 By default, Shopify only shares the last 60 days of orders. To give Unite your full history, add read_all_orders in a new version before you install the app.
@@ -74,9 +70,7 @@ By default, Shopify only shares the last 60 days of orders. To give Unite your f
 
 ---
 
-### Step 3
-
-##### Step 3 - Install the app on your store
+### Step 3 - Install the app on your store
 
 1. On your app's Overview page, click Install app in the Installs card.
 ![shop6.png](https://d1y8p27odt6lnh.cloudfront.net/strapi-upload/shop6_4f516dfcb1.png)
@@ -89,9 +83,7 @@ Shopify then opens the Unite website in that tab. That means the app is installe
 
 ---
 
-### Step 4
-
-##### Step 4 - Copy the app credentials
+### Step 4 - Copy the app credentials
 
 1. On your app's Overview page in the Dev Dashboard, find the Credentials card. Copy the Client ID with the copy button next to it.
 2. Copy the Client secret the same way.
@@ -100,9 +92,7 @@ Note : Treat the client secret like a password. Don't share it in email or chat.
 
 ---
 
-### Step 5
-
-##### Step 5 - Connect in Unite
+### Step 5 - Connect in Unite
 
 1. Come back to this page and use the Connect Shopify form on the left.
 2. Enter your Shop Name, for example your-store.myshopify.com. You can find it in Shopify admin under Settings > Domains.
@@ -114,9 +104,7 @@ Note : Treat the client secret like a password. Don't share it in email or chat.
 
 ---
 
-### Step 6
-
-##### Check you have your full order history
+### Step 6 - Check you have your full order history
 
 1 In Shopify admin, go to Settings > Apps and open your app.
 2 Under Activity and permissions, find Orders.
@@ -126,9 +114,7 @@ It should say All order history. If it says "last 60 days", see Troubleshooting.
 
 ---
 
-### Step 7
-
-##### Changing scopes later
+### Changing scopes later
 
 If you add a scope after the app is installed, the new access doesn't apply until your store approves it:
 - Create a new version with the updated scopes and click Release (as in step 2).
@@ -137,9 +123,7 @@ If you add a scope after the app is installed, the new access doesn't apply unti
 
 ---
 
-### Step 8
-
-##### Troubleshooting
+### Troubleshooting
 
 - Contains invalid scopes: read_all_orders" when creating the app: Shopify doesn't accept this scope on the Create an app form. Remove it, create the app, then add it in a new version (step 2).
 
@@ -155,9 +139,7 @@ If you add a scope after the app is installed, the new access doesn't apply unti
 
 ---
 
-### Step 9
-
-##### Setting this up for a client?
+### Setting this up for a client?
 
 If you're an agency or freelancer connecting a client's store, you have two options.
 
@@ -187,9 +169,7 @@ See Shopify's guides to [selecting a distribution method](https://shopify.dev/do
 
 ---
 
-### Step 10
-
-##### Removing access
+### Removing access
 
 To disconnect Unite, uninstall the app in [Shopify admin](https://accounts.shopify.com/lookup?rid=f03dcc58-4f14-4cba-8280-d7170610cb52&verify=1792573705-43UDJe0OpjcpJrgF5luCNawVgfv0lTqAvDbnStuLzXE%3D) under Settings > Apps. Once it is uninstalled, Unite can no longer access your store.
 
